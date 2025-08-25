@@ -23,12 +23,12 @@ export default function Home() {
         onMenuAccess={handleMenuAccess}
       />
       
-      {/* About Casa dos Sabores Section */}
+      {/* About Casa Da Peixe & Lapicanha Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-wine mb-6">
-              About Casa dos Sabores
+              About Casa Da Peixe & Lapicanha
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               For over two decades, we've been dedicated to bringing authentic Portuguese flavors to life through our two distinct culinary experiences. Each restaurant tells its own story of Portuguese heritage and passion.
@@ -153,7 +153,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-wine mb-6">
-              Why Choose Casa dos Sabores
+              Why Choose Casa Da Peixe & Lapicanha
             </h2>
           </div>
           
@@ -286,7 +286,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8">
             <div className="md:col-span-2">
-              <h3 className="font-serif text-2xl font-bold text-wine mb-4">Casa dos Sabores</h3>
+              <h3 className="font-serif text-2xl font-bold text-wine mb-4">Casa Da Peixe & Lapicanha</h3>
               <p className="text-gray-300 mb-4">
                 Bringing the authentic taste of Portugal to your table with two unique dining experiences.
               </p>
@@ -318,7 +318,7 @@ export default function Home() {
             </div>
           </div>
           <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 Casa dos Sabores. All rights reserved.</p>
+            <p>&copy; 2024 Casa Da Peixe & Lapicanha. All rights reserved.</p>
           </div>
         </div>
       </footer>

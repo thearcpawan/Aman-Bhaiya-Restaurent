@@ -17,7 +17,7 @@ export default function HeroSection({ onRestaurantChoice, onMenuAccess }: HeroSe
     >
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="text-center text-white px-4">
-          <h1 className="font-serif text-5xl md:text-7xl font-bold mb-6">Casa dos Sabores</h1>
+          <h1 className="font-serif text-5xl md:text-7xl font-bold mb-6">Casa Da Peixe & Lapicanha</h1>
           <p className="text-xl md:text-2xl mb-12 font-light">
             Authentic Portuguese Cuisine, Two Unique Experiences
           </p>
