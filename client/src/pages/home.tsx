@@ -100,7 +100,7 @@ export default function Home() {
             <Card className="bg-white shadow-lg hover:-translate-y-2 transition-all duration-300">
               <CardContent className="p-6">
                 <img
-                  src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250"
+                  src="https://images.unsplash.com/photo-1544943910-4c1dc44aab44?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250"
                   alt="Bacalhau dishes"
                   className="w-full h-48 object-cover rounded-lg mb-4"
                 />
