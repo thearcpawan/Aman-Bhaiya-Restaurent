@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, MessageCircle, Instagram } from "lucide-react";
 import GoogleMaps from "@/components/google-maps";
 import type { Restaurant } from "@shared/schema";
 
@@ -44,6 +44,46 @@ export default function ContactSection({ restaurant }: ContactSectionProps) {
                   </a>
                 </div>
               </div>
+
+              {restaurant.slug === "casa-da-peixe" && (
+                <>
+                  <div className="flex items-start space-x-4">
+                    <div className="bg-wine text-white p-3 rounded-lg flex-shrink-0">
+                      <MessageCircle className="h-6 w-6" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-lg mb-2">WhatsApp</h3>
+                      <a 
+                        href="https://wa.me/351926091468"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-600 hover:text-wine transition-colors"
+                        data-testid="link-whatsapp"
+                      >
+                        +351 926 091 468
+                      </a>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-4">
+                    <div className="bg-wine text-white p-3 rounded-lg flex-shrink-0">
+                      <Instagram className="h-6 w-6" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-lg mb-2">Instagram</h3>
+                      <a 
+                        href="https://instagram.com/265104317"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-600 hover:text-wine transition-colors"
+                        data-testid="link-instagram"
+                      >
+                        @265104317
+                      </a>
+                    </div>
+                  </div>
+                </>
+              )}
 
               <div className="flex items-start space-x-4">
                 <div className="bg-wine text-white p-3 rounded-lg flex-shrink-0">
