@@ -71,6 +71,9 @@ export class MemStorage implements IStorage {
 
     // Add Casa Da Peixe menu items from the real menu
     this.initializeCasaDaPeixeMenu();
+    
+    // Add Lapicanha menu items from the real menu
+    this.initializeLapicanhaMenu();
   }
 
   private initializeCasaDaPeixeMenu() {
@@ -192,6 +195,181 @@ export class MemStorage implements IStorage {
       { name: "Chá", price: "1.50€", description: "Tea", imageUrl: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
       { name: "Meia de Leite", price: "2.00€", description: "Coffee with milk", imageUrl: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
       { name: "Irish Coffee", price: "5.00€", description: "Irish coffee", imageUrl: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+    ];
+
+    // Add all menu items to storage
+    [...starters, ...mains, ...desserts, ...drinks].forEach(item => {
+      const id = randomUUID();
+      const category = starters.includes(item) ? 'starters' : 
+                      mains.includes(item) ? 'mains' : 
+                      desserts.includes(item) ? 'desserts' : 'drinks';
+      
+      const menuItem: MenuItem = {
+        id,
+        restaurantId,
+        name: item.name,
+        description: item.description ?? null,
+        price: item.price,
+        category,
+        imageUrl: item.imageUrl ?? null,
+        createdAt: new Date(),
+      };
+      
+      this.menuItems.set(id, menuItem);
+    });
+  }
+
+  private initializeLapicanhaMenu() {
+    const restaurantId = "lapicanha-id";
+
+    // STARTERS - ENTRADAS
+    const starters = [
+      { name: "CESTO DE PÃO 2 UNIDADES", price: "1.50€", description: "BREAD BASKET 2 UNITS", imageUrl: "https://images.unsplash.com/photo-1549931319-a545dcf3bc73?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "QUEIJO SECO", price: "4.50€", description: "DRY CHEESE", imageUrl: "https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "QUEIJO AMANTEIGADO", price: "6.50€", description: "BUTTERY CHEESE", imageUrl: "https://images.unsplash.com/photo-1452195100486-9cc805987862?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "AZEITONAS", price: "3.50€", description: "OLIVES", imageUrl: "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "CREPES LA PICANHA", price: "5.00€", description: "SPRINGROLES", imageUrl: "https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "MANTEIGA", price: "1.00€", description: "BUTTER", imageUrl: "https://images.unsplash.com/photo-1589985270826-4b7bb135bc9d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "PRESUNTO", price: "10.00€", description: "HAM", imageUrl: "https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "PICA PAU", price: "4.50€", description: "WOODPECKER COOKED PICANHA WITH SAUCE", imageUrl: "https://images.unsplash.com/photo-1544943910-4c1dc44aab44?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+    ];
+
+    // MAINS - PRATOS
+    const mains = [
+      { name: "HAMBURGER NO PRATO", price: "14.90€", description: "ARROZ, BATATA FRITA E FEIJÃO", imageUrl: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "HAMBURGUER VEGANO", price: "15.90€", description: "ARROZ E BATATAS FRITAS", imageUrl: "https://images.unsplash.com/photo-1520072959219-c595dc870360?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "HAMBURGER LA PICANHA", price: "15.90€", description: "HAMBURGUER NO PÃO, CEBOLA FRITA, BACON, QUEIJO CHEDDAR E TOMATE, ACOMPANHA BATATAS FRITAS", imageUrl: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "ESPETADA DE PICANHA", price: "15.90€", description: "NACOS DE PICANHA GRELHADO, COM CHOURIÇO, ACOMPANHA COM ARROZ E BATATA FRITA - GRILLED PICANHA STEAKS WITH CHORIZO, SERVED WITH RICE AND FRENCH FRIES", imageUrl: "https://images.unsplash.com/photo-1544943910-4c1dc44aab44?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "FRANGO À LA PICANHA", price: "18.90€", description: "PEITO DE FRANGO RECHEADO COM BACON, CHEDDAR, ACOMPANHA COM MOLHO DE ALHO COM ERVAS, ARROZ, SALADA E BATATAS FRITAS - CHICKEN FILLET STUFFED WITH BACON, CHEDDAR, SERVED WITH GARLIC SAUCE WITH HERBS, RICE, SALAD AND FRENCH FRIES", imageUrl: "https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "BIFE DE FRANGO", price: "15.90€", description: "BIFE DE FRANGO GRELHADO ACOMPANHA COM ARROZ E BATATA FRITA - GRILLED CHICKEN STEAK SERVED WITH RICE AND FRENCH FRIES", imageUrl: "https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "PICANHA Á DISCRIÇÃO", price: "19.50€", description: "ARROZ, FEIJÃO, BATATAS FRITAS, SALADA E FAROFA - RICE, BEANS, FRIES, SALAD AND FAROFA", imageUrl: "https://images.unsplash.com/photo-1544943910-4c1dc44aab44?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "PREMIUM ENTRECÔTE (350G)", price: "24.90€", description: "ARROZ, FEIJÃO E BATATAS FRITAS - RICE, BEANS AND FRIES", imageUrl: "https://images.unsplash.com/photo-1544943910-4c1dc44aab44?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "PREMIUM PICANHA (350G)", price: "24.90€", description: "BATATAS FRITAS, ARROZ, FEIJÃO - RICE, BEANS AND FRIES", imageUrl: "https://images.unsplash.com/photo-1544943910-4c1dc44aab44?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "PICANHA NO PRATO (MENU EXECUTIVO)", price: "15.00€", description: "ARROZ FEIJÃO E BATATAS FRITAS COM DIREITO A UMA BEBIDA E UM CAFÉ (SUMO, ÁGUA OU IMPERIAL) - RICE, BEANS AND FRIES, WITH A DRINK AND A COFFEE (JUICE, WATER OR BEER). DE SEGUNDA A SEXTA AOS ALMOÇOS, EXCETO FERIADOS", imageUrl: "https://images.unsplash.com/photo-1544943910-4c1dc44aab44?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "FRANGO Á LA PICANHA (MENU INFANTIL)", price: "10.50€", description: "ARROZ E BATATAS FRITAS - O MENU INFATIL É APLICADO PARA CRIANÇAS DE 4 A 9 ANOS", imageUrl: "https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "PICANHA NO PRATO (MENU INFANTIL)", price: "10.50€", description: "ARROZ E BATATAS FRITAS - O MENU INFATIL É APLICADO PARA CRIANÇAS DE 4 A 9 ANOS", imageUrl: "https://images.unsplash.com/photo-1544943910-4c1dc44aab44?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+    ];
+
+    // DESSERTS - SOBREMESAS
+    const desserts = [
+      { name: "CHEESECAKE OREO", price: "5.00€", description: "", imageUrl: "https://images.unsplash.com/photo-1541365087197-90ba01e2ba7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "CHEESECAKE FRUTOS VERMELHOS", price: "4.50€", description: "", imageUrl: "https://images.unsplash.com/photo-1541365087197-90ba01e2ba7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "CHEESECAKE CARAMELO SALGADO", price: "5.00€", description: "", imageUrl: "https://images.unsplash.com/photo-1541365087197-90ba01e2ba7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "BOLO BRIGADEIRO", price: "4.50€", description: "", imageUrl: "https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "CHEESECAKE LIMA", price: "4.50€", description: "", imageUrl: "https://images.unsplash.com/photo-1541365087197-90ba01e2ba7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "BOLO DE BOLACHA", price: "4.50€", description: "", imageUrl: "https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "PETIT GATEAU C/ GELADO", price: "5.50€", description: "", imageUrl: "https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "CAIXA LISBOETAS", price: "13.00€", description: "", imageUrl: "https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "PUDIM", price: "4.50€", description: "", imageUrl: "https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "MUSSE DE CHOCOLATE", price: "4.50€", description: "", imageUrl: "https://images.unsplash.com/photo-1541365087197-90ba01e2ba7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "DOCE DA CASA", price: "4.50€", description: "", imageUrl: "https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "BOLA DE GELADO", price: "2.50€", description: "", imageUrl: "https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+    ];
+
+    // DRINKS - CAFETÁRIA, BEBIDAS, VINHOS, SANGRIAS, BEBIDAS ALCOOLICAS, COCKTAILS
+    const drinks = [
+      // Cafetária
+      { name: "CAFÉ", price: "1.20€", description: "", imageUrl: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "DESCAFEINADO", price: "1.20€", description: "", imageUrl: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "CHA", price: "1.50€", description: "", imageUrl: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "ABATANADO", price: "1.50€", description: "", imageUrl: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "MEIA DE LEITE", price: "2.00€", description: "", imageUrl: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "IRISH COFFE", price: "5.00€", description: "", imageUrl: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "CAFÉ BOMBOM", price: "6.50€", description: "", imageUrl: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      
+      // Bebidas
+      { name: "ÁGUA PURIFICADA", price: "2.70€", description: "", imageUrl: "https://images.unsplash.com/photo-1548839140-29a749e1cf4d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "ÁGUAS COM GAS PURIFICADA", price: "2.70€", description: "", imageUrl: "https://images.unsplash.com/photo-1548839140-29a749e1cf4d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "ÀGUA COM GÁS", price: "2.20€", description: "", imageUrl: "https://images.unsplash.com/photo-1548839140-29a749e1cf4d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "ÁGUA GARRAFA 0.50CL", price: "1.70€", description: "", imageUrl: "https://images.unsplash.com/photo-1548839140-29a749e1cf4d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "ICE TEA", price: "2.20€", description: "", imageUrl: "https://images.unsplash.com/photo-1556679343-c7306c1976bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "COCA-COLA", price: "2.20€", description: "", imageUrl: "https://images.unsplash.com/photo-1561758033-d89a9ad46330?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "GUARANA", price: "2.20€", description: "", imageUrl: "https://images.unsplash.com/photo-1561758033-d89a9ad46330?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "SUMOL", price: "2.20€", description: "", imageUrl: "https://images.unsplash.com/photo-1561758033-d89a9ad46330?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "COMPAL", price: "2.00€", description: "", imageUrl: "https://images.unsplash.com/photo-1561758033-d89a9ad46330?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "SAGRES", price: "2.20€", description: "", imageUrl: "https://images.unsplash.com/photo-1608270586620-248524c67de9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "SAGRES PRETA", price: "2.50€", description: "", imageUrl: "https://images.unsplash.com/photo-1608270586620-248524c67de9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "SAGRES ZERO", price: "2.50€", description: "", imageUrl: "https://images.unsplash.com/photo-1608270586620-248524c67de9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "SAGRES BOHEMIA", price: "2.50€", description: "", imageUrl: "https://images.unsplash.com/photo-1608270586620-248524c67de9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "BANDIDA DO POMAR", price: "2.50€", description: "", imageUrl: "https://images.unsplash.com/photo-1608270586620-248524c67de9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "CANECA HEINEKEN", price: "4.00€", description: "", imageUrl: "https://images.unsplash.com/photo-1608270586620-248524c67de9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "IMPERIAL HEINEKEN", price: "2.50€", description: "", imageUrl: "https://images.unsplash.com/photo-1608270586620-248524c67de9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      
+      // Vinho Tinto
+      { name: "DONA ERMELINDA", price: "12.00€", description: "VINHO TINTO", imageUrl: "https://images.unsplash.com/photo-1474722883778-792e7990302f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "DONA ERMELINDA RESERVA", price: "15.00€", description: "VINHO TINTO", imageUrl: "https://images.unsplash.com/photo-1474722883778-792e7990302f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "ERMELINDA SYRAH RESERVA", price: "16.00€", description: "VINHO TINTO", imageUrl: "https://images.unsplash.com/photo-1474722883778-792e7990302f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "QUINTA DA MIMOSA", price: "17.00€", description: "VINHO TINTO", imageUrl: "https://images.unsplash.com/photo-1474722883778-792e7990302f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "HERDADE DOS GROUS", price: "20.00€", description: "VINHO TINTO", imageUrl: "https://images.unsplash.com/photo-1474722883778-792e7990302f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "HERDADE DOS GROUS RESERVA", price: "45.00€", description: "VINHO TINTO", imageUrl: "https://images.unsplash.com/photo-1474722883778-792e7990302f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "ASSOBIO", price: "10.00€", description: "VINHO TINTO", imageUrl: "https://images.unsplash.com/photo-1474722883778-792e7990302f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "MONTE VELHO", price: "12.00€", description: "VINHO TINTO", imageUrl: "https://images.unsplash.com/photo-1474722883778-792e7990302f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "CARM", price: "13.00€", description: "VINHO TINTO", imageUrl: "https://images.unsplash.com/photo-1474722883778-792e7990302f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "CARM RESERVA", price: "22.00€", description: "VINHO TINTO", imageUrl: "https://images.unsplash.com/photo-1474722883778-792e7990302f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "CAIADO", price: "12.00€", description: "VINHO TINTO", imageUrl: "https://images.unsplash.com/photo-1474722883778-792e7990302f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "TOURINGA NACIONAL", price: "17.00€", description: "VINHO TINTO", imageUrl: "https://images.unsplash.com/photo-1474722883778-792e7990302f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "ALTITUDE RESERVA", price: "25.00€", description: "VINHO TINTO", imageUrl: "https://images.unsplash.com/photo-1474722883778-792e7990302f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "PAI CHÃO", price: "90.00€", description: "VINHO TINTO", imageUrl: "https://images.unsplash.com/photo-1474722883778-792e7990302f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "PAPA FIGOS", price: "15.00€", description: "VINHO TINTO", imageUrl: "https://images.unsplash.com/photo-1474722883778-792e7990302f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "CARTUXA", price: "35.00€", description: "VINHO TINTO", imageUrl: "https://images.unsplash.com/photo-1474722883778-792e7990302f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      
+      // Vinho Branco
+      { name: "DONA ERMELINDA RESERVA (BRANCO)", price: "15.00€", description: "VINHO BRANCO", imageUrl: "https://images.unsplash.com/photo-1474722883778-792e7990302f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "HERDADE DOS GROUS (BRANCO)", price: "20.00€", description: "VINHO BRANCO", imageUrl: "https://images.unsplash.com/photo-1474722883778-792e7990302f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "ASSOBIO (BRANCO)", price: "12.00€", description: "VINHO BRANCO", imageUrl: "https://images.unsplash.com/photo-1474722883778-792e7990302f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "MONTE VELHO (BRANCO)", price: "12.00€", description: "VINHO BRANCO", imageUrl: "https://images.unsplash.com/photo-1474722883778-792e7990302f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "CAIADO (BRANCO)", price: "12.00€", description: "VINHO BRANCO", imageUrl: "https://images.unsplash.com/photo-1474722883778-792e7990302f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "TOURINGA NACIONAL (BRANCO)", price: "17.00€", description: "VINHO BRANCO", imageUrl: "https://images.unsplash.com/photo-1474722883778-792e7990302f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "PAPA FIGOS (BRANCO)", price: "15.00€", description: "VINHO BRANCO", imageUrl: "https://images.unsplash.com/photo-1474722883778-792e7990302f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "ALTITUDE RESERVA (BRANCO)", price: "27.00€", description: "VINHO BRANCO", imageUrl: "https://images.unsplash.com/photo-1474722883778-792e7990302f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "HERDADE DOS GROUS RESERVA (BRANCO)", price: "30.00€", description: "VINHO BRANCO", imageUrl: "https://images.unsplash.com/photo-1474722883778-792e7990302f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      
+      // Vinho Rosé
+      { name: "MATEUS", price: "12.00€", description: "VINHO ROSÉ", imageUrl: "https://images.unsplash.com/photo-1474722883778-792e7990302f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "CAIADO ROSÉ", price: "10.00€", description: "VINHO ROSÉ", imageUrl: "https://images.unsplash.com/photo-1474722883778-792e7990302f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      
+      // Sangrias
+      { name: "SANGRIA BRANCA 1L", price: "14.90€", description: "", imageUrl: "https://images.unsplash.com/photo-1571613316887-6f8d5cbf7ef7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "SANGRIA BRANCA 2L", price: "21.90€", description: "", imageUrl: "https://images.unsplash.com/photo-1571613316887-6f8d5cbf7ef7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "SANGRIA TINTA 1L", price: "14.90€", description: "", imageUrl: "https://images.unsplash.com/photo-1571613316887-6f8d5cbf7ef7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "SANGRIA TINTA 2L", price: "21.90€", description: "", imageUrl: "https://images.unsplash.com/photo-1571613316887-6f8d5cbf7ef7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "SANGRIA ESPUMANTE 1L", price: "17.90€", description: "", imageUrl: "https://images.unsplash.com/photo-1571613316887-6f8d5cbf7ef7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "SANGRIA ESPUMANTE 2L", price: "24.90€", description: "", imageUrl: "https://images.unsplash.com/photo-1571613316887-6f8d5cbf7ef7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "SANGRIA FRUTOS VERMELHOS 1L", price: "17.90€", description: "", imageUrl: "https://images.unsplash.com/photo-1571613316887-6f8d5cbf7ef7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "SANGRIA FRUTOS VERMELHOS 2L", price: "24.90€", description: "", imageUrl: "https://images.unsplash.com/photo-1571613316887-6f8d5cbf7ef7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "SANGRIA MANGA E MARACUJÁ 1L", price: "17.90€", description: "", imageUrl: "https://images.unsplash.com/photo-1571613316887-6f8d5cbf7ef7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "SANGRIA MANGA E MARACUJÁ 2L", price: "24.90€", description: "", imageUrl: "https://images.unsplash.com/photo-1571613316887-6f8d5cbf7ef7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "SANGRIA TROPICAL 1L", price: "17.90€", description: "", imageUrl: "https://images.unsplash.com/photo-1571613316887-6f8d5cbf7ef7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "SANGRIA TROPICAL 2L", price: "24.90€", description: "", imageUrl: "https://images.unsplash.com/photo-1571613316887-6f8d5cbf7ef7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      
+      // Bebidas Alcoolicas
+      { name: "MOSCATEL", price: "3.50€", description: "", imageUrl: "https://images.unsplash.com/photo-1474722883778-792e7990302f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "LICOR BEIRÃO", price: "4.50€", description: "", imageUrl: "https://images.unsplash.com/photo-1474722883778-792e7990302f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "AMENDOA AMARGA", price: "3.50€", description: "", imageUrl: "https://images.unsplash.com/photo-1474722883778-792e7990302f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "CRF", price: "5.00€", description: "", imageUrl: "https://images.unsplash.com/photo-1474722883778-792e7990302f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "VELHO TERRA", price: "4.50€", description: "", imageUrl: "https://images.unsplash.com/photo-1474722883778-792e7990302f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "MALIBU", price: "5.00€", description: "", imageUrl: "https://images.unsplash.com/photo-1474722883778-792e7990302f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "BAILYEIS", price: "5.00€", description: "", imageUrl: "https://images.unsplash.com/photo-1474722883778-792e7990302f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "MACIEIRA", price: "5.00€", description: "", imageUrl: "https://images.unsplash.com/photo-1474722883778-792e7990302f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "LOGAN", price: "10.00€", description: "", imageUrl: "https://images.unsplash.com/photo-1474722883778-792e7990302f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "BUSHMILLS", price: "5.00€", description: "", imageUrl: "https://images.unsplash.com/photo-1474722883778-792e7990302f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "FAMOUS GROUSE", price: "5.00€", description: "", imageUrl: "https://images.unsplash.com/photo-1474722883778-792e7990302f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "JAMENSON", price: "5.00€", description: "", imageUrl: "https://images.unsplash.com/photo-1474722883778-792e7990302f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "CUTTY SARK", price: "4.50€", description: "", imageUrl: "https://images.unsplash.com/photo-1474722883778-792e7990302f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "J&B 15 ANOS RESERVA", price: "12.00€", description: "", imageUrl: "https://images.unsplash.com/photo-1474722883778-792e7990302f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      
+      // Cocktails
+      { name: "COCKTAIL SEM ÁLCOOL", price: "6.00€", description: "", imageUrl: "https://images.unsplash.com/photo-1551024601-bec78aea704b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "CAIPIRINHA", price: "6.00€", description: "", imageUrl: "https://images.unsplash.com/photo-1551024601-bec78aea704b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "CAIPIBLACK", price: "6.00€", description: "", imageUrl: "https://images.unsplash.com/photo-1551024601-bec78aea704b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "MARGUERITA", price: "8.00€", description: "", imageUrl: "https://images.unsplash.com/photo-1551024601-bec78aea704b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "MOJITO", price: "8.00€", description: "", imageUrl: "https://images.unsplash.com/photo-1551024601-bec78aea704b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "APÉROL SPRITZ", price: "6.00€", description: "", imageUrl: "https://images.unsplash.com/photo-1551024601-bec78aea704b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "MARTINI", price: "3.50€", description: "", imageUrl: "https://images.unsplash.com/photo-1551024601-bec78aea704b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "BOMBAY", price: "8.00€", description: "", imageUrl: "https://images.unsplash.com/photo-1551024601-bec78aea704b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "BEEFEATER PINK", price: "8.00€", description: "", imageUrl: "https://images.unsplash.com/photo-1551024601-bec78aea704b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "BEEFEATER", price: "8.00€", description: "", imageUrl: "https://images.unsplash.com/photo-1551024601-bec78aea704b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "TANQUERAY", price: "8.00€", description: "", imageUrl: "https://images.unsplash.com/photo-1551024601-bec78aea704b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
     ];
 
     // Add all menu items to storage
