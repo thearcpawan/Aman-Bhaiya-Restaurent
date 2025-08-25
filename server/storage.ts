@@ -47,7 +47,7 @@ export class MemStorage implements IStorage {
       name: "Casa Da Peixe",
       slug: "casa-da-peixe",
       description: "Specializing in the freshest seafood and traditional Portuguese coastal cuisine. Our dishes celebrate the bounty of the sea with authentic recipes passed down through generations of fishermen and coastal cooks.",
-      address: "Portugal",
+      address: "Largo José Afonso 64, 2900-633\nSetúbal, Portugal",
       phone: "+351 926 091 468",
       email: "info@casadapeixe.pt",
       hours: "Tuesday - Thursday: 12:00 PM - 10:00 PM\nFriday - Saturday: 12:00 PM - 11:00 PM\nSunday: 12:00 PM - 9:00 PM\nMonday: Closed",
