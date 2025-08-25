@@ -41,33 +41,33 @@ export class MemStorage implements IStorage {
   }
 
   private initializeData() {
-    // Initialize with Porto and Lisboa restaurants
-    const porto: Restaurant = {
-      id: "porto-id",
-      name: "Restaurante Porto",
-      slug: "porto",
-      description: "Nestled in the heart of the city, Restaurante Porto brings the authentic flavors of Northern Portugal to your table. Our family recipes, passed down through generations, celebrate the rich culinary heritage of Porto.",
-      address: "Rua das Flores, 123\n4000-123 Porto, Portugal",
-      phone: "+351 220 123 456",
-      email: "porto@casadossabores.pt",
+    // Initialize with Casa Da Peixe and Lapicanha restaurants
+    const casaDaPeixe: Restaurant = {
+      id: "casa-da-peixe-id",
+      name: "Casa Da Peixe",
+      slug: "casa-da-peixe",
+      description: "Specializing in the freshest seafood and traditional Portuguese coastal cuisine. Our dishes celebrate the bounty of the sea with authentic recipes passed down through generations of fishermen and coastal cooks.",
+      address: "Rua da Ribeira, 89\n4050-513 Porto, Portugal",
+      phone: "+351 220 345 678",
+      email: "info@casadapeixe.pt",
       hours: "Tuesday - Thursday: 12:00 PM - 10:00 PM\nFriday - Saturday: 12:00 PM - 11:00 PM\nSunday: 12:00 PM - 9:00 PM\nMonday: Closed",
       createdAt: new Date(),
     };
 
-    const lisboa: Restaurant = {
-      id: "lisboa-id",
-      name: "Restaurante Lisboa",
-      slug: "lisboa",
-      description: "Experience the vibrant culinary scene of Lisbon in our contemporary restaurant. We blend traditional Portuguese flavors with modern techniques to create an unforgettable dining experience.",
-      address: "Avenida da Liberdade, 456\n1250-096 Lisboa, Portugal",
-      phone: "+351 210 987 654",
-      email: "lisboa@casadossabores.pt",
+    const lapicanha: Restaurant = {
+      id: "lapicanha-id",
+      name: "Lapicanha",
+      slug: "lapicanha",
+      description: "Premium grilled meats and traditional Portuguese flavors in a warm, rustic atmosphere. We specialize in perfectly prepared picanha and other prime cuts, paired with authentic Portuguese sides and wines.",
+      address: "Avenida da República, 245\n1050-186 Lisboa, Portugal",
+      phone: "+351 210 654 321",
+      email: "reservas@lapicanha.pt",
       hours: "Monday - Thursday: 6:00 PM - 11:00 PM\nFriday - Saturday: 6:00 PM - 12:00 AM\nSunday: 6:00 PM - 10:00 PM",
       createdAt: new Date(),
     };
 
-    this.restaurants.set(porto.id, porto);
-    this.restaurants.set(lisboa.id, lisboa);
+    this.restaurants.set(casaDaPeixe.id, casaDaPeixe);
+    this.restaurants.set(lapicanha.id, lapicanha);
   }
 
   // Restaurants

@@ -11,13 +11,13 @@ interface MenuSectionProps {
 
 const categoryImages = {
   starters: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
-  mains: (restaurant: Restaurant) => restaurant.slug === "porto" 
+  mains: (restaurant: Restaurant) => restaurant.slug === "casa-da-peixe" 
     ? "https://images.unsplash.com/photo-1485963631004-f2f00b1d6606?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250"
     : "https://images.unsplash.com/photo-1546833999-b9f581a1996d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
-  desserts: (restaurant: Restaurant) => restaurant.slug === "porto" 
+  desserts: (restaurant: Restaurant) => restaurant.slug === "casa-da-peixe" 
     ? "https://images.unsplash.com/photo-1509440159596-0249088772ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250"
     : "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
-  drinks: (restaurant: Restaurant) => restaurant.slug === "porto" 
+  drinks: (restaurant: Restaurant) => restaurant.slug === "casa-da-peixe" 
     ? "https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250"
     : "https://images.unsplash.com/photo-1474722883778-792e7990302f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250"
 };
@@ -50,7 +50,7 @@ export default function MenuSection({ restaurant }: MenuSectionProps) {
     <section className="py-16 bg-beige-light">
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="font-serif text-4xl font-bold text-center text-wine mb-12">
-          {restaurant.slug === "porto" ? "Our Menu" : "Contemporary Menu"}
+          {restaurant.slug === "casa-da-peixe" ? "Fresh Seafood Menu" : "Premium Meat Menu"}
         </h2>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">

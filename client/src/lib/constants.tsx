@@ -1,14 +1,14 @@
 export const RESTAURANTS = {
-  porto: {
-    name: "Restaurante Porto",
-    slug: "porto",
-    tagline: "Traditional Northern Portuguese flavors",
+  "casa-da-peixe": {
+    name: "Casa Da Peixe",
+    slug: "casa-da-peixe",
+    tagline: "Fresh seafood and Portuguese coastal flavors",
     heroImage: "https://images.unsplash.com/photo-1567521464027-f127ff144326?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300",
   },
-  lisboa: {
-    name: "Restaurante Lisboa", 
-    slug: "lisboa",
-    tagline: "Contemporary Lisbon-inspired cuisine",
+  lapicanha: {
+    name: "Lapicanha", 
+    slug: "lapicanha",
+    tagline: "Premium grilled meats and traditional flavors",
     heroImage: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300",
   },
 } as const;

@@ -177,7 +177,7 @@ export default function Home() {
               </div>
               <h3 className="font-serif text-2xl font-semibold text-wine mb-4">Two Unique Locations</h3>
               <p className="text-gray-600">
-                Experience different facets of Portuguese cuisine - traditional northern flavors in Porto and contemporary Lisbon-style dining.
+                Experience different facets of Portuguese cuisine - fresh seafood at Casa Da Peixe and premium grilled meats at Lapicanha.
               </p>
             </div>
           </div>
@@ -220,7 +220,7 @@ export default function Home() {
                   ))}
                 </div>
                 <p className="text-gray-600 mb-6 italic">
-                  "Both restaurants offer incredible food, but each has its own personality. Porto feels like dining in a traditional Portuguese home."
+                  "Both restaurants offer incredible food, but each has its own personality. Casa Da Peixe has amazing seafood, while Lapicanha serves the best grilled meats."
                 </p>
                 <div className="font-semibold text-wine">João Silva</div>
                 <div className="text-sm text-gray-500">Regular Customer</div>
@@ -257,18 +257,18 @@ export default function Home() {
           
           <div className="flex flex-col md:flex-row gap-6 justify-center">
             <Button
-              onClick={() => handleRestaurantChoice('porto')}
+              onClick={() => handleRestaurantChoice('casa-da-peixe')}
               className="bg-white text-wine hover:bg-beige-light px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300"
-              data-testid="cta-porto"
+              data-testid="cta-casa-da-peixe"
             >
-              Experience Porto Tradition
+              Experience Casa Da Peixe
             </Button>
             <Button
-              onClick={() => handleRestaurantChoice('lisboa')}
+              onClick={() => handleRestaurantChoice('lapicanha')}
               className="bg-beige text-wine hover:bg-beige-light px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300"
-              data-testid="cta-lisboa"
+              data-testid="cta-lapicanha"
             >
-              Discover Lisboa Modern
+              Discover Lapicanha
             </Button>
           </div>
         </div>
@@ -296,16 +296,16 @@ export default function Home() {
               </div>
             </div>
             <div>
-              <h4 className="font-semibold text-lg mb-4">Restaurante Porto</h4>
+              <h4 className="font-semibold text-lg mb-4">Casa Da Peixe</h4>
               <p className="text-gray-300 text-sm">
-                Rua das Flores, 123<br />
+                Rua da Ribeira, 89<br />
                 Porto, Portugal
               </p>
             </div>
             <div>
-              <h4 className="font-semibold text-lg mb-4">Restaurante Lisboa</h4>
+              <h4 className="font-semibold text-lg mb-4">Lapicanha</h4>
               <p className="text-gray-300 text-sm">
-                Avenida da Liberdade, 456<br />
+                Avenida da República, 245<br />
                 Lisboa, Portugal
               </p>
             </div>
