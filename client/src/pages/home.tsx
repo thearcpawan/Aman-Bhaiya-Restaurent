@@ -305,8 +305,8 @@ export default function Home() {
             <div>
               <h4 className="font-semibold text-lg mb-4">Casa Da Peixe</h4>
               <p className="text-gray-300 text-sm">
-                Rua da Ribeira, 89<br />
-                Porto, Portugal
+                Largo José Afonso 64, 2900-633<br />
+                Setúbal, Portugal
               </p>
             </div>
             <div>
