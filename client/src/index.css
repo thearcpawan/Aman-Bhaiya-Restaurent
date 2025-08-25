@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0 0% 100%);
+  --foreground: hsl(0 0% 17.3%);
+  --card: hsl(33 26% 95%);
+  --card-foreground: hsl(0 0% 17.3%);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(0 0% 17.3%);
+  --primary: hsl(342 83% 31%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(107 22% 37%);
+  --secondary-foreground: hsl(0 0% 100%);
+  --muted: hsl(33 26% 95%);
+  --muted-foreground: hsl(0 0% 45%);
+  --accent: hsl(33 26% 90%);
+  --accent-foreground: hsl(0 0% 17.3%);
+  --destructive: hsl(0 84% 60%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --border: hsl(33 26% 90%);
+  --input: hsl(33 26% 95%);
+  --ring: hsl(342 83% 31%);
+  
+  /* Custom Portuguese restaurant colors */
+  --wine: hsl(342 65% 35%);
+  --wine-light: hsl(342 65% 45%);
+  --wine-dark: hsl(342 65% 25%);
+  --beige: hsl(33 26% 87%);
+  --beige-light: hsl(33 26% 95%);
+  --olive: hsl(68 30% 35%);
+  --olive-light: hsl(68 30% 45%);
+  --charcoal: hsl(0 0% 17%);
+  
+  --font-sans: "Inter", sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --font-mono: "Geist Mono", monospace;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: hsl(0 0% 3.9%);
+  --foreground: hsl(0 0% 98%);
+  --card: hsl(0 0% 3.9%);
+  --card-foreground: hsl(0 0% 98%);
+  --popover: hsl(0 0% 3.9%);
+  --popover-foreground: hsl(0 0% 98%);
+  --primary: hsl(342 83% 31%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(0 0% 14.9%);
+  --secondary-foreground: hsl(0 0% 98%);
+  --muted: hsl(0 0% 14.9%);
+  --muted-foreground: hsl(0 0% 63.9%);
+  --accent: hsl(0 0% 14.9%);
+  --accent-foreground: hsl(0 0% 98%);
+  --destructive: hsl(0 62.8% 30.6%);
+  --destructive-foreground: hsl(0 0% 98%);
+  --border: hsl(0 0% 14.9%);
+  --input: hsl(0 0% 14.9%);
+  --ring: hsl(342 83% 31%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer utilities {
+  .text-wine {
+    color: var(--wine);
+  }
+  
+  .text-wine-light {
+    color: var(--wine-light);
+  }
+  
+  .text-wine-dark {
+    color: var(--wine-dark);
+  }
+  
+  .text-beige {
+    color: var(--beige);
+  }
+  
+  .text-beige-light {
+    color: var(--beige-light);
+  }
+  
+  .text-olive {
+    color: var(--olive);
+  }
+  
+  .text-olive-light {
+    color: var(--olive-light);
+  }
+  
+  .text-charcoal {
+    color: var(--charcoal);
+  }
+  
+  .bg-wine {
+    background-color: var(--wine);
+  }
+  
+  .bg-wine-light {
+    background-color: var(--wine-light);
+  }
+  
+  .bg-wine-dark {
+    background-color: var(--wine-dark);
+  }
+  
+  .bg-beige {
+    background-color: var(--beige);
+  }
+  
+  .bg-beige-light {
+    background-color: var(--beige-light);
+  }
+  
+  .bg-olive {
+    background-color: var(--olive);
+  }
+  
+  .bg-olive-light {
+    background-color: var(--olive-light);
+  }
+  
+  .bg-charcoal {
+    background-color: var(--charcoal);
+  }
+  
+  .border-wine {
+    border-color: var(--wine);
+  }
+  
+  .border-beige {
+    border-color: var(--beige);
+  }
+  
+  .border-olive {
+    border-color: var(--olive);
+  }
+  
+  .hover\:bg-wine:hover {
+    background-color: var(--wine);
+  }
+  
+  .hover\:bg-wine-dark:hover {
+    background-color: var(--wine-dark);
+  }
+  
+  .hover\:bg-olive-light:hover {
+    background-color: var(--olive-light);
+  }
+  
+  .hover\:text-wine:hover {
+    color: var(--wine);
+  }
+  
+  .focus\:border-wine:focus {
+    border-color: var(--wine);
+  }
+  
+  .focus\:ring-wine:focus {
+    --tw-ring-color: var(--wine);
+  }
+}
