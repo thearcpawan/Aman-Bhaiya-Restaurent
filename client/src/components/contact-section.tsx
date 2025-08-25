@@ -72,13 +72,13 @@ export default function ContactSection({ restaurant }: ContactSectionProps) {
                     <div>
                       <h3 className="font-semibold text-lg mb-2">Instagram</h3>
                       <a 
-                        href="https://instagram.com/265104317"
+                        href="https://www.instagram.com/casadepeixe3/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-gray-600 hover:text-wine transition-colors"
                         data-testid="link-instagram"
                       >
-                        @265104317
+                        @casadepeixe3
                       </a>
                     </div>
                   </div>
