@@ -29,7 +29,7 @@ export default function Navigation() {
           <div className="flex items-center">
             <Link href="/" data-testid="link-home">
               <h1 className="font-serif text-2xl font-bold text-wine cursor-pointer hover:text-wine-light transition-colors">
-                Casa dos Sabores
+                Casa Da Peixe & Lapicanha
               </h1>
             </Link>
           </div>
