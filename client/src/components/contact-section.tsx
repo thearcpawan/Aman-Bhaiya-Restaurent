@@ -84,34 +84,6 @@ export default function ContactSection({ restaurant }: ContactSectionProps) {
                   </div>
                 </>
               )}
-
-              <div className="flex items-start space-x-4">
-                <div className="bg-wine text-white p-3 rounded-lg flex-shrink-0">
-                  <Mail className="h-6 w-6" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-lg mb-2">Email</h3>
-                  <a 
-                    href={`mailto:${restaurant.email}`}
-                    className="text-gray-600 hover:text-wine transition-colors"
-                    data-testid="link-email"
-                  >
-                    {restaurant.email}
-                  </a>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4">
-                <div className="bg-wine text-white p-3 rounded-lg flex-shrink-0">
-                  <Clock className="h-6 w-6" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-lg mb-2">Hours</h3>
-                  <div className="text-gray-600 whitespace-pre-line">
-                    {restaurant.hours}
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
 
