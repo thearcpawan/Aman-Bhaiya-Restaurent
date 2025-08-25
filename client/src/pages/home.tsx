@@ -24,7 +24,7 @@ export default function Home() {
       />
       
       {/* About Casa Da Peixe & Lapicanha Section */}
-      <section className="py-20 bg-white">
+      <section className="pt-40 pb-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-wine mb-6">
