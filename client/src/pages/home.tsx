@@ -12,9 +12,16 @@ export default function Home() {
     setLocation(`/restaurant/${slug}`);
   };
 
+  const handleMenuAccess = (slug: string) => {
+    setLocation(`/restaurant/${slug}#menu`);
+  };
+
   return (
     <div className="min-h-screen">
-      <HeroSection onRestaurantChoice={handleRestaurantChoice} />
+      <HeroSection 
+        onRestaurantChoice={handleRestaurantChoice}
+        onMenuAccess={handleMenuAccess}
+      />
       
       {/* About Casa dos Sabores Section */}
       <section className="py-20 bg-white">

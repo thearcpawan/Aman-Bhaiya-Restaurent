@@ -1,11 +1,13 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { RESTAURANTS } from "@/lib/constants";
 
 interface HeroSectionProps {
   onRestaurantChoice: (slug: string) => void;
+  onMenuAccess: (slug: string) => void;
 }
 
-export default function HeroSection({ onRestaurantChoice }: HeroSectionProps) {
+export default function HeroSection({ onRestaurantChoice, onMenuAccess }: HeroSectionProps) {
   return (
     <div 
       className="relative h-screen bg-cover bg-center bg-fixed"
@@ -24,8 +26,7 @@ export default function HeroSection({ onRestaurantChoice }: HeroSectionProps) {
             {Object.entries(RESTAURANTS).map(([key, restaurant]) => (
               <Card
                 key={key}
-                className="bg-white/10 backdrop-blur-sm border-none max-w-sm cursor-pointer hover:bg-white/20 transition-all duration-300 transform hover:scale-105"
-                onClick={() => onRestaurantChoice(restaurant.slug)}
+                className="bg-white/10 backdrop-blur-sm border-none max-w-sm hover:bg-white/20 transition-all duration-300 transform hover:scale-105"
                 data-testid={`card-restaurant-choice-${key}`}
               >
                 <CardContent className="p-8">
@@ -37,9 +38,26 @@ export default function HeroSection({ onRestaurantChoice }: HeroSectionProps) {
                   <h3 className="font-serif text-2xl font-semibold mb-2 text-white">
                     {restaurant.name}
                   </h3>
-                  <p className="text-beige-light">
+                  <p className="text-beige-light mb-6">
                     {restaurant.tagline}
                   </p>
+                  <div className="flex flex-col gap-3">
+                    <Button
+                      onClick={() => onMenuAccess(restaurant.slug)}
+                      className="bg-wine hover:bg-wine/90 text-white w-full"
+                      data-testid={`button-menu-${key}`}
+                    >
+                      View Menu
+                    </Button>
+                    <Button
+                      onClick={() => onRestaurantChoice(restaurant.slug)}
+                      variant="outline"
+                      className="border-white text-white hover:bg-white hover:text-wine w-full"
+                      data-testid={`button-learn-more-${key}`}
+                    >
+                      Learn More
+                    </Button>
+                  </div>
                 </CardContent>
               </Card>
             ))}

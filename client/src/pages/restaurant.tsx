@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useParams } from "wouter";
 import { useQuery } from "@tanstack/react-query";
 import { Button } from "@/components/ui/button";
@@ -15,6 +15,14 @@ type Section = "about" | "menu" | "reservations" | "gallery" | "contact";
 export default function Restaurant() {
   const { slug } = useParams<{ slug: string }>();
   const [activeSection, setActiveSection] = useState<Section>("about");
+
+  // Handle hash navigation to specific sections
+  useEffect(() => {
+    const hash = window.location.hash.substring(1); // Remove the #
+    if (hash && ["about", "menu", "reservations", "gallery", "contact"].includes(hash)) {
+      setActiveSection(hash as Section);
+    }
+  }, []);
 
   const { data: restaurant, isLoading, error } = useQuery<Restaurant>({
     queryKey: ["/api/restaurants", slug],
