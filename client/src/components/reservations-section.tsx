@@ -77,7 +77,7 @@ export default function ReservationsSection({ restaurant }: ReservationsSectionP
     <section className="py-16 bg-white">
       <div className="max-w-4xl mx-auto px-4">
         <h2 className="font-serif text-4xl font-bold text-center text-wine mb-12">
-          {restaurant.slug === "porto" ? "Make a Reservation" : "Reserve Your Table"}
+          {restaurant.slug === "casa-da-peixe" ? "Make a Reservation" : "Reserve Your Table"}
         </h2>
         
         <Card className="bg-beige-light shadow-lg">
@@ -208,7 +208,7 @@ export default function ReservationsSection({ restaurant }: ReservationsSectionP
                       <FormControl>
                         <Textarea
                           rows={4}
-                          placeholder={restaurant.slug === "porto" 
+                          placeholder={restaurant.slug === "casa-da-peixe" 
                             ? "Any dietary restrictions or special occasions..." 
                             : "Wine pairing preferences, dietary restrictions, special occasions..."
                           }

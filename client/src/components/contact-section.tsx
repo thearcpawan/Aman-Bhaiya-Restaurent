@@ -11,7 +11,7 @@ export default function ContactSection({ restaurant }: ContactSectionProps) {
     <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="font-serif text-4xl font-bold text-center text-wine mb-12">
-          {restaurant.slug === "porto" ? "Contact Us" : "Visit Us"}
+          {restaurant.slug === "casa-da-peixe" ? "Contact Us" : "Visit Us"}
         </h2>
         
         <div className="grid lg:grid-cols-2 gap-12">

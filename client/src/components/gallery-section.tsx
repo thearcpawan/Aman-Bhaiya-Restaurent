@@ -13,14 +13,14 @@ interface GallerySectionProps {
 }
 
 const defaultImages = {
-  porto: [
+  "casa-da-peixe": [
     "https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300",
     "https://images.unsplash.com/photo-1534766555764-ce878a5e3a2b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300",
     "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300",
     "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300",
     "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
   ],
-  lisboa: [
+  lapicanha: [
     "https://images.unsplash.com/photo-1592861956120-e524fc739696?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300",
     "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300",
     "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300",
@@ -83,13 +83,13 @@ export default function GallerySection({ restaurant }: GallerySectionProps) {
 
   const displayImages = photos && photos.length > 0 
     ? photos.map(photo => photo.imageUrl)
-    : defaultImages[restaurant.slug as keyof typeof defaultImages] || defaultImages.porto;
+    : defaultImages[restaurant.slug as keyof typeof defaultImages] || defaultImages["casa-da-peixe"];
 
   return (
     <section className="py-16 bg-beige-light">
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="font-serif text-4xl font-bold text-center text-wine mb-12">
-          {restaurant.slug === "porto" ? "Gallery" : "Our Space"}
+          {restaurant.slug === "casa-da-peixe" ? "Gallery" : "Our Space"}
         </h2>
         
         <div className="mb-8 text-center">
