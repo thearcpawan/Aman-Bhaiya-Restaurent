@@ -1,13 +1,15 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { RESTAURANTS } from "@/lib/constants";
 
 export default function Navigation() {
   const [location] = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [currentRestaurant, setCurrentRestaurant] = useState<string | null>(null);
+  const { language, setLanguage, t } = useLanguage();
 
   useEffect(() => {
     const match = location.match(/\/restaurant\/(\w+)/);
@@ -29,14 +31,14 @@ export default function Navigation() {
           <div className="flex items-center">
             <Link href="/" data-testid="link-home">
               <h1 className="font-serif text-lg sm:text-xl md:text-2xl font-bold text-wine cursor-pointer hover:text-wine-light transition-colors">
-                <span className="hidden sm:inline">Casa Da Peixe & Lapicanha</span>
-                <span className="sm:hidden">Casa Da Peixe<br />& Lapicanha</span>
+                <span className="hidden sm:inline">{t.nav.title}</span>
+                <span className="sm:hidden whitespace-pre-line">{t.nav.titleMobile}</span>
               </h1>
             </Link>
           </div>
           
-          {/* Desktop Restaurant Switcher */}
-          <div className="hidden md:flex items-center space-x-1">
+          {/* Desktop Restaurant Switcher & Language Switcher */}
+          <div className="hidden md:flex items-center space-x-2">
             {Object.entries(RESTAURANTS).map(([key, restaurant]) => (
               <Link key={key} href={`/restaurant/${restaurant.slug}`} data-testid={`link-restaurant-${key}`}>
                 <Button
@@ -48,14 +50,59 @@ export default function Navigation() {
                   }`}
                   data-testid={`button-nav-${key}`}
                 >
-                  {restaurant.name}
+                  {t.restaurants[key as keyof typeof t.restaurants].name}
                 </Button>
               </Link>
             ))}
+            
+            {/* Language Switcher */}
+            <div className="flex items-center space-x-1 ml-4 border-l border-gray-300 pl-4">
+              <Globe className="h-4 w-4 text-gray-600" />
+              <Button
+                variant={language === 'en' ? 'default' : 'ghost'}
+                size="sm"
+                onClick={() => setLanguage('en')}
+                className="px-2 py-1 text-sm"
+                data-testid="button-lang-en"
+              >
+                EN
+              </Button>
+              <Button
+                variant={language === 'pt' ? 'default' : 'ghost'}
+                size="sm"
+                onClick={() => setLanguage('pt')}
+                className="px-2 py-1 text-sm"
+                data-testid="button-lang-pt"
+              >
+                PT
+              </Button>
+            </div>
           </div>
 
-          {/* Mobile menu button */}
-          <div className="md:hidden flex items-center">
+          {/* Mobile menu button & Language switcher */}
+          <div className="md:hidden flex items-center space-x-2">
+            {/* Mobile Language Switcher */}
+            <div className="flex items-center space-x-1">
+              <Button
+                variant={language === 'en' ? 'default' : 'ghost'}
+                size="sm"
+                onClick={() => setLanguage('en')}
+                className="px-2 py-1 text-xs"
+                data-testid="button-mobile-lang-en"
+              >
+                EN
+              </Button>
+              <Button
+                variant={language === 'pt' ? 'default' : 'ghost'}
+                size="sm"
+                onClick={() => setLanguage('pt')}
+                className="px-2 py-1 text-xs"
+                data-testid="button-mobile-lang-pt"
+              >
+                PT
+              </Button>
+            </div>
+            
             <Button
               variant="ghost"
               size="sm"
@@ -85,7 +132,7 @@ export default function Navigation() {
                   onClick={() => setIsMobileMenuOpen(false)}
                   data-testid={`button-mobile-nav-${key}`}
                 >
-                  {restaurant.name}
+                  {t.restaurants[key as keyof typeof t.restaurants].name}
                 </Button>
               </Link>
             ))}

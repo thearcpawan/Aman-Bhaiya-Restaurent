@@ -2,6 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { Card, CardContent } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import PhotoUpload from "@/components/photo-upload";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { MENU_CATEGORIES } from "@/lib/constants";
 import type { Restaurant, MenuItem } from "@shared/schema";
 
@@ -23,6 +24,7 @@ const categoryImages = {
 };
 
 export default function MenuSection({ restaurant }: MenuSectionProps) {
+  const { t } = useLanguage();
   const { data: menuItems, isLoading } = useQuery<MenuItem[]>({
     queryKey: ["/api/restaurants", restaurant.id, "menu"],
   });
@@ -50,7 +52,7 @@ export default function MenuSection({ restaurant }: MenuSectionProps) {
     <section className="py-16 bg-beige-light">
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-center text-wine mb-8 sm:mb-12">
-          {restaurant.slug === "casa-da-peixe" ? "Fresh Seafood Menu" : "Premium Meat Menu"}
+          {t.menu.title[restaurant.slug as keyof typeof t.menu.title]}
         </h2>
         
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
@@ -70,7 +72,7 @@ export default function MenuSection({ restaurant }: MenuSectionProps) {
                     className="w-full h-32 sm:h-40 object-cover rounded-lg mb-3 sm:mb-4"
                   />
                   <h3 className="font-serif text-lg sm:text-xl md:text-2xl font-semibold text-wine mb-3 sm:mb-4">
-                    {category.name}
+                    {t.menu.categories[category.id as keyof typeof t.menu.categories]}
                   </h3>
                   
                   <div className="space-y-2 text-sm mb-4">
@@ -87,7 +89,7 @@ export default function MenuSection({ restaurant }: MenuSectionProps) {
                         </div>
                       ))
                     ) : (
-                      <p className="text-gray-500 italic">No items added yet</p>
+                      <p className="text-gray-500 italic">{t.menu.noItems}</p>
                     )}
                   </div>
                   

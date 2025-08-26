@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { RESTAURANTS } from "@/lib/constants";
 
 interface HeroSectionProps {
@@ -8,6 +9,8 @@ interface HeroSectionProps {
 }
 
 export default function HeroSection({ onRestaurantChoice, onMenuAccess }: HeroSectionProps) {
+  const { t } = useLanguage();
+  
   return (
     <div 
       className="relative min-h-screen bg-cover bg-center bg-fixed pb-32 z-10"
@@ -18,10 +21,10 @@ export default function HeroSection({ onRestaurantChoice, onMenuAccess }: HeroSe
       <div className="absolute inset-0 flex items-center justify-center py-16 z-20">
         <div className="text-center text-white px-4 max-w-6xl mx-auto">
           <h1 className="font-serif text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 leading-tight">
-            Casa Da Peixe & Lapicanha
+            {t.hero.title}
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl mb-8 sm:mb-12 font-light px-2">
-            Authentic Portuguese Cuisine, Two Unique Experiences
+            {t.hero.subtitle}
           </p>
           
           <div className="flex flex-col lg:flex-row gap-6 justify-center items-center max-w-4xl mx-auto">
@@ -38,17 +41,17 @@ export default function HeroSection({ onRestaurantChoice, onMenuAccess }: HeroSe
                     className="w-full h-40 sm:h-48 object-cover rounded-lg mb-4"
                   />
                   <h3 className="font-serif text-xl sm:text-2xl font-semibold mb-2 text-white">
-                    {restaurant.name}
+                    {t.restaurants[key as keyof typeof t.restaurants].name}
                   </h3>
                   <p className="text-beige-light mb-4 sm:mb-6 text-sm sm:text-base">
-                    {restaurant.tagline}
+                    {t.restaurants[key as keyof typeof t.restaurants].tagline}
                   </p>
                   <Button
                     onClick={() => onMenuAccess(restaurant.slug)}
                     className="bg-wine hover:bg-wine/90 text-white w-full min-h-[44px] text-base font-semibold"
                     data-testid={`button-menu-${key}`}
                   >
-                    View Menu
+                    {t.hero.viewMenu}
                   </Button>
                 </CardContent>
               </Card>
