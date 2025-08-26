@@ -59,7 +59,7 @@ export class MemStorage implements IStorage {
       name: "Lapicanha",
       slug: "lapicanha",
       description: "Premium grilled meats and traditional Portuguese flavors in a warm, rustic atmosphere. We specialize in perfectly prepared picanha and other prime cuts, paired with authentic Portuguese sides and wines.",
-      address: "Avenida da República, 245\n1050-186 Lisboa, Portugal",
+      address: "Rua José Afonso n 69\nSetúbal, Portugal",
       phone: "+351 915 214 437",
       email: "reservas@lapicanha.pt",
       hours: "Monday - Thursday: 6:00 PM - 11:00 PM\nFriday - Saturday: 6:00 PM - 12:00 AM\nSunday: 6:00 PM - 10:00 PM",
