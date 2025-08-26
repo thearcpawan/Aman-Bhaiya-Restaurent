@@ -28,11 +28,17 @@ interface GallerySectionProps {
 
 const defaultImages = {
   "casa-da-peixe": [
-    "https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300",
-    "https://images.unsplash.com/photo-1534766555764-ce878a5e3a2b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300",
-    "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300",
-    "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300",
-    "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
+    gallery1,    // Fresh seafood display and restaurant atmosphere
+    gallery2,    // Beautiful seafood platter with coastal ambiance
+    gallery3,    // Traditional Portuguese fish dishes
+    gallery4,    // Grilled seafood with seaside dining
+    gallery5,    // Fresh catch presentation with Portuguese wine
+    gallery6,    // Coastal restaurant interior and seafood specialties
+    gallery7,    // Premium seafood dishes with Portuguese wines
+    gallery8,    // Traditional Portuguese coastal cuisine
+    gallery9,    // Seafood platters with authentic Portuguese atmosphere
+    gallery10,   // Fresh fish preparation and coastal dining
+    gallery11    // Portuguese seafood tradition and hospitality
   ],
   lapicanha: [
     gallery1,    // Red cocktails and cozy bar atmosphere
