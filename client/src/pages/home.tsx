@@ -296,23 +296,6 @@ export default function Home() {
               <p className="text-gray-300 mb-4">
                 {t.home.footerDesc}
               </p>
-              <div className="flex space-x-4">
-                <a href="#" className="text-gray-300 hover:text-wine transition-colors" data-testid="link-facebook">
-                  Facebook
-                </a>
-                <a 
-                  href="https://www.instagram.com/casadepeixe3/" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="text-gray-300 hover:text-wine transition-colors" 
-                  data-testid="link-instagram"
-                >
-                  Instagram
-                </a>
-                <a href="#" className="text-gray-300 hover:text-wine transition-colors" data-testid="link-tripadvisor">
-                  TripAdvisor
-                </a>
-              </div>
             </div>
             <div>
               <h4 className="font-semibold text-lg mb-4">Casa Da Peixe</h4>
