@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { Phone, MessageCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
 import { insertReservationSchema } from "@shared/schema";
@@ -79,6 +80,61 @@ export default function ReservationsSection({ restaurant }: ReservationsSectionP
         <h2 className="font-serif text-4xl font-bold text-center text-wine mb-12">
           {restaurant.slug === "casa-da-peixe" ? "Make a Reservation" : "Reserve Your Table"}
         </h2>
+        
+        {/* Contact Options */}
+        <div className="bg-wine text-white rounded-lg p-6 mb-8">
+          <div className="text-center mb-6">
+            <h3 className="text-xl font-semibold mb-2">Prefer to Call?</h3>
+            <p className="text-beige-light">
+              Call us directly for immediate reservation confirmation
+            </p>
+          </div>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            {/* Phone Button */}
+            <a
+              href={`tel:${restaurant.phone}`}
+              className="flex items-center gap-3 bg-white text-wine px-6 py-3 rounded-lg font-semibold hover:bg-beige-light transition-colors w-full sm:w-auto justify-center"
+              data-testid="button-call"
+            >
+              <Phone className="h-5 w-5" />
+              Call {restaurant.phone}
+            </a>
+            
+            {/* WhatsApp Button for Casa Da Peixe */}
+            {restaurant.slug === "casa-da-peixe" && (
+              <a
+                href="https://wa.me/351926091468"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors w-full sm:w-auto justify-center"
+                data-testid="button-whatsapp"
+              >
+                <MessageCircle className="h-5 w-5" />
+                WhatsApp
+              </a>
+            )}
+          </div>
+          
+          <div className="text-center mt-4 text-sm text-beige-light">
+            <p>
+              {restaurant.slug === "casa-da-peixe" 
+                ? "Available every day • Call or WhatsApp for reservations" 
+                : "Available every day • Call for immediate confirmation"
+              }
+            </p>
+          </div>
+        </div>
+        
+        {/* Online Form Option */}
+        <div className="text-center mb-6">
+          <h3 className="text-lg font-semibold text-charcoal mb-2">
+            Or Fill Out the Form Below
+          </h3>
+          <p className="text-gray-600">
+            Submit your reservation request and we'll contact you to confirm
+          </p>
+        </div>
         
         <Card className="bg-beige-light shadow-lg">
           <CardContent className="p-8">
