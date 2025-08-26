@@ -73,13 +73,15 @@ export default function ContactSection({ restaurant }: ContactSectionProps) {
                 <div>
                   <h3 className="font-semibold text-lg mb-2">{t.contact.instagram}</h3>
                   <a 
-                    href="https://www.instagram.com/casadepeixe3/"
+                    href={restaurant.slug === "casa-da-peixe" 
+                      ? "https://www.instagram.com/casadepeixe3/" 
+                      : "https://www.instagram.com/lapicanha_setubal/"}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-gray-600 hover:text-wine transition-colors"
                     data-testid="link-instagram"
                   >
-                    @casadepeixe3
+                    {restaurant.slug === "casa-da-peixe" ? "@casadepeixe3" : "@lapicanha_setubal"}
                   </a>
                 </div>
               </div>
