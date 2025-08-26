@@ -9,7 +9,7 @@ export const RESTAURANTS = {
     name: "Lapicanha", 
     slug: "lapicanha",
     tagline: "Premium grilled meats and traditional flavors",
-    heroImage: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300",
+    heroImage: "/attached_assets/20250826_1937_Restaurant Dinner Scene_remix_01k3kq5abhek38da893mqvx8fc_1756229988434.png",
   },
 } as const;
 
