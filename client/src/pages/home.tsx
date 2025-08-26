@@ -4,9 +4,11 @@ import { RESTAURANTS } from "@/lib/constants";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import HeroSection from "@/components/hero-section";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Home() {
   const [, setLocation] = useLocation();
+  const { t } = useLanguage();
 
   const handleRestaurantChoice = (slug: string) => {
     setLocation(`/restaurant/${slug}`);
@@ -28,10 +30,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-wine mb-6">
-              About Casa Da Peixe & Lapicanha
+              {t.home.aboutTitle}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              For over two decades, we've been dedicated to bringing authentic Portuguese flavors to life through our two distinct culinary experiences. Each restaurant tells its own story of Portuguese heritage and passion.
+              {t.home.aboutSubtitle}
             </p>
           </div>
           
@@ -49,9 +51,9 @@ export default function Home() {
                   <Wine className="h-6 w-6" />
                 </div>
                 <div>
-                  <h3 className="font-serif text-2xl font-semibold text-wine mb-2">Traditional Heritage</h3>
+                  <h3 className="font-serif text-2xl font-semibold text-wine mb-2">{t.home.traditionalHeritage}</h3>
                   <p className="text-gray-600">
-                    Our recipes have been passed down through generations, preserving the authentic taste of Portugal's rich culinary history.
+                    {t.home.traditionalHeritageDesc}
                   </p>
                 </div>
               </div>
@@ -61,9 +63,9 @@ export default function Home() {
                   <Utensils className="h-6 w-6" />
                 </div>
                 <div>
-                  <h3 className="font-serif text-2xl font-semibold text-wine mb-2">Fresh Ingredients</h3>
+                  <h3 className="font-serif text-2xl font-semibold text-wine mb-2">{t.home.freshIngredients}</h3>
                   <p className="text-gray-600">
-                    We source the finest ingredients, many imported directly from Portugal, to ensure every dish captures the true essence of Portuguese cuisine.
+                    {t.home.freshIngredientsDesc}
                   </p>
                 </div>
               </div>
@@ -73,9 +75,9 @@ export default function Home() {
                   <Users className="h-6 w-6" />
                 </div>
                 <div>
-                  <h3 className="font-serif text-2xl font-semibold text-wine mb-2">Family Experience</h3>
+                  <h3 className="font-serif text-2xl font-semibold text-wine mb-2">{t.home.familyExperience}</h3>
                   <p className="text-gray-600">
-                    Every meal is crafted with love and served with the warmth of Portuguese hospitality, making you feel like family.
+                    {t.home.familyExperienceDesc}
                   </p>
                 </div>
               </div>
@@ -89,10 +91,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-wine mb-6">
-              Signature Dishes
+              {t.home.signatureDishes}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover our most beloved creations, each telling a story of Portuguese culinary excellence
+              {t.home.signatureDishesDesc}
             </p>
           </div>
           
@@ -153,7 +155,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-wine mb-6">
-              Why Choose Casa Da Peixe & Lapicanha
+              {t.home.whyChooseUs}
             </h2>
           </div>
           
@@ -162,9 +164,9 @@ export default function Home() {
               <div className="bg-wine text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Star className="h-8 w-8" />
               </div>
-              <h3 className="font-serif text-2xl font-semibold text-wine mb-4">Award-Winning Cuisine</h3>
+              <h3 className="font-serif text-2xl font-semibold text-wine mb-4">{t.home.awardWinning}</h3>
               <p className="text-gray-600">
-                Recognized by culinary experts and food critics for our authentic Portuguese dishes and exceptional service quality.
+                {t.home.awardWinningDesc}
               </p>
             </div>
             
@@ -172,9 +174,9 @@ export default function Home() {
               <div className="bg-olive text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Clock className="h-8 w-8" />
               </div>
-              <h3 className="font-serif text-2xl font-semibold text-wine mb-4">25+ Years Experience</h3>
+              <h3 className="font-serif text-2xl font-semibold text-wine mb-4">{t.home.experience25Years}</h3>
               <p className="text-gray-600">
-                Over two decades of perfecting our craft, building relationships with customers, and preserving Portuguese culinary traditions.
+                {t.home.experience25YearsDesc}
               </p>
             </div>
             
@@ -182,9 +184,9 @@ export default function Home() {
               <div className="bg-wine text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <MapPin className="h-8 w-8" />
               </div>
-              <h3 className="font-serif text-2xl font-semibold text-wine mb-4">Two Unique Locations</h3>
+              <h3 className="font-serif text-2xl font-semibold text-wine mb-4">{t.home.twoLocations}</h3>
               <p className="text-gray-600">
-                Experience different facets of Portuguese cuisine - fresh seafood at Casa Da Peixe and premium grilled meats at Lapicanha.
+                {t.home.twoLocationsDesc}
               </p>
             </div>
           </div>
@@ -196,10 +198,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-wine mb-6">
-              What Our Guests Say
+              {t.home.whatGuestsSay}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Hear from our valued customers about their dining experiences
+              {t.home.whatGuestsSayDesc}
             </p>
           </div>
           
@@ -256,10 +258,10 @@ export default function Home() {
       <section className="py-20 bg-wine text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6">
-            Ready to Experience Portugal?
+            {t.home.readyExperience}
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            Join us for an unforgettable culinary journey through the flavors of Portugal. Choose your dining adventure.
+            {t.home.readyExperienceDesc}
           </p>
           
           <div className="flex flex-col md:flex-row gap-6 justify-center">
@@ -268,14 +270,14 @@ export default function Home() {
               className="bg-white text-wine hover:bg-beige-light px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300"
               data-testid="cta-casa-da-peixe"
             >
-              Experience Casa Da Peixe
+              {t.home.experienceCasaDaPeixe}
             </Button>
             <Button
               onClick={() => handleRestaurantChoice('lapicanha')}
               className="bg-beige text-wine hover:bg-beige-light px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300"
               data-testid="cta-lapicanha"
             >
-              Discover Lapicanha
+              {t.home.discoverLapicanha}
             </Button>
           </div>
         </div>
@@ -288,7 +290,7 @@ export default function Home() {
             <div className="md:col-span-2">
               <h3 className="font-serif text-2xl font-bold text-wine mb-4">Casa Da Peixe & Lapicanha</h3>
               <p className="text-gray-300 mb-4">
-                Bringing the authentic taste of Portugal to your table with two unique dining experiences.
+                {t.home.footerDesc}
               </p>
               <div className="flex space-x-4">
                 <a href="#" className="text-gray-300 hover:text-wine transition-colors" data-testid="link-facebook">
@@ -318,7 +320,7 @@ export default function Home() {
             </div>
           </div>
           <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 Casa Da Peixe & Lapicanha. All rights reserved.</p>
+            <p>&copy; 2024 Casa Da Peixe & Lapicanha. {t.home.allRightsReserved}</p>
           </div>
         </div>
       </footer>

@@ -6,6 +6,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import PhotoUpload from "@/components/photo-upload";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
+import { useLanguage } from "@/contexts/LanguageContext";
 import type { Restaurant, GalleryPhoto } from "@shared/schema";
 
 // Import gallery images
@@ -51,6 +52,7 @@ const defaultImages = {
 export default function GallerySection({ restaurant }: GallerySectionProps) {
   const { toast } = useToast();
   const queryClient = useQueryClient();
+  const { t } = useLanguage();
 
   const { data: photos, isLoading } = useQuery<GalleryPhoto[]>({
     queryKey: ["/api/restaurants", restaurant.id, "gallery"],
@@ -108,7 +110,7 @@ export default function GallerySection({ restaurant }: GallerySectionProps) {
     <section className="py-16 bg-beige-light">
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="font-serif text-4xl font-bold text-center text-wine mb-12">
-          {restaurant.slug === "casa-da-peixe" ? "Gallery" : "Our Space"}
+          {restaurant.slug === "casa-da-peixe" ? t.gallery.galleryTitle : t.gallery.ourSpaceTitle}
         </h2>
         
         <div className="mb-8 text-center">

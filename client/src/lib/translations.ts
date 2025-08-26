@@ -62,6 +62,72 @@ export const translations = {
       callToday: "Call us to make your reservation today!"
     },
     
+    // Home Page
+    home: {
+      aboutTitle: "About Casa Da Peixe & Lapicanha",
+      aboutSubtitle: "For over two decades, we've been dedicated to bringing authentic Portuguese flavors to life through our two distinct culinary experiences. Each restaurant tells its own story of Portuguese heritage and passion.",
+      traditionalHeritage: "Traditional Heritage",
+      traditionalHeritageDesc: "Our recipes have been passed down through generations, preserving the authentic taste of Portugal's rich culinary history.",
+      freshIngredients: "Fresh Ingredients",
+      freshIngredientsDesc: "We source the finest ingredients, many imported directly from Portugal, to ensure every dish captures the true essence of Portuguese cuisine.",
+      familyExperience: "Family Experience",
+      familyExperienceDesc: "Every meal is crafted with love and served with the warmth of Portuguese hospitality, making you feel like family.",
+      signatureDishes: "Signature Dishes",
+      signatureDishesDesc: "Discover our most beloved creations, each telling a story of Portuguese culinary excellence",
+      whyChooseUs: "Why Choose Casa Da Peixe & Lapicanha",
+      awardWinning: "Award-Winning Cuisine",
+      awardWinningDesc: "Recognized by culinary experts and food critics for our authentic Portuguese dishes and exceptional service quality.",
+      experience25Years: "25+ Years Experience",
+      experience25YearsDesc: "Over two decades of perfecting our craft, building relationships with customers, and preserving Portuguese culinary traditions.",
+      twoLocations: "Two Unique Locations",
+      twoLocationsDesc: "Experience different facets of Portuguese cuisine - fresh seafood at Casa Da Peixe and premium grilled meats at Lapicanha.",
+      whatGuestsSay: "What Our Guests Say",
+      whatGuestsSayDesc: "Hear from our valued customers about their dining experiences",
+      readyExperience: "Ready to Experience Portugal?",
+      readyExperienceDesc: "Join us for an unforgettable culinary journey through the flavors of Portugal. Choose your dining adventure.",
+      experienceCasaDaPeixe: "Experience Casa Da Peixe",
+      discoverLapicanha: "Discover Lapicanha",
+      footerDesc: "Bringing the authentic taste of Portugal to your table with two unique dining experiences.",
+      allRightsReserved: "All rights reserved."
+    },
+
+    // Restaurant Page
+    restaurant: {
+      sections: {
+        about: "About",
+        menu: "Menu",
+        reservations: "Reservations",
+        gallery: "Gallery",
+        contact: "Contact"
+      },
+      notFound: "Restaurant Not Found",
+      notFoundDesc: "The restaurant you're looking for doesn't exist."
+    },
+
+    // About Section
+    about: {
+      yearsExperience: "Years Experience",
+      traditionalRecipes: "Traditional Recipes",
+      awardWinningDishes: "Award-Winning Dishes",
+      premiumWines: "Premium Wines"
+    },
+
+    // Contact Section
+    contact: {
+      contactUs: "Contact Us",
+      visitUs: "Visit Us",
+      address: "Address",
+      phone: "Phone",
+      whatsapp: "WhatsApp",
+      instagram: "Instagram"
+    },
+
+    // Gallery Section
+    gallery: {
+      galleryTitle: "Gallery",
+      ourSpaceTitle: "Our Space"
+    },
+
     // General
     general: {
       language: "Language"
@@ -131,6 +197,72 @@ export const translations = {
       callToday: "Ligue-nos para fazer a sua reserva hoje!"
     },
     
+    // Home Page
+    home: {
+      aboutTitle: "Sobre Casa Da Peixe & Lapicanha",
+      aboutSubtitle: "Há mais de duas décadas, dedicamo-nos a dar vida aos sabores portugueses autênticos através das nossas duas experiências culinárias distintas. Cada restaurante conta a sua própria história de herança e paixão portuguesas.",
+      traditionalHeritage: "Herança Tradicional",
+      traditionalHeritageDesc: "As nossas receitas foram transmitidas através de gerações, preservando o sabor autêntico da rica história culinária de Portugal.",
+      freshIngredients: "Ingredientes Frescos",
+      freshIngredientsDesc: "Obtemos os melhores ingredientes, muitos importados diretamente de Portugal, para garantir que cada prato capte a verdadeira essência da cozinha portuguesa.",
+      familyExperience: "Experiência Familiar",
+      familyExperienceDesc: "Cada refeição é preparada com amor e servida com o calor da hospitalidade portuguesa, fazendo-o sentir-se em família.",
+      signatureDishes: "Pratos Especiais",
+      signatureDishesDesc: "Descubra as nossas criações mais queridas, cada uma contando uma história de excelência culinária portuguesa",
+      whyChooseUs: "Porque Escolher Casa Da Peixe & Lapicanha",
+      awardWinning: "Cozinha Premiada",
+      awardWinningDesc: "Reconhecidos por especialistas culinários e críticos gastronómicos pelos nossos pratos portugueses autênticos e qualidade de serviço excecional.",
+      experience25Years: "25+ Anos de Experiência",
+      experience25YearsDesc: "Mais de duas décadas a aperfeiçoar a nossa arte, construir relacionamentos com clientes e preservar tradições culinárias portuguesas.",
+      twoLocations: "Dois Locais Únicos",
+      twoLocationsDesc: "Experimente diferentes facetas da cozinha portuguesa - peixe fresco na Casa Da Peixe e carnes grelhadas premium na Lapicanha.",
+      whatGuestsSay: "O que Dizem os Nossos Convidados",
+      whatGuestsSayDesc: "Ouça dos nossos valiosos clientes sobre as suas experiências gastronómicas",
+      readyExperience: "Pronto para Experienciar Portugal?",
+      readyExperienceDesc: "Junte-se a nós numa jornada culinária inesquecível pelos sabores de Portugal. Escolha a sua aventura gastronómica.",
+      experienceCasaDaPeixe: "Experienciar Casa Da Peixe",
+      discoverLapicanha: "Descobrir Lapicanha",
+      footerDesc: "Trazendo o sabor autêntico de Portugal à sua mesa com duas experiências gastronómicas únicas.",
+      allRightsReserved: "Todos os direitos reservados."
+    },
+
+    // Restaurant Page
+    restaurant: {
+      sections: {
+        about: "Sobre",
+        menu: "Ementa",
+        reservations: "Reservas",
+        gallery: "Galeria",
+        contact: "Contacto"
+      },
+      notFound: "Restaurante Não Encontrado",
+      notFoundDesc: "O restaurante que procura não existe."
+    },
+
+    // About Section
+    about: {
+      yearsExperience: "Anos de Experiência",
+      traditionalRecipes: "Receitas Tradicionais",
+      awardWinningDishes: "Pratos Premiados",
+      premiumWines: "Vinhos Premium"
+    },
+
+    // Contact Section
+    contact: {
+      contactUs: "Contacte-nos",
+      visitUs: "Visite-nos",
+      address: "Morada",
+      phone: "Telefone",
+      whatsapp: "WhatsApp",
+      instagram: "Instagram"
+    },
+
+    // Gallery Section
+    gallery: {
+      galleryTitle: "Galeria",
+      ourSpaceTitle: "O Nosso Espaço"
+    },
+
     // General
     general: {
       language: "Idioma"
