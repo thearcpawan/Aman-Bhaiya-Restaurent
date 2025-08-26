@@ -8,6 +8,19 @@ import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
 import type { Restaurant, GalleryPhoto } from "@shared/schema";
 
+// Import gallery images
+import gallery1 from "@/assets/gallery-1.jpg";
+import gallery2 from "@/assets/gallery-2.jpg";
+import gallery3 from "@/assets/gallery-3.jpg";
+import gallery4 from "@/assets/gallery-4.jpg";
+import gallery5 from "@/assets/gallery-5.jpg";
+import gallery6 from "@/assets/gallery-6.jpg";
+import gallery7 from "@/assets/gallery-7.jpg";
+import gallery8 from "@/assets/gallery-8.jpg";
+import gallery9 from "@/assets/gallery-9.jpg";
+import gallery10 from "@/assets/gallery-10.jpg";
+import gallery11 from "@/assets/gallery-11.jpg";
+
 interface GallerySectionProps {
   restaurant: Restaurant;
 }
@@ -21,11 +34,17 @@ const defaultImages = {
     "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
   ],
   lapicanha: [
-    "https://images.unsplash.com/photo-1592861956120-e524fc739696?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300",
-    "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300",
-    "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300",
-    "https://images.unsplash.com/photo-1544148103-0773bf10d330?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300",
-    "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
+    gallery1,    // Red cocktails and cozy bar atmosphere
+    gallery2,    // Beautiful picanha spread with sides and wine
+    gallery3,    // Tender meat stew with wine and bread
+    gallery4,    // Grilled meat skewers with beer and sides
+    gallery5,    // Traditional picanha in copper pan with Portuguese cider
+    gallery6,    // Duplicate of gallery3 - meat stew presentation
+    gallery7,    // Golden picanha slices with premium wine
+    gallery8,    // Gourmet pasta with Portuguese cider
+    gallery9,    // Colorful meat and fruit platter with cocktails
+    gallery10,   // Traditional meat board with chimichurri and sides
+    gallery11    // Bartenders serving fresh passion fruit cocktails
   ]
 };
 
