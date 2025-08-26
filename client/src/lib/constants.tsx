@@ -1,3 +1,5 @@
+import lapicanhaHeroImage from '@/assets/lapicanha-hero.png';
+
 export const RESTAURANTS = {
   "casa-da-peixe": {
     name: "Casa Da Peixe",
@@ -9,7 +11,7 @@ export const RESTAURANTS = {
     name: "Lapicanha", 
     slug: "lapicanha",
     tagline: "Premium grilled meats and traditional flavors",
-    heroImage: "/attached_assets/20250826_1937_Restaurant Dinner Scene_remix_01k3kq5abhek38da893mqvx8fc_1756229988434.png",
+    heroImage: lapicanhaHeroImage,
   },
 } as const;
 
