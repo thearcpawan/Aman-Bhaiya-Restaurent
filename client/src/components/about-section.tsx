@@ -1,6 +1,7 @@
 import type { Restaurant } from "@shared/schema";
 import { useLanguage } from "@/contexts/LanguageContext";
 import casaDaPeixeCover from "@/assets/casa-da-peixe-cover.jpg";
+import lapicanhaCover from "@/assets/lapicanha-cover.jpg";
 
 interface AboutSectionProps {
   restaurant: Restaurant;
@@ -18,10 +19,10 @@ export default function AboutSection({ restaurant }: AboutSectionProps) {
             <img
               src={isCasaDaPeixe 
                 ? casaDaPeixeCover
-                : "https://images.unsplash.com/photo-1600891964092-4316c288032e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+                : lapicanhaCover
               }
-              alt={`${restaurant.name} ${isCasaDaPeixe ? 'logo' : 'cuisine'}`}
-              className={`rounded-2xl shadow-lg ${isCasaDaPeixe ? 'object-contain bg-black' : ''}`}
+              alt={`${restaurant.name} ${isCasaDaPeixe ? 'logo' : 'neon sign and dining atmosphere'}`}
+              className="rounded-2xl shadow-lg object-cover"
             />
           </div>
           <div>
