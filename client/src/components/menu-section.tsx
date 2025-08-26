@@ -5,14 +5,17 @@ import PhotoUpload from "@/components/photo-upload";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { MENU_CATEGORIES } from "@/lib/constants";
 import type { Restaurant, MenuItem } from "@shared/schema";
-import starterImage from "@assets/f2_1756236810700.jpg";
+import starterImageMeat from "@assets/f2_1756236810700.jpg";
+import starterImageSeafood from "@assets/a5_1756237863463.jpg";
 
 interface MenuSectionProps {
   restaurant: Restaurant;
 }
 
 const categoryImages = {
-  starters: starterImage,
+  starters: (restaurant: Restaurant) => restaurant.slug === "casa-da-peixe" 
+    ? starterImageSeafood 
+    : starterImageMeat,
   mains: (restaurant: Restaurant) => restaurant.slug === "casa-da-peixe" 
     ? "https://images.unsplash.com/photo-1485963631004-f2f00b1d6606?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250"
     : "https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
