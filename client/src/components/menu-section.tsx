@@ -49,11 +49,11 @@ export default function MenuSection({ restaurant }: MenuSectionProps) {
   return (
     <section className="py-16 bg-beige-light">
       <div className="max-w-7xl mx-auto px-4">
-        <h2 className="font-serif text-4xl font-bold text-center text-wine mb-12">
+        <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-center text-wine mb-8 sm:mb-12">
           {restaurant.slug === "casa-da-peixe" ? "Fresh Seafood Menu" : "Premium Meat Menu"}
         </h2>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {MENU_CATEGORIES.map((category) => {
             const categoryItems = getItemsByCategory(category.id);
             const imageValue = categoryImages[category.id as keyof typeof categoryImages];
@@ -63,13 +63,13 @@ export default function MenuSection({ restaurant }: MenuSectionProps) {
             
             return (
               <Card key={category.id} className="bg-white shadow-lg hover:-translate-y-1 transition-transform">
-                <CardContent className="p-6">
+                <CardContent className="p-4 sm:p-6">
                   <img
                     src={imageUrl}
                     alt={`${category.name} dishes`}
-                    className="w-full h-40 object-cover rounded-lg mb-4"
+                    className="w-full h-32 sm:h-40 object-cover rounded-lg mb-3 sm:mb-4"
                   />
-                  <h3 className="font-serif text-2xl font-semibold text-wine mb-4">
+                  <h3 className="font-serif text-lg sm:text-xl md:text-2xl font-semibold text-wine mb-3 sm:mb-4">
                     {category.name}
                   </h3>
                   

@@ -77,28 +77,28 @@ export default function ReservationsSection({ restaurant }: ReservationsSectionP
   return (
     <section className="py-16 bg-white">
       <div className="max-w-4xl mx-auto px-4">
-        <h2 className="font-serif text-4xl font-bold text-center text-wine mb-12">
+        <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-center text-wine mb-8 sm:mb-12">
           {restaurant.slug === "casa-da-peixe" ? "Make a Reservation" : "Reserve Your Table"}
         </h2>
         
         {/* Contact Options */}
-        <div className="bg-wine text-white rounded-lg p-6 mb-8">
-          <div className="text-center mb-6">
-            <h3 className="text-xl font-semibold mb-2">Prefer to Call?</h3>
-            <p className="text-beige-light">
+        <div className="bg-wine text-white rounded-lg p-4 sm:p-6 mb-6 sm:mb-8">
+          <div className="text-center mb-4 sm:mb-6">
+            <h3 className="text-lg sm:text-xl font-semibold mb-2">Prefer to Call?</h3>
+            <p className="text-beige-light text-sm sm:text-base">
               Call us directly for immediate reservation confirmation
             </p>
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col gap-3 sm:flex-row sm:gap-4 justify-center items-center">
             {/* Phone Button */}
             <a
               href={`tel:${restaurant.phone}`}
-              className="flex items-center gap-3 bg-white text-wine px-6 py-3 rounded-lg font-semibold hover:bg-beige-light transition-colors w-full sm:w-auto justify-center"
+              className="flex items-center gap-3 bg-white text-wine px-4 sm:px-6 py-3 sm:py-4 rounded-lg font-semibold hover:bg-beige-light transition-colors w-full sm:w-auto justify-center min-h-[48px] text-sm sm:text-base"
               data-testid="button-call"
             >
               <Phone className="h-5 w-5" />
-              Call {restaurant.phone}
+              <span className="hidden xs:inline">Call </span>{restaurant.phone}
             </a>
             
             {/* WhatsApp Button for Casa Da Peixe */}
@@ -107,7 +107,7 @@ export default function ReservationsSection({ restaurant }: ReservationsSectionP
                 href="https://wa.me/351926091468"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors w-full sm:w-auto justify-center"
+                className="flex items-center gap-3 bg-green-600 text-white px-4 sm:px-6 py-3 sm:py-4 rounded-lg font-semibold hover:bg-green-700 transition-colors w-full sm:w-auto justify-center min-h-[48px] text-sm sm:text-base"
                 data-testid="button-whatsapp"
               >
                 <MessageCircle className="h-5 w-5" />
@@ -116,7 +116,7 @@ export default function ReservationsSection({ restaurant }: ReservationsSectionP
             )}
           </div>
           
-          <div className="text-center mt-4 text-sm text-beige-light">
+          <div className="text-center mt-3 sm:mt-4 text-xs sm:text-sm text-beige-light">
             <p>
               {restaurant.slug === "casa-da-peixe" 
                 ? "Available every day • Call or WhatsApp for reservations" 
@@ -128,12 +128,12 @@ export default function ReservationsSection({ restaurant }: ReservationsSectionP
         
         {/* Additional Contact Info */}
         <div className="text-center">
-          <div className="bg-beige-light rounded-lg p-8 shadow-lg">
-            <h3 className="text-2xl font-semibold text-charcoal mb-4">
+          <div className="bg-beige-light rounded-lg p-4 sm:p-6 md:p-8 shadow-lg">
+            <h3 className="text-xl sm:text-2xl font-semibold text-charcoal mb-3 sm:mb-4">
               Restaurant Information
             </h3>
             
-            <div className="space-y-4 text-lg">
+            <div className="space-y-3 sm:space-y-4 text-sm sm:text-base md:text-lg">
               <div>
                 <p className="font-semibold text-wine mb-1">Address:</p>
                 <p className="text-charcoal whitespace-pre-line">{restaurant.address}</p>
@@ -152,8 +152,8 @@ export default function ReservationsSection({ restaurant }: ReservationsSectionP
               )}
             </div>
             
-            <div className="mt-6 pt-6 border-t border-wine/20">
-              <p className="text-charcoal font-medium">
+            <div className="mt-4 sm:mt-6 pt-4 sm:pt-6 border-t border-wine/20">
+              <p className="text-charcoal font-medium text-sm sm:text-base">
                 Call us to make your reservation today!
               </p>
             </div>

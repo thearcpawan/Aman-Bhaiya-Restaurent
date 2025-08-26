@@ -17,33 +17,35 @@ export default function HeroSection({ onRestaurantChoice, onMenuAccess }: HeroSe
     >
       <div className="absolute inset-0 flex items-center justify-center py-16 z-20">
         <div className="text-center text-white px-4 max-w-6xl mx-auto">
-          <h1 className="font-serif text-5xl md:text-7xl font-bold mb-6">Casa Da Peixe & Lapicanha</h1>
-          <p className="text-xl md:text-2xl mb-12 font-light">
+          <h1 className="font-serif text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 leading-tight">
+            Casa Da Peixe & Lapicanha
+          </h1>
+          <p className="text-lg sm:text-xl md:text-2xl mb-8 sm:mb-12 font-light px-2">
             Authentic Portuguese Cuisine, Two Unique Experiences
           </p>
           
-          <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
+          <div className="flex flex-col lg:flex-row gap-6 justify-center items-center max-w-4xl mx-auto">
             {Object.entries(RESTAURANTS).map(([key, restaurant]) => (
               <Card
                 key={key}
-                className="bg-white/10 backdrop-blur-sm border-none max-w-sm hover:bg-white/20 transition-all duration-300 transform hover:scale-105"
+                className="bg-white/10 backdrop-blur-sm border-none w-full max-w-sm hover:bg-white/20 transition-all duration-300 transform hover:scale-105"
                 data-testid={`card-restaurant-choice-${key}`}
               >
-                <CardContent className="p-8">
+                <CardContent className="p-6 sm:p-8">
                   <img
                     src={restaurant.heroImage}
                     alt={`${restaurant.name} interior`}
-                    className="w-full h-48 object-cover rounded-lg mb-4"
+                    className="w-full h-40 sm:h-48 object-cover rounded-lg mb-4"
                   />
-                  <h3 className="font-serif text-2xl font-semibold mb-2 text-white">
+                  <h3 className="font-serif text-xl sm:text-2xl font-semibold mb-2 text-white">
                     {restaurant.name}
                   </h3>
-                  <p className="text-beige-light mb-6">
+                  <p className="text-beige-light mb-4 sm:mb-6 text-sm sm:text-base">
                     {restaurant.tagline}
                   </p>
                   <Button
                     onClick={() => onMenuAccess(restaurant.slug)}
-                    className="bg-wine hover:bg-wine/90 text-white w-full"
+                    className="bg-wine hover:bg-wine/90 text-white w-full min-h-[44px] text-base font-semibold"
                     data-testid={`button-menu-${key}`}
                   >
                     View Menu
