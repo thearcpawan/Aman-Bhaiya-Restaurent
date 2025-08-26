@@ -124,16 +124,16 @@ export class MemStorage implements IStorage {
       { name: "Robalo do Mar", price: "50.00€/KG", description: "Wild sea bass by weight", imageUrl: "https://images.unsplash.com/photo-1544943910-4c1dc44aab44?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
       
       // Tachos & Pratos
-      { name: "Massa de Peixe", price: "35.00€", description: "Fish pasta", imageUrl: "https://images.unsplash.com/photo-1551326844-4df70f78d0e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
-      { name: "Arroz de Marisco", price: "37.00€", description: "Seafood rice", imageUrl: "https://images.unsplash.com/photo-1551326844-4df70f78d0e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
-      { name: "Cataplana", price: "50.00€", description: "Traditional seafood cataplana", imageUrl: "https://images.unsplash.com/photo-1551326844-4df70f78d0e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "Massa de Peixe", price: "35.00€", description: "Fish pasta", imageUrl: "https://images.unsplash.com/photo-1621996346565-e3dbc353d2e5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "Arroz de Marisco", price: "37.00€", description: "Seafood rice", imageUrl: "https://images.unsplash.com/photo-1609501676725-7186f44ac3b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "Cataplana", price: "50.00€", description: "Traditional seafood cataplana", imageUrl: "https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
       { name: "Atum de Cebolada", price: "24.00€", description: "Tuna with onions", imageUrl: "https://images.unsplash.com/photo-1544943910-4c1dc44aab44?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
       { name: "Choco à Algarvia", price: "16.00€", description: "Cuttlefish Algarve style", imageUrl: "https://images.unsplash.com/photo-1565299585323-38174c4a6c07?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
-      { name: "Polvo à Lagareiro", price: "19.00€", description: "Octopus with olive oil and garlic", imageUrl: "https://images.unsplash.com/photo-1551326844-4df70f78d0e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
-      { name: "Bacalhau à Brás", price: "17.00€", description: "Shredded cod with eggs", imageUrl: "https://images.unsplash.com/photo-1551326844-4df70f78d0e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
-      { name: "Arroz de Gambas", price: "22.50€", description: "Prawn rice", imageUrl: "https://images.unsplash.com/photo-1551326844-4df70f78d0e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "Polvo à Lagareiro", price: "19.00€", description: "Octopus with olive oil and garlic", imageUrl: "https://images.unsplash.com/photo-1571197119282-621c1afec1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "Bacalhau à Brás", price: "17.00€", description: "Shredded cod with eggs", imageUrl: "https://images.unsplash.com/photo-1604152135912-04a022e23696?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "Arroz de Gambas", price: "22.50€", description: "Prawn rice", imageUrl: "https://images.unsplash.com/photo-1512058454905-6f5d5f7045c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
       { name: "Caril de Gambas", price: "24.50€", description: "Prawn curry", imageUrl: "https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
-      { name: "Bacalhau com Manjericão", price: "19.50€", description: "Cod with basil", imageUrl: "https://images.unsplash.com/photo-1551326844-4df70f78d0e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "Bacalhau com Manjericão", price: "19.50€", description: "Cod with basil", imageUrl: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
       { name: "Risotto de Camarão", price: "26.50€", description: "Prawn risotto", imageUrl: "https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
       
       // Carne
@@ -149,9 +149,9 @@ export class MemStorage implements IStorage {
 
     // DESSERTS
     const desserts = [
-      { name: "Cheesecake Baba de Camelo", price: "4.50€", description: "Camel drool cheesecake", imageUrl: "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
-      { name: "Cheesecake Frutos Vermelhos", price: "4.50€", description: "Red berries cheesecake", imageUrl: "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
-      { name: "Cheesecake Manga", price: "4.50€", description: "Mango cheesecake", imageUrl: "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "Cheesecake Baba de Camelo", price: "4.50€", description: "Camel drool cheesecake", imageUrl: "https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "Cheesecake Frutos Vermelhos", price: "4.50€", description: "Red berries cheesecake", imageUrl: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "Cheesecake Manga", price: "4.50€", description: "Mango cheesecake", imageUrl: "https://images.unsplash.com/photo-1541365087197-90ba01e2ba7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
       { name: "Bolo Brigadeiro", price: "4.50€", description: "Brazilian brigadeiro cake", imageUrl: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
       { name: "Bolo de Bolacha", price: "4.50€", description: "Cookie cake", imageUrl: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
       { name: "Pudim", price: "4.50€", description: "Portuguese pudding", imageUrl: "https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
