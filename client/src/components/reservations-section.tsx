@@ -103,19 +103,17 @@ export default function ReservationsSection({ restaurant }: ReservationsSectionP
               <span className="hidden xs:inline">{t.reservations.call} </span>{restaurant.phone}
             </a>
             
-            {/* WhatsApp Button for Casa Da Peixe */}
-            {restaurant.slug === "casa-da-peixe" && (
-              <a
-                href="https://wa.me/351926091468"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 bg-green-600 text-white px-4 sm:px-6 py-3 sm:py-4 rounded-lg font-semibold hover:bg-green-700 transition-colors w-full sm:w-auto justify-center min-h-[48px] text-sm sm:text-base"
-                data-testid="button-whatsapp"
-              >
-                <MessageCircle className="h-5 w-5" />
-                {t.reservations.whatsapp}
-              </a>
-            )}
+            {/* WhatsApp Button */}
+            <a
+              href={`https://wa.me/${restaurant.phone.replace(/\D/g, '')}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 bg-green-600 text-white px-4 sm:px-6 py-3 sm:py-4 rounded-lg font-semibold hover:bg-green-700 transition-colors w-full sm:w-auto justify-center min-h-[48px] text-sm sm:text-base"
+              data-testid="button-whatsapp"
+            >
+              <MessageCircle className="h-5 w-5" />
+              {t.reservations.whatsapp}
+            </a>
           </div>
           
           <div className="text-center mt-3 sm:mt-4 text-xs sm:text-sm text-beige-light">
@@ -143,12 +141,10 @@ export default function ReservationsSection({ restaurant }: ReservationsSectionP
                 <p className="text-charcoal">{restaurant.phone}</p>
               </div>
               
-              {restaurant.slug === "casa-da-peixe" && (
-                <div>
-                  <p className="font-semibold text-wine mb-1">{t.reservations.whatsappLabel}</p>
-                  <p className="text-charcoal">{t.reservations.whatsappNumber}</p>
-                </div>
-              )}
+              <div>
+                <p className="font-semibold text-wine mb-1">{t.reservations.whatsappLabel}</p>
+                <p className="text-charcoal">{restaurant.phone}</p>
+              </div>
             </div>
             
             <div className="mt-4 sm:mt-6 pt-4 sm:pt-6 border-t border-wine/20">
