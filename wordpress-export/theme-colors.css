@@ -1,0 +1,117 @@
+/* Casa Da Peixe & Lapicanha - WordPress Theme Colors */
+/* Copy this CSS to your WordPress theme's style.css */
+
+:root {
+  /* Portuguese Restaurant Theme Colors */
+  --wine: #8b2635;
+  --wine-dark: #6b1d28;
+  --beige: #f5f0e8;
+  --beige-light: #faf7f2;
+  --olive: #8b8c34;
+  --olive-light: #a4a53d;
+  --charcoal: #2c2c2c;
+  --charcoal-light: #4a4a4a;
+}
+
+/* Primary Colors */
+.wine-color { color: #8b2635 !important; }
+.wine-bg { background-color: #8b2635 !important; }
+.beige-color { color: #f5f0e8 !important; }
+.beige-bg { background-color: #f5f0e8 !important; }
+.olive-color { color: #8b8c34 !important; }
+.olive-bg { background-color: #8b8c34 !important; }
+
+/* Typography */
+.portuguese-serif {
+  font-family: "Playfair Display", "Times New Roman", serif;
+}
+
+.portuguese-sans {
+  font-family: "Inter", "Arial", sans-serif;
+}
+
+/* Button Styles */
+.btn-wine {
+  background-color: #8b2635;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-wine:hover {
+  background-color: #6b1d28;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(139, 38, 53, 0.3);
+}
+
+/* Card Styles */
+.restaurant-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.restaurant-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Menu Item Styles */
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.menu-item:last-child {
+  border-bottom: none;
+}
+
+.menu-item-name {
+  font-weight: 600;
+  color: #2c2c2c;
+  margin-bottom: 4px;
+}
+
+.menu-item-description {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.4;
+}
+
+.menu-item-price {
+  font-weight: 600;
+  color: #8b2635;
+  margin-left: 16px;
+  flex-shrink: 0;
+}
+
+/* Portuguese Flag Colors */
+.flag-green { color: #046A38; }
+.flag-red { color: #DA291C; }
+.flag-yellow { color: #FFD500; }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .btn-wine {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+  
+  .menu-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .menu-item-price {
+    margin-left: 0;
+    margin-top: 8px;
+  }
+}
