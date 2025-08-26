@@ -19,11 +19,11 @@ export default function HeroSection({ onRestaurantChoice, onMenuAccess }: HeroSe
       }}
     >
       <div className="absolute inset-0 flex items-center justify-center py-16 z-20">
-        <div className="text-center text-white px-4 max-w-6xl mx-auto">
+        <div className="text-center text-white px-6 sm:px-8 md:px-12 lg:px-16 max-w-6xl mx-auto">
           <h1 className="font-serif text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 leading-tight">
             {t.hero.title}
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl mb-8 sm:mb-12 font-light px-2">
+          <p className="text-lg sm:text-xl md:text-2xl mb-8 sm:mb-12 font-light px-4 sm:px-6 md:px-8">
             {t.hero.subtitle}
           </p>
           
