@@ -11,7 +11,7 @@ interface MenuSectionProps {
 }
 
 const categoryImages = {
-  starters: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
+  starters: "/attached_assets/f2_1756236810700.jpg",
   mains: (restaurant: Restaurant) => restaurant.slug === "casa-da-peixe" 
     ? "https://images.unsplash.com/photo-1485963631004-f2f00b1d6606?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250"
     : "https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
