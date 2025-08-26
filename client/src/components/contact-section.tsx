@@ -66,25 +66,23 @@ export default function ContactSection({ restaurant }: ContactSectionProps) {
                 </div>
               </div>
 
-              {restaurant.slug === "casa-da-peixe" && (
-                <div className="flex items-start space-x-4">
-                  <div className="bg-wine text-white p-3 rounded-lg flex-shrink-0">
-                    <Instagram className="h-6 w-6" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-lg mb-2">{t.contact.instagram}</h3>
-                    <a 
-                      href="https://www.instagram.com/casadepeixe3/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-gray-600 hover:text-wine transition-colors"
-                      data-testid="link-instagram"
-                    >
-                      @casadepeixe3
-                    </a>
-                  </div>
+              <div className="flex items-start space-x-4">
+                <div className="bg-wine text-white p-3 rounded-lg flex-shrink-0">
+                  <Instagram className="h-6 w-6" />
                 </div>
-              )}
+                <div>
+                  <h3 className="font-semibold text-lg mb-2">{t.contact.instagram}</h3>
+                  <a 
+                    href="https://www.instagram.com/casadepeixe3/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-600 hover:text-wine transition-colors"
+                    data-testid="link-instagram"
+                  >
+                    @casadepeixe3
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
 
