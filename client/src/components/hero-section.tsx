@@ -38,7 +38,7 @@ export default function HeroSection({ onRestaurantChoice, onMenuAccess }: HeroSe
                   <img
                     src={restaurant.heroImage}
                     alt={`${restaurant.name} interior`}
-                    className="w-full h-40 sm:h-48 object-cover rounded-lg mb-4"
+                    className="w-full h-40 sm:h-48 object-contain bg-black rounded-lg mb-4"
                   />
                   <h3 className="font-serif text-xl sm:text-2xl font-semibold mb-2 text-white">
                     {t.restaurants[key as keyof typeof t.restaurants].name}
