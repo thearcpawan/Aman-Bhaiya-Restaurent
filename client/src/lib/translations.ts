@@ -17,11 +17,13 @@ export const translations = {
     restaurants: {
       "casa-da-peixe": {
         name: "Casa Da Peixe",
-        tagline: "Fresh seafood and Portuguese coastal flavors"
+        tagline: "Fresh seafood and Portuguese coastal flavors",
+        description: "Specializing in the freshest seafood and traditional Portuguese coastal cuisine. Our dishes celebrate the bounty of the sea with authentic recipes passed down through generations of fishermen and coastal cooks."
       },
       lapicanha: {
         name: "Lapicanha",
-        tagline: "Premium grilled meats and traditional flavors"
+        tagline: "Premium grilled meats and traditional flavors",
+        description: "Premium grilled meats and traditional Portuguese flavors in a warm, rustic atmosphere. We specialize in perfectly prepared picanha and other prime cuts, paired with authentic Portuguese sides and wines."
       }
     },
     
@@ -269,11 +271,13 @@ export const translations = {
     restaurants: {
       "casa-da-peixe": {
         name: "Casa Da Peixe",
-        tagline: "Peixe fresco e sabores costeiros portugueses"
+        tagline: "Peixe fresco e sabores costeiros portugueses",
+        description: "Especializamo-nos no peixe mais fresco e na cozinha costeira tradicional portuguesa. Os nossos pratos celebram a abundância do mar com receitas autênticas transmitidas através de gerações de pescadores e cozinheiros costeiros."
       },
       lapicanha: {
         name: "Lapicanha",
-        tagline: "Carnes grelhadas premium e sabores tradicionais"
+        tagline: "Carnes grelhadas premium e sabores tradicionais",
+        description: "Carnes grelhadas premium e sabores portugueses tradicionais num ambiente acolhedor e rústico. Especializamo-nos em picanha perfeitamente preparada e outros cortes nobres, acompanhados de acompanhamentos portugueses autênticos e vinhos."
       }
     },
     

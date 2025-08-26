@@ -30,7 +30,7 @@ export default function AboutSection({ restaurant }: AboutSectionProps) {
               {restaurant.name}
             </h2>
             <p className="text-lg leading-relaxed mb-6 text-gray-700">
-              {restaurant.description}
+              {t.restaurants[restaurant.slug as keyof typeof t.restaurants].description}
             </p>
             
             <div className="grid grid-cols-2 gap-4 mt-8">
