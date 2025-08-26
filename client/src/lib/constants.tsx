@@ -1,12 +1,12 @@
 import lapicanhaHeroImage from '@/assets/lapicanha-hero.png';
-import casaDaPeixeLogo from '@/assets/casa-da-peixe-logo.jpg';
+import casaDaPeixeCover from '@/assets/casa-da-peixe-cover.jpg';
 
 export const RESTAURANTS = {
   "casa-da-peixe": {
     name: "Casa Da Peixe",
     slug: "casa-da-peixe",
     tagline: "Fresh seafood and Portuguese coastal flavors",
-    heroImage: casaDaPeixeLogo,
+    heroImage: casaDaPeixeCover,
   },
   lapicanha: {
     name: "Lapicanha", 
