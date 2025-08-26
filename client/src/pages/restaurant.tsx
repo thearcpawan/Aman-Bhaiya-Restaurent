@@ -9,6 +9,7 @@ import ReservationsSection from "@/components/reservations-section";
 import GallerySection from "@/components/gallery-section";
 import ContactSection from "@/components/contact-section";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useDocumentTitle } from "@/hooks/useDocumentTitle";
 import type { Restaurant } from "@shared/schema";
 
 type Section = "about" | "menu" | "reservations" | "gallery" | "contact";
@@ -17,6 +18,10 @@ export default function Restaurant() {
   const { slug } = useParams<{ slug: string }>();
   const [activeSection, setActiveSection] = useState<Section>("about");
   const { t } = useLanguage();
+  
+  // Set page title and meta description based on restaurant
+  const pageType = slug === 'casa-da-peixe' ? 'casaDaPeixe' : 'lapicanha';
+  useDocumentTitle(pageType, slug);
 
   // Handle hash navigation to specific sections
   useEffect(() => {

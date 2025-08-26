@@ -53,8 +53,8 @@ export default function ReservationsSection({ restaurant }: ReservationsSectionP
     },
     onSuccess: () => {
       toast({
-        title: "Reservation Submitted",
-        description: "Your reservation has been submitted successfully. We'll contact you soon to confirm.",
+        title: t.toast.success.reservationSubmitted,
+        description: t.toast.success.reservationSubmittedDesc,
       });
       form.reset();
       queryClient.invalidateQueries({
@@ -63,8 +63,8 @@ export default function ReservationsSection({ restaurant }: ReservationsSectionP
     },
     onError: (error: Error) => {
       toast({
-        title: "Reservation Failed",
-        description: error.message || "Failed to submit reservation. Please try again.",
+        title: t.toast.error.reservationFailed,
+        description: error.message || t.toast.error.reservationFailedDesc,
         variant: "destructive",
       });
     },
