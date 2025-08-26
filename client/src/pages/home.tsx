@@ -5,10 +5,14 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import HeroSection from "@/components/hero-section";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useDocumentTitle } from "@/hooks/useDocumentTitle";
 
 export default function Home() {
   const [, setLocation] = useLocation();
   const { t } = useLanguage();
+  
+  // Set page title and meta description
+  useDocumentTitle('home');
 
   const handleRestaurantChoice = (slug: string) => {
     setLocation(`/restaurant/${slug}`);

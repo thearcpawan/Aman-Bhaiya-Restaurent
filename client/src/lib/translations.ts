@@ -128,9 +128,126 @@ export const translations = {
       ourSpaceTitle: "Our Space"
     },
 
+    // Forms
+    forms: {
+      labels: {
+        name: "Name",
+        email: "Email",
+        phone: "Phone",
+        date: "Date",
+        time: "Time",
+        guests: "Guests",
+        specialRequests: "Special Requests",
+        message: "Message"
+      },
+      placeholders: {
+        name: "Enter your name",
+        email: "Enter your email",
+        phone: "Enter your phone number",
+        date: "Select date",
+        time: "Select time",
+        guests: "Number of guests",
+        specialRequests: "Any special requests or dietary requirements?",
+        message: "Your message"
+      },
+      validation: {
+        required: "This field is required",
+        emailInvalid: "Please enter a valid email address",
+        phoneInvalid: "Please enter a valid phone number",
+        dateInvalid: "Please select a valid date",
+        timeInvalid: "Please select a time",
+        guestsMin: "Minimum 1 guest required",
+        guestsMax: "Maximum 20 guests allowed"
+      },
+      buttons: {
+        submit: "Submit",
+        cancel: "Cancel",
+        save: "Save",
+        delete: "Delete",
+        edit: "Edit",
+        close: "Close",
+        confirm: "Confirm",
+        back: "Back",
+        next: "Next"
+      },
+      confirmations: {
+        deletePhoto: "Are you sure you want to delete this photo?",
+        deleteItem: "Are you sure you want to delete this item?",
+        unsavedChanges: "You have unsaved changes. Are you sure you want to leave?"
+      }
+    },
+
+    // Toast Messages
+    toast: {
+      success: {
+        reservationSubmitted: "Reservation Submitted",
+        reservationSubmittedDesc: "Your reservation has been submitted successfully. We'll contact you soon to confirm.",
+        photoUploaded: "Photo Uploaded",
+        photoUploadedDesc: "Photo has been uploaded successfully.",
+        photoDeleted: "Photo Deleted",
+        photoDeletedDesc: "Photo has been deleted successfully."
+      },
+      error: {
+        reservationFailed: "Reservation Failed",
+        reservationFailedDesc: "Failed to submit reservation. Please try again.",
+        uploadFailed: "Upload Failed",
+        uploadFailedDesc: "Failed to upload photo. Please try again.",
+        deleteFailed: "Delete Failed",
+        deleteFailedDesc: "Failed to delete photo. Please try again.",
+        genericError: "Something went wrong",
+        genericErrorDesc: "An unexpected error occurred. Please try again."
+      }
+    },
+
+    // SEO Metadata
+    seo: {
+      homePage: {
+        title: "Casa Da Peixe & Lapicanha - Authentic Portuguese Cuisine",
+        description: "Experience authentic Portuguese cuisine at Casa Da Peixe & Lapicanha. Fresh seafood and premium grilled meats in Setúbal and Lisboa. Make reservations today."
+      },
+      casaDaPeixe: {
+        title: "Casa Da Peixe - Fresh Portuguese Seafood | Setúbal",
+        description: "Authentic Portuguese seafood restaurant in Setúbal. Fresh fish, traditional coastal flavors, and warm hospitality. Book your table today."
+      },
+      lapicanha: {
+        title: "Lapicanha - Premium Grilled Meats | Lisboa",
+        description: "Premium grilled meat restaurant in Lisboa. Traditional Portuguese picanha, expert preparation, and exceptional dining experience. Reserve now."
+      }
+    },
+
+    // Loading States
+    loading: {
+      restaurant: "Loading restaurant...",
+      menu: "Loading menu...",
+      gallery: "Loading gallery...",
+      reservations: "Loading...",
+      submitting: "Submitting...",
+      uploading: "Uploading...",
+      deleting: "Deleting..."
+    },
+
     // General
     general: {
-      language: "Language"
+      language: "Language",
+      loading: "Loading...",
+      error: "Error",
+      success: "Success",
+      warning: "Warning",
+      info: "Information",
+      yes: "Yes",
+      no: "No",
+      ok: "OK",
+      and: "and",
+      or: "or",
+      of: "of",
+      in: "in",
+      at: "at",
+      on: "on",
+      for: "for",
+      with: "with",
+      by: "by",
+      from: "from",
+      to: "to"
     }
   },
   
@@ -263,9 +380,126 @@ export const translations = {
       ourSpaceTitle: "O Nosso Espaço"
     },
 
+    // Forms
+    forms: {
+      labels: {
+        name: "Nome",
+        email: "Email",
+        phone: "Telefone",
+        date: "Data",
+        time: "Hora",
+        guests: "Convidados",
+        specialRequests: "Pedidos Especiais",
+        message: "Mensagem"
+      },
+      placeholders: {
+        name: "Insira o seu nome",
+        email: "Insira o seu email",
+        phone: "Insira o seu número de telefone",
+        date: "Selecione a data",
+        time: "Selecione a hora",
+        guests: "Número de convidados",
+        specialRequests: "Algum pedido especial ou restrições alimentares?",
+        message: "A sua mensagem"
+      },
+      validation: {
+        required: "Este campo é obrigatório",
+        emailInvalid: "Por favor insira um endereço de email válido",
+        phoneInvalid: "Por favor insira um número de telefone válido",
+        dateInvalid: "Por favor selecione uma data válida",
+        timeInvalid: "Por favor selecione uma hora",
+        guestsMin: "Mínimo de 1 convidado necessário",
+        guestsMax: "Máximo de 20 convidados permitido"
+      },
+      buttons: {
+        submit: "Submeter",
+        cancel: "Cancelar",
+        save: "Guardar",
+        delete: "Eliminar",
+        edit: "Editar",
+        close: "Fechar",
+        confirm: "Confirmar",
+        back: "Voltar",
+        next: "Próximo"
+      },
+      confirmations: {
+        deletePhoto: "Tem certeza de que deseja eliminar esta foto?",
+        deleteItem: "Tem certeza de que deseja eliminar este item?",
+        unsavedChanges: "Tem alterações não guardadas. Tem certeza de que deseja sair?"
+      }
+    },
+
+    // Toast Messages
+    toast: {
+      success: {
+        reservationSubmitted: "Reserva Submetida",
+        reservationSubmittedDesc: "A sua reserva foi submetida com sucesso. Entraremos em contacto em breve para confirmar.",
+        photoUploaded: "Foto Carregada",
+        photoUploadedDesc: "A foto foi carregada com sucesso.",
+        photoDeleted: "Foto Eliminada",
+        photoDeletedDesc: "A foto foi eliminada com sucesso."
+      },
+      error: {
+        reservationFailed: "Reserva Falhada",
+        reservationFailedDesc: "Falha ao submeter reserva. Por favor tente novamente.",
+        uploadFailed: "Carregamento Falhado",
+        uploadFailedDesc: "Falha ao carregar foto. Por favor tente novamente.",
+        deleteFailed: "Eliminação Falhada",
+        deleteFailedDesc: "Falha ao eliminar foto. Por favor tente novamente.",
+        genericError: "Algo correu mal",
+        genericErrorDesc: "Ocorreu um erro inesperado. Por favor tente novamente."
+      }
+    },
+
+    // SEO Metadata
+    seo: {
+      homePage: {
+        title: "Casa Da Peixe & Lapicanha - Cozinha Portuguesa Autêntica",
+        description: "Experimente a cozinha portuguesa autêntica na Casa Da Peixe & Lapicanha. Peixe fresco e carnes grelhadas premium em Setúbal e Lisboa. Faça reservas hoje."
+      },
+      casaDaPeixe: {
+        title: "Casa Da Peixe - Peixe Português Fresco | Setúbal",
+        description: "Restaurante português autêntico de peixe em Setúbal. Peixe fresco, sabores costeiros tradicionais e hospitalidade calorosa. Reserve a sua mesa hoje."
+      },
+      lapicanha: {
+        title: "Lapicanha - Carnes Grelhadas Premium | Lisboa",
+        description: "Restaurante de carnes grelhadas premium em Lisboa. Picanha portuguesa tradicional, preparação especializada e experiência gastronómica excecional. Reserve já."
+      }
+    },
+
+    // Loading States
+    loading: {
+      restaurant: "Carregando restaurante...",
+      menu: "Carregando ementa...",
+      gallery: "Carregando galeria...",
+      reservations: "Carregando...",
+      submitting: "Submetendo...",
+      uploading: "Carregando...",
+      deleting: "Eliminando..."
+    },
+
     // General
     general: {
-      language: "Idioma"
+      language: "Idioma",
+      loading: "Carregando...",
+      error: "Erro",
+      success: "Sucesso",
+      warning: "Aviso",
+      info: "Informação",
+      yes: "Sim",
+      no: "Não",
+      ok: "OK",
+      and: "e",
+      or: "ou",
+      of: "de",
+      in: "em",
+      at: "em",
+      on: "em",
+      for: "para",
+      with: "com",
+      by: "por",
+      from: "de",
+      to: "para"
     }
   }
 } as const;

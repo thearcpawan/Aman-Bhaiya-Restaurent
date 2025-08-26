@@ -91,8 +91,8 @@ export default function GallerySection({ restaurant }: GallerySectionProps) {
     },
     onSuccess: () => {
       toast({
-        title: "Photo Deleted",
-        description: "Photo has been removed from the gallery.",
+        title: t.toast.success.photoDeleted,
+        description: t.toast.success.photoDeletedDesc,
       });
       queryClient.invalidateQueries({
         queryKey: ["/api/restaurants", restaurant.id, "gallery"],
@@ -100,15 +100,15 @@ export default function GallerySection({ restaurant }: GallerySectionProps) {
     },
     onError: () => {
       toast({
-        title: "Delete Failed",
-        description: "Failed to delete photo. Please try again.",
+        title: t.toast.error.deleteFailed,
+        description: t.toast.error.deleteFailedDesc,
         variant: "destructive",
       });
     },
   });
 
   const handleDeletePhoto = (photoId: string) => {
-    if (window.confirm("Are you sure you want to delete this photo?")) {
+    if (window.confirm(t.forms.confirmations.deletePhoto)) {
       deleteMutation.mutate(photoId);
     }
   };
