@@ -296,7 +296,13 @@ export default function Home() {
                 <a href="#" className="text-gray-300 hover:text-wine transition-colors" data-testid="link-facebook">
                   Facebook
                 </a>
-                <a href="#" className="text-gray-300 hover:text-wine transition-colors" data-testid="link-instagram">
+                <a 
+                  href="https://www.instagram.com/casadepeixe3/" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-gray-300 hover:text-wine transition-colors" 
+                  data-testid="link-instagram"
+                >
                   Instagram
                 </a>
                 <a href="#" className="text-gray-300 hover:text-wine transition-colors" data-testid="link-tripadvisor">
