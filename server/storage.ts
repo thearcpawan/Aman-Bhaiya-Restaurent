@@ -82,37 +82,37 @@ export class MemStorage implements IStorage {
     // STARTERS - Couvert, Sopas, Entradas
     const starters = [
       // Couvert
-      { name: "Cesto de Pão", price: "1.50€", description: "Fresh bread basket", imageUrl: "https://images.unsplash.com/photo-1549931319-a545dcf3bc73?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
-      { name: "Queijo Seco", price: "4.50€", description: "Portuguese dried cheese", imageUrl: "https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
-      { name: "Queijo Fresco", price: "6.50€", description: "Fresh Portuguese cheese", imageUrl: "https://images.unsplash.com/photo-1452195100486-9cc805987862?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
-      { name: "Azeitonas", price: "2.50€", description: "Portuguese olives", imageUrl: "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
-      { name: "Presunto", price: "11.00€", description: "Portuguese cured ham", imageUrl: "https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "Cesto de Pão", price: "1.50€", description: "Fresh bread basket", imageUrl: "https://images.unsplash.com/photo-1509440159596-0249088772ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "Queijo Seco", price: "4.50€", description: "Portuguese dried cheese", imageUrl: "https://images.unsplash.com/photo-1589881133595-0d8fef2447b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "Queijo Fresco", price: "6.50€", description: "Fresh Portuguese cheese", imageUrl: "https://images.unsplash.com/photo-1607893378714-007fd47c8719?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "Azeitonas", price: "2.50€", description: "Portuguese olives", imageUrl: "https://images.unsplash.com/photo-1611735341450-74d61e660ad2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "Presunto", price: "11.00€", description: "Portuguese cured ham", imageUrl: "https://images.unsplash.com/photo-1579952363873-27d3bfad9c0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
       
       // Sopas
-      { name: "Sopa do Dia", price: "3.00€", description: "Daily soup", imageUrl: "https://images.unsplash.com/photo-1547592166-23ac45744acd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
-      { name: "Sopa de Peixe", price: "4.50€", description: "Traditional Portuguese fish soup", imageUrl: "https://images.unsplash.com/photo-1547592180-85f173990554?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "Sopa do Dia", price: "3.00€", description: "Daily soup", imageUrl: "https://images.unsplash.com/photo-1563379091339-03246963d51a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "Sopa de Peixe", price: "4.50€", description: "Traditional Portuguese fish soup", imageUrl: "https://images.unsplash.com/photo-1574484284002-952d92456975?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
       
       // Entradas
-      { name: "Camarão ao Alhinho", price: "17.00€", description: "Garlic prawns", imageUrl: "https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
-      { name: "Ameijoas ao Natural", price: "19.00€", description: "Natural clams", imageUrl: "https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
-      { name: "Mexilhão à Original", price: "19.90€", description: "Original style mussels", imageUrl: "https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
-      { name: "Taquitos de Choco", price: "12.00€", description: "Cuttlefish strips", imageUrl: "https://images.unsplash.com/photo-1565299585323-38174c4a6c07?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
-      { name: "Lingueirão à Bolhão Pato", price: "20.00€", description: "Razor clams Bolhão Pato style", imageUrl: "https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
-      { name: "Salada de Polvo", price: "7.00€", description: "Octopus salad", imageUrl: "https://images.unsplash.com/photo-1551326844-4df70f78d0e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
-      { name: "Choco Frito", price: "10.00€", description: "Fried cuttlefish", imageUrl: "https://images.unsplash.com/photo-1565299585323-38174c4a6c07?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "Camarão ao Alhinho", price: "17.00€", description: "Garlic prawns", imageUrl: "https://images.unsplash.com/photo-1558030006-450675393462?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "Ameijoas ao Natural", price: "19.00€", description: "Natural clams", imageUrl: "https://images.unsplash.com/photo-1551218808-94e220e084d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "Mexilhão à Original", price: "19.90€", description: "Original style mussels", imageUrl: "https://images.unsplash.com/photo-1599084993091-1cb5c0721cc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "Taquitos de Choco", price: "12.00€", description: "Cuttlefish strips", imageUrl: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "Lingueirão à Bolhão Pato", price: "20.00€", description: "Razor clams Bolhão Pato style", imageUrl: "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "Salada de Polvo", price: "7.00€", description: "Octopus salad", imageUrl: "https://images.unsplash.com/photo-1571197119282-621c1afec1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "Choco Frito", price: "10.00€", description: "Fried cuttlefish", imageUrl: "https://images.unsplash.com/photo-1544943910-4c1dc44aab44?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
     ];
 
     // MAINS - Peixe Grelhado, Carne, Tachos & Pratos
     const mains = [
       // Peixe Grelhado à Dose
-      { name: "Garoupa", price: "21.00€", description: "Grilled grouper portion", imageUrl: "https://images.unsplash.com/photo-1544943910-4c1dc44aab44?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
-      { name: "Dourada", price: "17.00€", description: "Grilled sea bream portion", imageUrl: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
-      { name: "Robalo", price: "17.00€", description: "Grilled sea bass portion", imageUrl: "https://images.unsplash.com/photo-1544943910-4c1dc44aab44?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
-      { name: "Salmão", price: "18.00€", description: "Grilled salmon portion", imageUrl: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
-      { name: "Peixe Espada", price: "18.00€", description: "Grilled scabbard fish", imageUrl: "https://images.unsplash.com/photo-1544943910-4c1dc44aab44?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
-      { name: "Sardinhas", price: "15.00€", description: "Grilled sardines", imageUrl: "https://images.unsplash.com/photo-1544943910-4c1dc44aab44?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
-      { name: "Choco Assado", price: "16.00€", description: "Roasted cuttlefish", imageUrl: "https://images.unsplash.com/photo-1565299585323-38174c4a6c07?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
-      { name: "Lulas", price: "16.00€", description: "Grilled squid", imageUrl: "https://images.unsplash.com/photo-1565299585323-38174c4a6c07?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "Garoupa", price: "21.00€", description: "Grilled grouper portion", imageUrl: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "Dourada", price: "17.00€", description: "Grilled sea bream portion", imageUrl: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "Robalo", price: "17.00€", description: "Grilled sea bass portion", imageUrl: "https://images.unsplash.com/photo-1562967914-608f82629710?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "Salmão", price: "18.00€", description: "Grilled salmon portion", imageUrl: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "Peixe Espada", price: "18.00€", description: "Grilled scabbard fish", imageUrl: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "Sardinhas", price: "15.00€", description: "Grilled sardines", imageUrl: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "Choco Assado", price: "16.00€", description: "Roasted cuttlefish", imageUrl: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "Lulas", price: "16.00€", description: "Grilled squid", imageUrl: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
       { name: "Atum", price: "21.00€", description: "Grilled tuna portion", imageUrl: "https://images.unsplash.com/photo-1544943910-4c1dc44aab44?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
       { name: "Bacalhau", price: "21.00€", description: "Grilled cod portion", imageUrl: "https://images.unsplash.com/photo-1544943910-4c1dc44aab44?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
       
@@ -236,15 +236,15 @@ export class MemStorage implements IStorage {
 
     // MAINS - PRATOS
     const mains = [
-      { name: "HAMBURGER NO PRATO", price: "14.90€", description: "ARROZ, BATATA FRITA E FEIJÃO", imageUrl: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "HAMBURGER NO PRATO", price: "14.90€", description: "ARROZ, BATATA FRITA E FEIJÃO", imageUrl: "https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
       { name: "HAMBURGUER VEGANO", price: "15.90€", description: "ARROZ E BATATAS FRITAS", imageUrl: "https://images.unsplash.com/photo-1520072959219-c595dc870360?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
       { name: "HAMBURGER LA PICANHA", price: "15.90€", description: "HAMBURGUER NO PÃO, CEBOLA FRITA, BACON, QUEIJO CHEDDAR E TOMATE, ACOMPANHA BATATAS FRITAS", imageUrl: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
-      { name: "ESPETADA DE PICANHA", price: "15.90€", description: "NACOS DE PICANHA GRELHADO, COM CHOURIÇO, ACOMPANHA COM ARROZ E BATATA FRITA - GRILLED PICANHA STEAKS WITH CHORIZO, SERVED WITH RICE AND FRENCH FRIES", imageUrl: "https://images.unsplash.com/photo-1544943910-4c1dc44aab44?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "ESPETADA DE PICANHA", price: "15.90€", description: "NACOS DE PICANHA GRELHADO, COM CHOURIÇO, ACOMPANHA COM ARROZ E BATATA FRITA - GRILLED PICANHA STEAKS WITH CHORIZO, SERVED WITH RICE AND FRENCH FRIES", imageUrl: "https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
       { name: "FRANGO À LA PICANHA", price: "18.90€", description: "PEITO DE FRANGO RECHEADO COM BACON, CHEDDAR, ACOMPANHA COM MOLHO DE ALHO COM ERVAS, ARROZ, SALADA E BATATAS FRITAS - CHICKEN FILLET STUFFED WITH BACON, CHEDDAR, SERVED WITH GARLIC SAUCE WITH HERBS, RICE, SALAD AND FRENCH FRIES", imageUrl: "https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
       { name: "BIFE DE FRANGO", price: "15.90€", description: "BIFE DE FRANGO GRELHADO ACOMPANHA COM ARROZ E BATATA FRITA - GRILLED CHICKEN STEAK SERVED WITH RICE AND FRENCH FRIES", imageUrl: "https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
-      { name: "PICANHA Á DISCRIÇÃO", price: "19.50€", description: "ARROZ, FEIJÃO, BATATAS FRITAS, SALADA E FAROFA - RICE, BEANS, FRIES, SALAD AND FAROFA", imageUrl: "https://images.unsplash.com/photo-1544943910-4c1dc44aab44?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
-      { name: "PREMIUM ENTRECÔTE (350G)", price: "24.90€", description: "ARROZ, FEIJÃO E BATATAS FRITAS - RICE, BEANS AND FRIES", imageUrl: "https://images.unsplash.com/photo-1544943910-4c1dc44aab44?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
-      { name: "PREMIUM PICANHA (350G)", price: "24.90€", description: "BATATAS FRITAS, ARROZ, FEIJÃO - RICE, BEANS AND FRIES", imageUrl: "https://images.unsplash.com/photo-1544943910-4c1dc44aab44?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "PICANHA Á DISCRIÇÃO", price: "19.50€", description: "ARROZ, FEIJÃO, BATATAS FRITAS, SALADA E FAROFA - RICE, BEANS, FRIES, SALAD AND FAROFA", imageUrl: "https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "PREMIUM ENTRECÔTE (350G)", price: "24.90€", description: "ARROZ, FEIJÃO E BATATAS FRITAS - RICE, BEANS AND FRIES", imageUrl: "https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "PREMIUM PICANHA (350G)", price: "24.90€", description: "BATATAS FRITAS, ARROZ, FEIJÃO - RICE, BEANS AND FRIES", imageUrl: "https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
       { name: "PICANHA NO PRATO (MENU EXECUTIVO)", price: "15.00€", description: "ARROZ FEIJÃO E BATATAS FRITAS COM DIREITO A UMA BEBIDA E UM CAFÉ (SUMO, ÁGUA OU IMPERIAL) - RICE, BEANS AND FRIES, WITH A DRINK AND A COFFEE (JUICE, WATER OR BEER). DE SEGUNDA A SEXTA AOS ALMOÇOS, EXCETO FERIADOS", imageUrl: "https://images.unsplash.com/photo-1544943910-4c1dc44aab44?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
       { name: "FRANGO Á LA PICANHA (MENU INFANTIL)", price: "10.50€", description: "ARROZ E BATATAS FRITAS - O MENU INFATIL É APLICADO PARA CRIANÇAS DE 4 A 9 ANOS", imageUrl: "https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
       { name: "PICANHA NO PRATO (MENU INFANTIL)", price: "10.50€", description: "ARROZ E BATATAS FRITAS - O MENU INFATIL É APLICADO PARA CRIANÇAS DE 4 A 9 ANOS", imageUrl: "https://images.unsplash.com/photo-1544943910-4c1dc44aab44?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
@@ -252,10 +252,10 @@ export class MemStorage implements IStorage {
 
     // DESSERTS - SOBREMESAS
     const desserts = [
-      { name: "CHEESECAKE OREO", price: "5.00€", description: "", imageUrl: "https://images.unsplash.com/photo-1541365087197-90ba01e2ba7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
-      { name: "CHEESECAKE FRUTOS VERMELHOS", price: "4.50€", description: "", imageUrl: "https://images.unsplash.com/photo-1541365087197-90ba01e2ba7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "CHEESECAKE OREO", price: "5.00€", description: "", imageUrl: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "CHEESECAKE FRUTOS VERMELHOS", price: "4.50€", description: "", imageUrl: "https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
       { name: "CHEESECAKE CARAMELO SALGADO", price: "5.00€", description: "", imageUrl: "https://images.unsplash.com/photo-1541365087197-90ba01e2ba7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
-      { name: "BOLO BRIGADEIRO", price: "4.50€", description: "", imageUrl: "https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
+      { name: "BOLO BRIGADEIRO", price: "4.50€", description: "", imageUrl: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
       { name: "CHEESECAKE LIMA", price: "4.50€", description: "", imageUrl: "https://images.unsplash.com/photo-1541365087197-90ba01e2ba7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
       { name: "BOLO DE BOLACHA", price: "4.50€", description: "", imageUrl: "https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
       { name: "PETIT GATEAU C/ GELADO", price: "5.50€", description: "", imageUrl: "https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250" },
