@@ -22,23 +22,44 @@ import gallery9 from "@/assets/gallery-9.jpg";
 import gallery10 from "@/assets/gallery-10.jpg";
 import gallery11 from "@/assets/gallery-11.jpg";
 
+// Import Casa da Peixe authentic images
+import casaDaPeixe1 from "@/assets/casa-da-peixe-1.jpg";
+import casaDaPeixe2 from "@/assets/casa-da-peixe-2.jpg";
+import casaDaPeixe3 from "@/assets/casa-da-peixe-3.jpg";
+import casaDaPeixe4 from "@/assets/casa-da-peixe-4.jpg";
+import casaDaPeixe5 from "@/assets/casa-da-peixe-5.jpg";
+import casaDaPeixe6 from "@/assets/casa-da-peixe-6.jpg";
+import casaDaPeixe7 from "@/assets/casa-da-peixe-7.jpg";
+import casaDaPeixe8 from "@/assets/casa-da-peixe-8.jpg";
+import casaDaPeixe9 from "@/assets/casa-da-peixe-9.jpg";
+import casaDaPeixe10 from "@/assets/casa-da-peixe-10.jpg";
+import casaDaPeixe11 from "@/assets/casa-da-peixe-11.jpg";
+import casaDaPeixe12 from "@/assets/casa-da-peixe-12.jpg";
+import casaDaPeixe13 from "@/assets/casa-da-peixe-13.jpg";
+import casaDaPeixe14 from "@/assets/casa-da-peixe-14.jpg";
+import casaDaPeixe15 from "@/assets/casa-da-peixe-15.jpg";
+
 interface GallerySectionProps {
   restaurant: Restaurant;
 }
 
 const defaultImages = {
   "casa-da-peixe": [
-    gallery1,    // Fresh seafood display and restaurant atmosphere
-    gallery2,    // Beautiful seafood platter with coastal ambiance
-    gallery3,    // Traditional Portuguese fish dishes
-    gallery4,    // Grilled seafood with seaside dining
-    gallery5,    // Fresh catch presentation with Portuguese wine
-    gallery6,    // Coastal restaurant interior and seafood specialties
-    gallery7,    // Premium seafood dishes with Portuguese wines
-    gallery8,    // Traditional Portuguese coastal cuisine
-    gallery9,    // Seafood platters with authentic Portuguese atmosphere
-    gallery10,   // Fresh fish preparation and coastal dining
-    gallery11    // Portuguese seafood tradition and hospitality
+    casaDaPeixe1,    // Crispy fried seafood with Portuguese herbs and lime
+    casaDaPeixe2,    // Traditional cuttlefish salad with onions and peppers
+    casaDaPeixe3,    // Breaded fish fillets with authentic Portuguese sides
+    casaDaPeixe4,    // Fresh seafood preparation with traditional garnish
+    casaDaPeixe5,    // Artisanal seafood platter with wine pairing
+    casaDaPeixe6,    // Portuguese seafood croquettes with house sauce
+    casaDaPeixe7,    // Golden seafood fritters with coastal flavors
+    casaDaPeixe8,    // Traditional spring rolls with Portuguese twist
+    casaDaPeixe9,    // Fresh fish with basil and roasted vegetables
+    casaDaPeixe10,   // Close-up of traditional Portuguese seafood preparation
+    casaDaPeixe11,   // Crispy spring rolls with sweet and sour sauce
+    casaDaPeixe12,   // Seafood prawns in traditional Portuguese sauce
+    casaDaPeixe13,   // Traditional fried cuttlefish julienne with herbs
+    casaDaPeixe14,   // Another angle of the signature cuttlefish dish
+    casaDaPeixe15    // Portuguese seafood curry in traditional clay pot
   ],
   lapicanha: [
     gallery1,    // Red cocktails and cozy bar atmosphere
