@@ -28,8 +28,9 @@ export default function Navigation() {
         <div className="flex justify-between h-20">
           <div className="flex items-center">
             <Link href="/" data-testid="link-home">
-              <h1 className="font-serif text-2xl font-bold text-wine cursor-pointer hover:text-wine-light transition-colors">
-                Casa Da Peixe & Lapicanha
+              <h1 className="font-serif text-lg sm:text-xl md:text-2xl font-bold text-wine cursor-pointer hover:text-wine-light transition-colors">
+                <span className="hidden sm:inline">Casa Da Peixe & Lapicanha</span>
+                <span className="sm:hidden">Casa Da Peixe<br />& Lapicanha</span>
               </h1>
             </Link>
           </div>
@@ -59,10 +60,10 @@ export default function Navigation() {
               variant="ghost"
               size="sm"
               onClick={toggleMobileMenu}
-              className="text-charcoal hover:text-wine p-2"
+              className="text-charcoal hover:text-wine p-3 min-h-[44px] min-w-[44px]"
               data-testid="button-mobile-menu"
             >
-              {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isMobileMenuOpen ? <X className="h-7 w-7" /> : <Menu className="h-7 w-7" />}
             </Button>
           </div>
         </div>
