@@ -126,171 +126,39 @@ export default function ReservationsSection({ restaurant }: ReservationsSectionP
           </div>
         </div>
         
-        {/* Online Form Option */}
-        <div className="text-center mb-6">
-          <h3 className="text-lg font-semibold text-charcoal mb-2">
-            Or Fill Out the Form Below
-          </h3>
-          <p className="text-gray-600">
-            Submit your reservation request and we'll contact you to confirm
-          </p>
+        {/* Additional Contact Info */}
+        <div className="text-center">
+          <div className="bg-beige-light rounded-lg p-8 shadow-lg">
+            <h3 className="text-2xl font-semibold text-charcoal mb-4">
+              Restaurant Information
+            </h3>
+            
+            <div className="space-y-4 text-lg">
+              <div>
+                <p className="font-semibold text-wine mb-1">Address:</p>
+                <p className="text-charcoal whitespace-pre-line">{restaurant.address}</p>
+              </div>
+              
+              <div>
+                <p className="font-semibold text-wine mb-1">Phone:</p>
+                <p className="text-charcoal">{restaurant.phone}</p>
+              </div>
+              
+              {restaurant.slug === "casa-da-peixe" && (
+                <div>
+                  <p className="font-semibold text-wine mb-1">WhatsApp:</p>
+                  <p className="text-charcoal">+351 926 091 468</p>
+                </div>
+              )}
+            </div>
+            
+            <div className="mt-6 pt-6 border-t border-wine/20">
+              <p className="text-charcoal font-medium">
+                Call us to make your reservation today!
+              </p>
+            </div>
+          </div>
         </div>
-        
-        <Card className="bg-beige-light shadow-lg">
-          <CardContent className="p-8">
-            <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <FormField
-                    control={form.control}
-                    name="name"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel className="text-sm font-medium text-charcoal">Full Name *</FormLabel>
-                        <FormControl>
-                          <Input
-                            placeholder="Your name"
-                            className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-wine focus:ring-2 focus:ring-wine/20 transition-colors"
-                            data-testid="input-name"
-                            {...field}
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  
-                  <FormField
-                    control={form.control}
-                    name="email"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel className="text-sm font-medium text-charcoal">Email *</FormLabel>
-                        <FormControl>
-                          <Input
-                            type="email"
-                            placeholder="your@email.com"
-                            className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-wine focus:ring-2 focus:ring-wine/20 transition-colors"
-                            data-testid="input-email"
-                            {...field}
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                </div>
-                
-                <div className="grid md:grid-cols-3 gap-6">
-                  <FormField
-                    control={form.control}
-                    name="date"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel className="text-sm font-medium text-charcoal">Date *</FormLabel>
-                        <FormControl>
-                          <Input
-                            type="date"
-                            min={today}
-                            className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-wine focus:ring-2 focus:ring-wine/20 transition-colors"
-                            data-testid="input-date"
-                            {...field}
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  
-                  <FormField
-                    control={form.control}
-                    name="time"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel className="text-sm font-medium text-charcoal">Time *</FormLabel>
-                        <Select onValueChange={field.onChange} value={field.value}>
-                          <FormControl>
-                            <SelectTrigger className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-wine focus:ring-2 focus:ring-wine/20 transition-colors" data-testid="select-time">
-                              <SelectValue placeholder="Select time" />
-                            </SelectTrigger>
-                          </FormControl>
-                          <SelectContent>
-                            {RESERVATION_TIMES.map((time) => (
-                              <SelectItem key={time} value={time}>
-                                {time}
-                              </SelectItem>
-                            ))}
-                          </SelectContent>
-                        </Select>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  
-                  <FormField
-                    control={form.control}
-                    name="guests"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel className="text-sm font-medium text-charcoal">Guests *</FormLabel>
-                        <Select onValueChange={(value) => field.onChange(parseInt(value))} value={field.value?.toString()}>
-                          <FormControl>
-                            <SelectTrigger className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-wine focus:ring-2 focus:ring-wine/20 transition-colors" data-testid="select-guests">
-                              <SelectValue placeholder="Number of guests" />
-                            </SelectTrigger>
-                          </FormControl>
-                          <SelectContent>
-                            {GUEST_OPTIONS.map((option) => (
-                              <SelectItem key={option.value} value={option.value}>
-                                {option.label}
-                              </SelectItem>
-                            ))}
-                          </SelectContent>
-                        </Select>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                </div>
-
-                <FormField
-                  control={form.control}
-                  name="specialRequests"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="text-sm font-medium text-charcoal">
-                        Special Requests
-                      </FormLabel>
-                      <FormControl>
-                        <Textarea
-                          rows={4}
-                          placeholder={restaurant.slug === "casa-da-peixe" 
-                            ? "Any dietary restrictions or special occasions..." 
-                            : "Wine pairing preferences, dietary restrictions, special occasions..."
-                          }
-                          className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-wine focus:ring-2 focus:ring-wine/20 transition-colors resize-none"
-                          data-testid="textarea-requests"
-                          {...field}
-                          value={field.value || ""}
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
-                <Button
-                  type="submit"
-                  disabled={reservationMutation.isPending}
-                  className="w-full bg-wine text-white py-4 rounded-lg font-semibold hover:bg-wine-dark transition-colors disabled:opacity-50"
-                  data-testid="button-reserve"
-                >
-                  {reservationMutation.isPending ? "Reserving..." : "Reserve Table"}
-                </Button>
-              </form>
-            </Form>
-          </CardContent>
-        </Card>
       </div>
     </section>
   );
