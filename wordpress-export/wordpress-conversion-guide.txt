@@ -1,0 +1,88 @@
+CASA DA PEIXE & LAPICANHA - WORDPRESS CONVERSION GUIDE
+=======================================================
+
+This guide will help you convert your React restaurant website to WordPress.
+
+STEP 1: WORDPRESS SETUP
+------------------------
+1. Purchase WordPress hosting (recommended: SiteGround, Bluehost, WP Engine)
+2. Install WordPress on your domain
+3. Choose a restaurant theme or create custom theme
+4. Install essential plugins:
+   - Contact Form 7 (for reservations)
+   - WP Restaurant Menu (for menu display)
+   - Yoast SEO (for search optimization)
+   - WooCommerce (if you want online ordering)
+
+STEP 2: IMPORT YOUR DATA
+------------------------
+1. Use the data from 'restaurant-data.php'
+2. Create WordPress pages:
+   - Home page
+   - Casa Da Peixe page
+   - Lapicanha page
+   - Contact page
+   - Menu pages
+
+3. Import menu items:
+   - Use a restaurant menu plugin
+   - Or create custom posts for each menu item
+   - Copy prices and descriptions exactly
+
+STEP 3: STYLING
+---------------
+1. Copy CSS from 'theme-colors.css' into your WordPress theme
+2. Add Portuguese restaurant colors and fonts
+3. Create responsive design for mobile
+4. Test on all devices
+
+STEP 4: FUNCTIONALITY
+---------------------
+RESERVATIONS:
+- Install Contact Form 7
+- Create reservation forms for each restaurant
+- Set up email notifications
+- Test form submissions
+
+CONTACT INFO:
+Casa Da Peixe:
+- Address: Largo José Afonso 64, 2900-633, Setúbal, Portugal
+- Phone: +351 926 091 468
+- WhatsApp: +351 926 091 468
+- Instagram: @casadepeixe3
+
+Lapicanha:
+- Address: Avenida da República, 245, 1050-186 Lisboa, Portugal
+- Phone: +351 210 654 321
+
+STEP 5: MENU SETUP
+------------------
+Casa Da Peixe Menu Categories:
+- Starters (14 items)
+- Mains (15 items)  
+- Desserts (7 items)
+- Drinks (16 items)
+
+Lapicanha Menu Categories:
+- Starters (8 items)
+- Mains (12 items)
+- Desserts (12 items)
+- Drinks (17+ items)
+
+All menu data is provided in restaurant-data.php
+
+STEP 6: TESTING
+---------------
+1. Test all forms
+2. Check mobile responsiveness
+3. Verify contact information
+4. Test menu display
+5. Check page loading speed
+6. Test on different browsers
+
+ESTIMATED TIME: 2-3 weeks for full conversion
+DIFFICULTY: High (requires WordPress development knowledge)
+
+ALTERNATIVE: Consider keeping your current React website - it's already professional and working perfectly!
+
+Need help? Contact a WordPress developer for professional conversion.
