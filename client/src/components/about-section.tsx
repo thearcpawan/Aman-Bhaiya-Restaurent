@@ -1,4 +1,5 @@
 import type { Restaurant } from "@shared/schema";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface AboutSectionProps {
   restaurant: Restaurant;
@@ -6,6 +7,7 @@ interface AboutSectionProps {
 
 export default function AboutSection({ restaurant }: AboutSectionProps) {
   const isCasaDaPeixe = restaurant.slug === "casa-da-peixe";
+  const { t } = useLanguage();
   
   return (
     <section className="py-16 bg-white">
@@ -35,7 +37,7 @@ export default function AboutSection({ restaurant }: AboutSectionProps) {
                   {isCasaDaPeixe ? "25+" : "15+"}
                 </div>
                 <div className="text-sm text-charcoal">
-                  {isCasaDaPeixe ? "Years Experience" : "Award-Winning Dishes"}
+                  {isCasaDaPeixe ? t.about.yearsExperience : t.about.awardWinningDishes}
                 </div>
               </div>
               <div className="text-center p-4 bg-beige rounded-lg">
@@ -43,7 +45,7 @@ export default function AboutSection({ restaurant }: AboutSectionProps) {
                   {isCasaDaPeixe ? "100+" : "50+"}
                 </div>
                 <div className="text-sm text-charcoal">
-                  {isCasaDaPeixe ? "Traditional Recipes" : "Premium Wines"}
+                  {isCasaDaPeixe ? t.about.traditionalRecipes : t.about.premiumWines}
                 </div>
               </div>
             </div>

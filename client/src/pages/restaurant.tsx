@@ -8,6 +8,7 @@ import MenuSection from "@/components/menu-section";
 import ReservationsSection from "@/components/reservations-section";
 import GallerySection from "@/components/gallery-section";
 import ContactSection from "@/components/contact-section";
+import { useLanguage } from "@/contexts/LanguageContext";
 import type { Restaurant } from "@shared/schema";
 
 type Section = "about" | "menu" | "reservations" | "gallery" | "contact";
@@ -15,6 +16,7 @@ type Section = "about" | "menu" | "reservations" | "gallery" | "contact";
 export default function Restaurant() {
   const { slug } = useParams<{ slug: string }>();
   const [activeSection, setActiveSection] = useState<Section>("about");
+  const { t } = useLanguage();
 
   // Handle hash navigation to specific sections
   useEffect(() => {
@@ -51,19 +53,19 @@ export default function Restaurant() {
     return (
       <div className="min-h-screen pt-20 flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-serif font-bold text-wine mb-4">Restaurant Not Found</h1>
-          <p className="text-gray-600">The restaurant you're looking for doesn't exist.</p>
+          <h1 className="text-4xl font-serif font-bold text-wine mb-4">{t.restaurant.notFound}</h1>
+          <p className="text-gray-600">{t.restaurant.notFoundDesc}</p>
         </div>
       </div>
     );
   }
 
   const sections = [
-    { id: "about" as Section, name: "About" },
-    { id: "menu" as Section, name: "Menu" },
-    { id: "reservations" as Section, name: "Reservations" },
-    { id: "gallery" as Section, name: "Gallery" },
-    { id: "contact" as Section, name: "Contact" },
+    { id: "about" as Section, name: t.restaurant.sections.about },
+    { id: "menu" as Section, name: t.restaurant.sections.menu },
+    { id: "reservations" as Section, name: t.restaurant.sections.reservations },
+    { id: "gallery" as Section, name: t.restaurant.sections.gallery },
+    { id: "contact" as Section, name: t.restaurant.sections.contact },
   ];
 
   const renderSection = () => {
