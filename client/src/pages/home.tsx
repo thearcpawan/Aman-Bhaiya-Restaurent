@@ -174,9 +174,9 @@ export default function Home() {
               <div className="bg-olive text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Clock className="h-8 w-8" />
               </div>
-              <h3 className="font-serif text-2xl font-semibold text-wine mb-4">{t.home.experience25Years}</h3>
+              <h3 className="font-serif text-2xl font-semibold text-wine mb-4">{t.home.experience5Years}</h3>
               <p className="text-gray-600">
-                {t.home.experience25YearsDesc}
+                {t.home.experience5YearsDesc}
               </p>
             </div>
             

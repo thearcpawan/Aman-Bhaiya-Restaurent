@@ -36,18 +36,18 @@ export default function AboutSection({ restaurant }: AboutSectionProps) {
             <div className="grid grid-cols-2 gap-4 mt-8">
               <div className="text-center p-4 bg-beige rounded-lg">
                 <div className="text-2xl font-bold text-wine">
-                  {isCasaDaPeixe ? "25+" : "15+"}
+                  5+
                 </div>
                 <div className="text-sm text-charcoal">
-                  {isCasaDaPeixe ? t.about.yearsExperience : t.about.awardWinningDishes}
+                  {t.about.yearsExperience}
                 </div>
               </div>
               <div className="text-center p-4 bg-beige rounded-lg">
                 <div className="text-2xl font-bold text-wine">
-                  {isCasaDaPeixe ? "100+" : "50+"}
+                  50+
                 </div>
                 <div className="text-sm text-charcoal">
-                  {isCasaDaPeixe ? t.about.traditionalRecipes : t.about.premiumWines}
+                  {t.about.traditionalRecipes}
                 </div>
               </div>
             </div>
