@@ -16,7 +16,7 @@ export const translations = {
     // Restaurants
     restaurants: {
       "casa-da-peixe": {
-        name: "Original's Casa Da Peixe",
+        name: "Original's Casa de Peixe",
         tagline: "Fresh seafood and Portuguese coastal flavors",
         description: "Specializing in the freshest seafood and traditional Portuguese coastal cuisine. Our dishes celebrate the bounty of the sea with authentic recipes passed down through generations of fishermen and coastal cooks."
       },
@@ -271,7 +271,7 @@ export const translations = {
     // Restaurants
     restaurants: {
       "casa-da-peixe": {
-        name: "Original's Casa Da Peixe",
+        name: "Original's Casa de Peixe",
         tagline: "Peixe fresco e sabores costeiros portugueses",
         description: "Especializamo-nos no peixe mais fresco e na cozinha costeira tradicional portuguesa. Os nossos pratos celebram a abundância do mar com receitas autênticas transmitidas através de gerações de pescadores e cozinheiros costeiros."
       },
@@ -526,7 +526,7 @@ export const translations = {
     // Restaurants
     restaurants: {
       "casa-da-peixe": {
-        name: "Original's Casa Da Peixe",
+        name: "Original's Casa de Peixe",
         tagline: "Mariscos frescos y sabores costeros portugueses",
         description: "Especializados en los mariscos más frescos y la cocina costera tradicional portuguesa. Nuestros platos celebran la abundancia del mar con recetas auténticas transmitidas a través de generaciones de pescadores y cocineros costeros."
       },
@@ -781,7 +781,7 @@ export const translations = {
     // Restaurants
     restaurants: {
       "casa-da-peixe": {
-        name: "Original's Casa Da Peixe",
+        name: "Original's Casa de Peixe",
         tagline: "Verse zeevruchten en Portugese kustsmaken",
         description: "Gespecialiseerd in de verse zeevruchten en traditionele Portugese kustkeuken. Onze gerechten vieren de overvloed van de zee met authentieke recepten doorgegeven door generaties vissers en kustkoks."
       },
