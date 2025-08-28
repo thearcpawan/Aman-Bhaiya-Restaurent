@@ -7,6 +7,7 @@ import { MENU_CATEGORIES } from "@/lib/constants";
 import type { Restaurant, MenuItem } from "@shared/schema";
 import starterImageMeat from "@assets/f2_1756236810700.jpg";
 import starterImageSeafood from "@assets/a5_1756237863463.jpg";
+import casaDaPeixeStarterImage from "@assets/f7_1756382522658.jpg";
 
 interface MenuSectionProps {
   restaurant: Restaurant;
@@ -14,7 +15,7 @@ interface MenuSectionProps {
 
 const categoryImages = {
   starters: (restaurant: Restaurant) => restaurant.slug === "casa-da-peixe" 
-    ? "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400"
+    ? casaDaPeixeStarterImage
     : starterImageMeat,
   mains: (restaurant: Restaurant) => restaurant.slug === "casa-da-peixe" 
     ? "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400"
