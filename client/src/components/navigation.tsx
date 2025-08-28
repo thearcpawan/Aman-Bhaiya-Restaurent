@@ -27,12 +27,12 @@ export default function Navigation() {
   return (
     <nav className="bg-white shadow-lg fixed w-full top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-20">
-          <div className="flex items-center">
+        <div className="flex justify-between items-center h-16 sm:h-20">
+          <div className="flex items-center flex-1 min-w-0">
             <Link href="/" data-testid="link-home">
-              <h1 className="font-serif text-lg sm:text-xl md:text-2xl font-bold text-wine cursor-pointer hover:text-wine-light transition-colors">
+              <h1 className="font-serif text-sm sm:text-xl md:text-2xl font-bold text-wine cursor-pointer hover:text-wine-light transition-colors leading-tight">
                 <span className="hidden sm:inline">{t.nav.title}</span>
-                <span className="sm:hidden whitespace-pre-line">{t.nav.titleMobile}</span>
+                <span className="sm:hidden whitespace-pre-line text-center">{t.nav.titleMobile}</span>
               </h1>
             </Link>
           </div>
@@ -98,14 +98,14 @@ export default function Navigation() {
           </div>
 
           {/* Mobile menu button & Language switcher */}
-          <div className="md:hidden flex items-center space-x-2">
+          <div className="md:hidden flex items-center space-x-1 flex-shrink-0">
             {/* Mobile Language Switcher */}
-            <div className="flex items-center space-x-1">
+            <div className="flex items-center space-x-0.5">
               <Button
                 variant={language === 'pt' ? 'default' : 'ghost'}
                 size="sm"
                 onClick={() => setLanguage('pt')}
-                className="px-1 py-1 text-xs"
+                className="px-1.5 py-1 text-xs h-7 min-w-0"
                 data-testid="button-mobile-lang-pt"
               >
                 PT
@@ -114,7 +114,7 @@ export default function Navigation() {
                 variant={language === 'es' ? 'default' : 'ghost'}
                 size="sm"
                 onClick={() => setLanguage('es')}
-                className="px-1 py-1 text-xs"
+                className="px-1.5 py-1 text-xs h-7 min-w-0"
                 data-testid="button-mobile-lang-es"
               >
                 ES
@@ -123,7 +123,7 @@ export default function Navigation() {
                 variant={language === 'nl' ? 'default' : 'ghost'}
                 size="sm"
                 onClick={() => setLanguage('nl')}
-                className="px-1 py-1 text-xs"
+                className="px-1.5 py-1 text-xs h-7 min-w-0"
                 data-testid="button-mobile-lang-nl"
               >
                 NL
@@ -132,7 +132,7 @@ export default function Navigation() {
                 variant={language === 'en' ? 'default' : 'ghost'}
                 size="sm"
                 onClick={() => setLanguage('en')}
-                className="px-1 py-1 text-xs"
+                className="px-1.5 py-1 text-xs h-7 min-w-0"
                 data-testid="button-mobile-lang-en"
               >
                 EN
