@@ -130,7 +130,7 @@ export default function Home() {
             <Card className="bg-white shadow-lg hover:-translate-y-2 transition-all duration-300">
               <CardContent className="p-6">
                 <img
-                  src="https://images.unsplash.com/photo-1571115764595-644a1f56a55c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250"
+                  src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250"
                   alt="Pastéis de Nata - Portuguese custard tarts"
                   className="w-full h-48 object-cover rounded-lg mb-4"
                 />
@@ -142,7 +142,7 @@ export default function Home() {
             <Card className="bg-white shadow-lg hover:-translate-y-2 transition-all duration-300">
               <CardContent className="p-6">
                 <img
-                  src="https://images.unsplash.com/photo-1551538827-9c037cb4f32a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250"
+                  src="https://images.unsplash.com/photo-1474722883778-792e7990302f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250"
                   alt="Vinho Verde - Portuguese green wine"
                   className="w-full h-48 object-cover rounded-lg mb-4"
                 />
