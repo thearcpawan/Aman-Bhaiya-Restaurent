@@ -94,7 +94,7 @@ export default function ContactSection({ restaurant }: ContactSectionProps) {
                   <h3 className="font-semibold text-lg mb-2">{t.contact.facebook}</h3>
                   <a 
                     href={restaurant.slug === "casa-da-peixe" 
-                      ? "#" 
+                      ? "https://www.facebook.com/profile.php?id=61577184646207" 
                       : "https://www.facebook.com/LaFamigliaSetubal"}
                     target="_blank"
                     rel="noopener noreferrer"
