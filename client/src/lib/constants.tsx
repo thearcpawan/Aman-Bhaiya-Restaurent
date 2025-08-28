@@ -3,7 +3,7 @@ import casaDaPeixeCover from '@assets/20250827_2018_Inviting Restaurant Exterior
 
 export const RESTAURANTS = {
   "casa-da-peixe": {
-    name: "Casa Da Peixe",
+    name: "Original's Casa de Peixe",
     slug: "casa-da-peixe",
     tagline: "Fresh seafood and Portuguese coastal flavors",
     heroImage: casaDaPeixeCover,

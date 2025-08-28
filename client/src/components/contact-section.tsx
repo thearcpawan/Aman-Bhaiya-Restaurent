@@ -101,7 +101,7 @@ export default function ContactSection({ restaurant }: ContactSectionProps) {
                     className="text-gray-600 hover:text-wine transition-colors"
                     data-testid="link-facebook"
                   >
-                    {restaurant.slug === "casa-da-peixe" ? "Casa Da Peixe" : "La Famiglia Setúbal"}
+                    {restaurant.slug === "casa-da-peixe" ? "Original's Casa de Peixe" : "La Famiglia Setúbal"}
                   </a>
                 </div>
               </div>

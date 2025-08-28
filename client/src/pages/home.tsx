@@ -233,7 +233,7 @@ export default function Home() {
                   ))}
                 </div>
                 <p className="text-gray-600 mb-6 italic">
-                  "Both restaurants offer incredible food, but each has its own personality. Casa Da Peixe has amazing seafood, while Lapicanha serves the best grilled meats."
+                  "Both restaurants offer incredible food, but each has its own personality. Original's Casa de Peixe has amazing seafood, while Lapicanha serves the best grilled meats."
                 </p>
                 <div className="font-semibold text-wine">João Silva</div>
                 <div className="text-sm text-gray-500">Regular Customer</div>
@@ -292,13 +292,13 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8">
             <div className="md:col-span-2">
-              <h3 className="font-serif text-2xl font-bold text-wine mb-4">Casa Da Peixe & Lapicanha</h3>
+              <h3 className="font-serif text-2xl font-bold text-wine mb-4">Original's Casa de Peixe & Lapicanha</h3>
               <p className="text-gray-300 mb-4">
                 {t.home.footerDesc}
               </p>
             </div>
             <div>
-              <h4 className="font-semibold text-lg mb-4">Casa Da Peixe</h4>
+              <h4 className="font-semibold text-lg mb-4">Original's Casa de Peixe</h4>
               <p className="text-gray-300 text-sm">
                 Largo José Afonso 64, 2900-633<br />
                 Setúbal, Portugal
@@ -313,7 +313,7 @@ export default function Home() {
             </div>
           </div>
           <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 Casa Da Peixe & Lapicanha. {t.home.allRightsReserved}</p>
+            <p>&copy; 2024 Original's Casa de Peixe & Lapicanha. {t.home.allRightsReserved}</p>
           </div>
         </div>
       </footer>

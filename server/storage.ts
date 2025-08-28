@@ -41,10 +41,10 @@ export class MemStorage implements IStorage {
   }
 
   private initializeData() {
-    // Initialize with Casa Da Peixe and Lapicanha restaurants
+    // Initialize with Original's Casa de Peixe and Lapicanha restaurants
     const casaDaPeixe: Restaurant = {
       id: "casa-da-peixe-id",
-      name: "Casa Da Peixe",
+      name: "Original's Casa de Peixe",
       slug: "casa-da-peixe",
       description: "Specializing in the freshest seafood and traditional Portuguese coastal cuisine. Our dishes celebrate the bounty of the sea with authentic recipes passed down through generations of fishermen and coastal cooks.",
       address: "Largo José Afonso 64, 2900-633\nSetúbal, Portugal",
@@ -69,7 +69,7 @@ export class MemStorage implements IStorage {
     this.restaurants.set(casaDaPeixe.id, casaDaPeixe);
     this.restaurants.set(lapicanha.id, lapicanha);
 
-    // Add Casa Da Peixe menu items from the real menu
+    // Add Original's Casa de Peixe menu items from the real menu
     this.initializeCasaDaPeixeMenu();
     
     // Add Lapicanha menu items from the real menu
