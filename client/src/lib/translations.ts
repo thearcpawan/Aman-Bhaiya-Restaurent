@@ -3,7 +3,7 @@ export const translations = {
     // Navigation
     nav: {
       title: "Original's Casa de Peixe & Lapicanha",
-      titleMobile: "Original's\nCasa de Peixe"
+      titleMobile: "Original's Casa de Peixe\n& Lapicanha"
     },
     
     // Hero Section
@@ -258,7 +258,7 @@ export const translations = {
     // Navigation
     nav: {
       title: "Original's Casa de Peixe & Lapicanha",
-      titleMobile: "Original's\nCasa de Peixe"
+      titleMobile: "Original's Casa de Peixe\n& Lapicanha"
     },
     
     // Hero Section
@@ -513,7 +513,7 @@ export const translations = {
     // Navigation
     nav: {
       title: "Original's Casa de Peixe & Lapicanha",
-      titleMobile: "Original's\nCasa de Peixe"
+      titleMobile: "Original's Casa de Peixe\n& Lapicanha"
     },
     
     // Hero Section
@@ -768,7 +768,7 @@ export const translations = {
     // Navigation
     nav: {
       title: "Original's Casa de Peixe & Lapicanha",
-      titleMobile: "Original's\nCasa de Peixe"
+      titleMobile: "Original's Casa de Peixe\n& Lapicanha"
     },
     
     // Hero Section

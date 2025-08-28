@@ -18,7 +18,7 @@ export default function HeroSection({ onRestaurantChoice, onMenuAccess }: HeroSe
         backgroundImage: `linear-gradient(rgba(139, 38, 53, 0.7), rgba(44, 44, 44, 0.7)), url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080')`
       }}
     >
-      <div className="absolute inset-0 flex items-center justify-center pt-32 pb-16 z-20">
+      <div className="absolute inset-0 flex items-center justify-center pt-24 pb-16 z-20">
         <div className="text-center text-white px-6 sm:px-8 md:px-12 lg:px-16 max-w-6xl mx-auto">
           <h1 className="font-serif text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 leading-tight">
             {t.hero.title}

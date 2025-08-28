@@ -27,12 +27,12 @@ export default function Navigation() {
   return (
     <nav className="bg-white shadow-lg fixed w-full top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16 sm:h-20">
-          <div className="flex items-center flex-1 min-w-0">
+        <div className="flex justify-between items-center h-20 sm:h-20">
+          <div className="flex items-center flex-1 min-w-0 pr-2">
             <Link href="/" data-testid="link-home">
-              <h1 className="font-serif text-sm sm:text-xl md:text-2xl font-bold text-wine cursor-pointer hover:text-wine-light transition-colors leading-tight">
+              <h1 className="font-serif text-xs sm:text-xl md:text-2xl font-bold text-wine cursor-pointer hover:text-wine-light transition-colors leading-tight">
                 <span className="hidden sm:inline">{t.nav.title}</span>
-                <span className="sm:hidden whitespace-pre-line text-center">{t.nav.titleMobile}</span>
+                <span className="sm:hidden whitespace-pre-line text-center leading-tight">{t.nav.titleMobile}</span>
               </h1>
             </Link>
           </div>
