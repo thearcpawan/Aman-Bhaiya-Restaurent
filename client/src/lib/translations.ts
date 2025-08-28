@@ -507,6 +507,516 @@ export const translations = {
       from: "de",
       to: "para"
     }
+  },
+
+  es: {
+    // Navigation
+    nav: {
+      title: "Casa Da Peixe & Lapicanha",
+      titleMobile: "Casa Da Peixe\n& Lapicanha"
+    },
+    
+    // Hero Section
+    hero: {
+      title: "Casa Da Peixe & Lapicanha",
+      subtitle: "Cocina Portuguesa Auténtica, Dos Experiencias Únicas",
+      viewMenu: "Ver Menú"
+    },
+    
+    // Restaurants
+    restaurants: {
+      "casa-da-peixe": {
+        name: "Casa Da Peixe",
+        tagline: "Mariscos frescos y sabores costeros portugueses",
+        description: "Especializados en los mariscos más frescos y la cocina costera tradicional portuguesa. Nuestros platos celebran la abundancia del mar con recetas auténticas transmitidas a través de generaciones de pescadores y cocineros costeros."
+      },
+      lapicanha: {
+        name: "Lapicanha",
+        tagline: "Carnes a la parrilla premium y sabores tradicionales",
+        description: "Carnes a la parrilla premium y sabores portugueses tradicionales en un ambiente cálido y rústico. Nos especializamos en picanha perfectamente preparada y otros cortes prime, acompañados de guarniciones portuguesas auténticas y vinos."
+      }
+    },
+    
+    // Menu Section
+    menu: {
+      title: {
+        "casa-da-peixe": "Menú de Mariscos Frescos",
+        lapicanha: "Menú de Carnes Premium"
+      },
+      categories: {
+        starters: "Entrantes",
+        mains: "Platos Principales",
+        desserts: "Postres",
+        drinks: "Bebidas"
+      },
+      noItems: "Aún no se han añadido elementos"
+    },
+    
+    // Reservations
+    reservations: {
+      title: {
+        "casa-da-peixe": "Hacer una Reserva",
+        lapicanha: "Reserve su Mesa"
+      },
+      preferCall: "¿Prefiere Llamar?",
+      callDescription: "Llámenos directamente para confirmación inmediata de reserva",
+      call: "Llamar",
+      whatsapp: "WhatsApp",
+      availability: {
+        "casa-da-peixe": "Disponible todos los días • Llame o WhatsApp para reservas",
+        lapicanha: "Disponible todos los días • Llame para confirmación inmediata"
+      },
+      restaurantInfo: "Información del Restaurante",
+      address: "Dirección:",
+      phone: "Teléfono:",
+      whatsappLabel: "WhatsApp:",
+      whatsappNumber: "+351 926 091 468",
+      callToday: "¡Llámenos para hacer su reserva hoy!"
+    },
+    
+    // Home Page
+    home: {
+      aboutTitle: "Acerca de Casa Da Peixe & Lapicanha",
+      aboutSubtitle: "Durante más de 5 años, nos hemos dedicado a dar vida a los sabores portugueses auténticos a través de nuestras dos experiencias culinarias distintas. Cada restaurante cuenta su propia historia de herencia y pasión portuguesas.",
+      traditionalHeritage: "Herencia Tradicional",
+      traditionalHeritageDesc: "Nuestras recetas han sido transmitidas a través de generaciones, preservando el sabor auténtico de la rica historia culinaria de Portugal.",
+      freshIngredients: "Ingredientes Frescos",
+      freshIngredientsDesc: "Obtenemos los mejores ingredientes, muchos importados directamente de Portugal, para asegurar que cada plato capture la verdadera esencia de la cocina portuguesa.",
+      familyExperience: "Experiencia Familiar",
+      familyExperienceDesc: "Cada comida se prepara con amor y se sirve con la calidez de la hospitalidad portuguesa, haciéndote sentir como en familia.",
+      signatureDishes: "Platos Especiales",
+      signatureDishesDesc: "Descubre nuestras creaciones más queridas, cada una contando una historia de excelencia culinaria portuguesa",
+      whyChooseUs: "Por qué Elegir Casa Da Peixe & Lapicanha",
+      awardWinning: "Cocina Premiada",
+      awardWinningDesc: "Reconocidos por expertos culinarios y críticos gastronómicos por nuestros platos portugueses auténticos y calidad de servicio excepcional.",
+      experience5Years: "5+ Años de Experiencia",
+      experience5YearsDesc: "Cinco años perfeccionando nuestro arte, construyendo relaciones con clientes y preservando tradiciones culinarias portuguesas.",
+      twoLocations: "Dos Ubicaciones Únicas",
+      twoLocationsDesc: "Experimenta diferentes facetas de la cocina portuguesa - mariscos frescos en Casa Da Peixe y carnes a la parrilla premium en Lapicanha.",
+      whatGuestsSay: "Lo que Dicen Nuestros Huéspedes",
+      whatGuestsSayDesc: "Escucha de nuestros valiosos clientes sobre sus experiencias gastronómicas",
+      readyExperience: "¿Listo para Experimentar Portugal?",
+      readyExperienceDesc: "Únete a nosotros para un viaje culinario inolvidable a través de los sabores de Portugal. Elige tu aventura gastronómica.",
+      experienceCasaDaPeixe: "Experimentar Casa Da Peixe",
+      discoverLapicanha: "Descubrir Lapicanha",
+      footerDesc: "Trayendo el sabor auténtico de Portugal a tu mesa con dos experiencias gastronómicas únicas.",
+      allRightsReserved: "Todos los derechos reservados."
+    },
+
+    // Restaurant Page
+    restaurant: {
+      sections: {
+        about: "Acerca de",
+        menu: "Menú",
+        reservations: "Reservas",
+        gallery: "Galería",
+        contact: "Contacto"
+      },
+      notFound: "Restaurante No Encontrado",
+      notFoundDesc: "El restaurante que buscas no existe."
+    },
+
+    // About Section
+    about: {
+      yearsExperience: "Años de Experiencia",
+      traditionalRecipes: "Recetas Tradicionales",
+      awardWinningDishes: "Platos Premiados",
+      premiumWines: "Vinos Premium"
+    },
+
+    // Contact Section
+    contact: {
+      contactUs: "Contáctanos",
+      visitUs: "Visítanos",
+      address: "Dirección",
+      phone: "Teléfono",
+      whatsapp: "WhatsApp",
+      instagram: "Instagram",
+      facebook: "Facebook"
+    },
+
+    // Gallery Section
+    gallery: {
+      galleryTitle: "Galería",
+      ourSpaceTitle: "Nuestro Espacio"
+    },
+
+    // Forms
+    forms: {
+      labels: {
+        name: "Nombre",
+        email: "Correo",
+        phone: "Teléfono",
+        date: "Fecha",
+        time: "Hora",
+        guests: "Huéspedes",
+        specialRequests: "Solicitudes Especiales",
+        message: "Mensaje"
+      },
+      placeholders: {
+        name: "Ingrese su nombre",
+        email: "Ingrese su correo",
+        phone: "Ingrese su número de teléfono",
+        date: "Seleccione fecha",
+        time: "Seleccione hora",
+        guests: "Número de huéspedes",
+        specialRequests: "¿Alguna solicitud especial o restricciones dietéticas?",
+        message: "Su mensaje"
+      },
+      validation: {
+        required: "Este campo es obligatorio",
+        emailInvalid: "Por favor ingrese una dirección de correo válida",
+        phoneInvalid: "Por favor ingrese un número de teléfono válido",
+        dateInvalid: "Por favor seleccione una fecha válida",
+        timeInvalid: "Por favor seleccione una hora",
+        guestsMin: "Mínimo 1 huésped requerido",
+        guestsMax: "Máximo 20 huéspedes permitidos"
+      },
+      buttons: {
+        submit: "Enviar",
+        cancel: "Cancelar",
+        save: "Guardar",
+        delete: "Eliminar",
+        edit: "Editar",
+        close: "Cerrar",
+        confirm: "Confirmar",
+        back: "Atrás",
+        next: "Siguiente"
+      },
+      confirmations: {
+        deletePhoto: "¿Está seguro de que desea eliminar esta foto?",
+        deleteItem: "¿Está seguro de que desea eliminar este elemento?",
+        unsavedChanges: "Tiene cambios no guardados. ¿Está seguro de que desea salir?"
+      }
+    },
+
+    // Toast Messages
+    toast: {
+      success: {
+        reservationSubmitted: "Reserva Enviada",
+        reservationSubmittedDesc: "Su reserva ha sido enviada exitosamente. Nos pondremos en contacto pronto para confirmar.",
+        photoUploaded: "Foto Subida",
+        photoUploadedDesc: "La foto ha sido subida exitosamente.",
+        photoDeleted: "Foto Eliminada",
+        photoDeletedDesc: "La foto ha sido eliminada exitosamente."
+      },
+      error: {
+        reservationFailed: "Reserva Fallida",
+        reservationFailedDesc: "Error al enviar reserva. Por favor intente nuevamente.",
+        uploadFailed: "Subida Fallida",
+        uploadFailedDesc: "Error al subir foto. Por favor intente nuevamente.",
+        deleteFailed: "Eliminación Fallida",
+        deleteFailedDesc: "Error al eliminar foto. Por favor intente nuevamente.",
+        genericError: "Algo salió mal",
+        genericErrorDesc: "Ocurrió un error inesperado. Por favor intente nuevamente."
+      }
+    },
+
+    // SEO Metadata
+    seo: {
+      homePage: {
+        title: "Casa Da Peixe & Lapicanha - Cocina Portuguesa Auténtica",
+        description: "Experimenta la cocina portuguesa auténtica en Casa Da Peixe & Lapicanha. Mariscos frescos y carnes a la parrilla premium en Setúbal y Lisboa. Haz reservas hoy."
+      },
+      casaDaPeixe: {
+        title: "Casa Da Peixe - Mariscos Portugueses Frescos | Setúbal",
+        description: "Restaurante portugués auténtico de mariscos en Setúbal. Pescado fresco, sabores costeros tradicionales y hospitalidad cálida. Reserve su mesa hoy."
+      },
+      lapicanha: {
+        title: "Lapicanha - Carnes a la Parrilla Premium | Lisboa",
+        description: "Restaurante de carnes a la parrilla premium en Lisboa. Picanha portuguesa tradicional, preparación experta y experiencia gastronómica excepcional. Reserve ahora."
+      }
+    },
+
+    // Loading States
+    loading: {
+      restaurant: "Cargando restaurante...",
+      menu: "Cargando menú...",
+      gallery: "Cargando galería...",
+      reservations: "Cargando...",
+      submitting: "Enviando...",
+      uploading: "Subiendo...",
+      deleting: "Eliminando..."
+    },
+
+    // General
+    general: {
+      language: "Idioma",
+      loading: "Cargando...",
+      error: "Error",
+      success: "Éxito",
+      warning: "Advertencia",
+      info: "Información",
+      yes: "Sí",
+      no: "No",
+      ok: "OK",
+      and: "y",
+      or: "o",
+      of: "de",
+      in: "en",
+      at: "en",
+      on: "en",
+      for: "para",
+      with: "con",
+      by: "por",
+      from: "de",
+      to: "a"
+    }
+  },
+
+  nl: {
+    // Navigation
+    nav: {
+      title: "Casa Da Peixe & Lapicanha",
+      titleMobile: "Casa Da Peixe\n& Lapicanha"
+    },
+    
+    // Hero Section
+    hero: {
+      title: "Casa Da Peixe & Lapicanha",
+      subtitle: "Authentieke Portugese Keuken, Twee Unieke Ervaringen",
+      viewMenu: "Bekijk Menu"
+    },
+    
+    // Restaurants
+    restaurants: {
+      "casa-da-peixe": {
+        name: "Casa Da Peixe",
+        tagline: "Verse zeevruchten en Portugese kustsmaken",
+        description: "Gespecialiseerd in de verse zeevruchten en traditionele Portugese kustkeuken. Onze gerechten vieren de overvloed van de zee met authentieke recepten doorgegeven door generaties vissers en kustkoks."
+      },
+      lapicanha: {
+        name: "Lapicanha",
+        tagline: "Premium gegrild vlees en traditionele smaken",
+        description: "Premium gegrild vlees en traditionele Portugese smaken in een warme, rustieke sfeer. Wij specialiseren ons in perfect bereide picanha en andere premium stukken, gecombineerd met authentieke Portugese bijgerechten en wijnen."
+      }
+    },
+    
+    // Menu Section
+    menu: {
+      title: {
+        "casa-da-peixe": "Verse Zeevruchten Menu",
+        lapicanha: "Premium Vlees Menu"
+      },
+      categories: {
+        starters: "Voorgerechten",
+        mains: "Hoofdgerechten",
+        desserts: "Desserts",
+        drinks: "Dranken"
+      },
+      noItems: "Nog geen items toegevoegd"
+    },
+    
+    // Reservations
+    reservations: {
+      title: {
+        "casa-da-peixe": "Maak een Reservering",
+        lapicanha: "Reserveer uw Tafel"
+      },
+      preferCall: "Liever Bellen?",
+      callDescription: "Bel ons direct voor onmiddellijke reserveringsbevestiging",
+      call: "Bellen",
+      whatsapp: "WhatsApp",
+      availability: {
+        "casa-da-peixe": "Elke dag beschikbaar • Bel of WhatsApp voor reserveringen",
+        lapicanha: "Elke dag beschikbaar • Bel voor onmiddellijke bevestiging"
+      },
+      restaurantInfo: "Restaurant Informatie",
+      address: "Adres:",
+      phone: "Telefoon:",
+      whatsappLabel: "WhatsApp:",
+      whatsappNumber: "+351 926 091 468",
+      callToday: "Bel ons vandaag nog om uw reservering te maken!"
+    },
+    
+    // Home Page
+    home: {
+      aboutTitle: "Over Casa Da Peixe & Lapicanha",
+      aboutSubtitle: "Meer dan 5 jaar lang hebben wij ons toegewijd aan het tot leven brengen van authentieke Portugese smaken door onze twee verschillende culinaire ervaringen. Elk restaurant vertelt zijn eigen verhaal van Portugees erfgoed en passie.",
+      traditionalHeritage: "Traditioneel Erfgoed",
+      traditionalHeritageDesc: "Onze recepten zijn doorgegeven door generaties, waarbij de authentieke smaak van Portugal's rijke culinaire geschiedenis behouden blijft.",
+      freshIngredients: "Verse Ingrediënten",
+      freshIngredientsDesc: "Wij verkrijgen de beste ingrediënten, veel direct geïmporteerd uit Portugal, om ervoor te zorgen dat elk gerecht de ware essentie van de Portugese keuken vastlegt.",
+      familyExperience: "Familie Ervaring",
+      familyExperienceDesc: "Elke maaltijd wordt met liefde bereid en geserveerd met de warmte van Portugese gastvrijheid, waardoor u zich thuis voelt.",
+      signatureDishes: "Specialiteiten",
+      signatureDishesDesc: "Ontdek onze meest geliefde creaties, elk vertelend een verhaal van Portugese culinaire excellentie",
+      whyChooseUs: "Waarom Kiezen voor Casa Da Peixe & Lapicanha",
+      awardWinning: "Bekroonde Keuken",
+      awardWinningDesc: "Erkend door culinaire experts en voedselcritici voor onze authentieke Portugese gerechten en uitzonderlijke servicekwaliteit.",
+      experience5Years: "5+ Jaar Ervaring",
+      experience5YearsDesc: "Vijf jaar van het perfectioneren van ons ambacht, het opbouwen van relaties met klanten en het behouden van Portugese culinaire tradities.",
+      twoLocations: "Twee Unieke Locaties",
+      twoLocationsDesc: "Ervaar verschillende facetten van de Portugese keuken - verse zeevruchten bij Casa Da Peixe en premium gegrild vlees bij Lapicanha.",
+      whatGuestsSay: "Wat Onze Gasten Zeggen",
+      whatGuestsSayDesc: "Hoor van onze gewaardeerde klanten over hun eetervaring",
+      readyExperience: "Klaar om Portugal te Ervaren?",
+      readyExperienceDesc: "Ga met ons mee op een onvergetelijke culinaire reis door de smaken van Portugal. Kies uw gastronomische avontuur.",
+      experienceCasaDaPeixe: "Ervaar Casa Da Peixe",
+      discoverLapicanha: "Ontdek Lapicanha",
+      footerDesc: "De authentieke smaak van Portugal naar uw tafel brengen met twee unieke eetervaring.",
+      allRightsReserved: "Alle rechten voorbehouden."
+    },
+
+    // Restaurant Page
+    restaurant: {
+      sections: {
+        about: "Over",
+        menu: "Menu",
+        reservations: "Reserveringen",
+        gallery: "Galerij",
+        contact: "Contact"
+      },
+      notFound: "Restaurant Niet Gevonden",
+      notFoundDesc: "Het restaurant dat u zoekt bestaat niet."
+    },
+
+    // About Section
+    about: {
+      yearsExperience: "Jaar Ervaring",
+      traditionalRecipes: "Traditionele Recepten",
+      awardWinningDishes: "Bekroonde Gerechten",
+      premiumWines: "Premium Wijnen"
+    },
+
+    // Contact Section
+    contact: {
+      contactUs: "Neem Contact Op",
+      visitUs: "Bezoek Ons",
+      address: "Adres",
+      phone: "Telefoon",
+      whatsapp: "WhatsApp",
+      instagram: "Instagram",
+      facebook: "Facebook"
+    },
+
+    // Gallery Section
+    gallery: {
+      galleryTitle: "Galerij",
+      ourSpaceTitle: "Onze Ruimte"
+    },
+
+    // Forms
+    forms: {
+      labels: {
+        name: "Naam",
+        email: "Email",
+        phone: "Telefoon",
+        date: "Datum",
+        time: "Tijd",
+        guests: "Gasten",
+        specialRequests: "Speciale Verzoeken",
+        message: "Bericht"
+      },
+      placeholders: {
+        name: "Voer uw naam in",
+        email: "Voer uw email in",
+        phone: "Voer uw telefoonnummer in",
+        date: "Selecteer datum",
+        time: "Selecteer tijd",
+        guests: "Aantal gasten",
+        specialRequests: "Speciale verzoeken of dieetbeperkingen?",
+        message: "Uw bericht"
+      },
+      validation: {
+        required: "Dit veld is verplicht",
+        emailInvalid: "Voer een geldig emailadres in",
+        phoneInvalid: "Voer een geldig telefoonnummer in",
+        dateInvalid: "Selecteer een geldige datum",
+        timeInvalid: "Selecteer een tijd",
+        guestsMin: "Minimaal 1 gast vereist",
+        guestsMax: "Maximaal 20 gasten toegestaan"
+      },
+      buttons: {
+        submit: "Versturen",
+        cancel: "Annuleren",
+        save: "Opslaan",
+        delete: "Verwijderen",
+        edit: "Bewerken",
+        close: "Sluiten",
+        confirm: "Bevestigen",
+        back: "Terug",
+        next: "Volgende"
+      },
+      confirmations: {
+        deletePhoto: "Weet u zeker dat u deze foto wilt verwijderen?",
+        deleteItem: "Weet u zeker dat u dit item wilt verwijderen?",
+        unsavedChanges: "U heeft niet-opgeslagen wijzigingen. Weet u zeker dat u wilt vertrekken?"
+      }
+    },
+
+    // Toast Messages
+    toast: {
+      success: {
+        reservationSubmitted: "Reservering Verstuurd",
+        reservationSubmittedDesc: "Uw reservering is succesvol verstuurd. We nemen binnenkort contact op voor bevestiging.",
+        photoUploaded: "Foto Geüpload",
+        photoUploadedDesc: "Foto is succesvol geüpload.",
+        photoDeleted: "Foto Verwijderd",
+        photoDeletedDesc: "Foto is succesvol verwijderd."
+      },
+      error: {
+        reservationFailed: "Reservering Mislukt",
+        reservationFailedDesc: "Fout bij versturen reservering. Probeer opnieuw.",
+        uploadFailed: "Upload Mislukt",
+        uploadFailedDesc: "Fout bij uploaden foto. Probeer opnieuw.",
+        deleteFailed: "Verwijderen Mislukt",
+        deleteFailedDesc: "Fout bij verwijderen foto. Probeer opnieuw.",
+        genericError: "Er ging iets mis",
+        genericErrorDesc: "Er is een onverwachte fout opgetreden. Probeer opnieuw."
+      }
+    },
+
+    // SEO Metadata
+    seo: {
+      homePage: {
+        title: "Casa Da Peixe & Lapicanha - Authentieke Portugese Keuken",
+        description: "Ervaar authentieke Portugese keuken bij Casa Da Peixe & Lapicanha. Verse zeevruchten en premium gegrild vlees in Setúbal en Lissabon. Maak vandaag een reservering."
+      },
+      casaDaPeixe: {
+        title: "Casa Da Peixe - Verse Portugese Zeevruchten | Setúbal",
+        description: "Authentiek Portugees zeevruchtenrestaurant in Setúbal. Verse vis, traditionele kustsmaken en warme gastvrijheid. Boek vandaag uw tafel."
+      },
+      lapicanha: {
+        title: "Lapicanha - Premium Gegrild Vlees | Lissabon",
+        description: "Premium gegrild vleesrestaurant in Lissabon. Traditionele Portugese picanha, expertbereiding en uitzonderlijke eetervaring. Reserveer nu."
+      }
+    },
+
+    // Loading States
+    loading: {
+      restaurant: "Restaurant laden...",
+      menu: "Menu laden...",
+      gallery: "Galerij laden...",
+      reservations: "Laden...",
+      submitting: "Versturen...",
+      uploading: "Uploaden...",
+      deleting: "Verwijderen..."
+    },
+
+    // General
+    general: {
+      language: "Taal",
+      loading: "Laden...",
+      error: "Fout",
+      success: "Succes",
+      warning: "Waarschuwing",
+      info: "Informatie",
+      yes: "Ja",
+      no: "Nee",
+      ok: "OK",
+      and: "en",
+      or: "of",
+      of: "van",
+      in: "in",
+      at: "bij",
+      on: "op",
+      for: "voor",
+      with: "met",
+      by: "door",
+      from: "van",
+      to: "naar"
+    }
   }
 } as const;
 
