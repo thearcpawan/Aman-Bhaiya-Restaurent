@@ -29,7 +29,7 @@ export default function Home() {
         onMenuAccess={handleMenuAccess}
       />
       
-      {/* About Casa Da Peixe & Lapicanha Section */}
+      {/* About Original's Casa de Peixe & Lapicanha Section */}
       <section className="pt-40 pb-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
