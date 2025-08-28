@@ -27,7 +27,7 @@ export default function Navigation() {
   return (
     <nav className="bg-white shadow-lg fixed w-full top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-24 sm:h-28">
+        <div className="flex justify-between items-center h-20 sm:h-20">
           <div className="flex items-center flex-1 min-w-0 pr-2">
             <Link href="/" data-testid="link-home">
               <h1 className="font-serif text-xs sm:text-xl md:text-2xl font-bold text-wine cursor-pointer hover:text-wine-light transition-colors leading-tight">
@@ -150,19 +150,6 @@ export default function Navigation() {
             </Button>
           </div>
         </div>
-        
-        {/* Restaurant Name Banner */}
-        {currentRestaurant && (
-          <div className="bg-wine text-white py-3">
-            <div className="max-w-7xl mx-auto px-4 text-center">
-              <h2 className="font-serif text-lg sm:text-xl md:text-2xl font-bold">
-                {currentRestaurant === 'casa-da-peixe' 
-                  ? t.restaurants['casa-da-peixe'].name 
-                  : t.restaurants.lapicanha.name}
-              </h2>
-            </div>
-          </div>
-        )}
       </div>
 
       {/* Mobile Menu */}
