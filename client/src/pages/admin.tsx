@@ -15,7 +15,7 @@ export default function AdminPage() {
   });
 
   const allReservations = [
-    ...(casaReservations || []).map((res: any) => ({ ...res, restaurantName: "Casa Da Peixe" })),
+    ...(casaReservations || []).map((res: any) => ({ ...res, restaurantName: "Original's Casa de Peixe" })),
     ...(lapicanhaReservations || []).map((res: any) => ({ ...res, restaurantName: "Lapicanha" }))
   ];
 
