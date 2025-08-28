@@ -6,6 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import HeroSection from "@/components/hero-section";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useDocumentTitle } from "@/hooks/useDocumentTitle";
+import pastriesImage from "@assets/assortment-pieces-cake_114579-85732_1756384661320.avif";
 
 export default function Home() {
   const [, setLocation] = useLocation();
@@ -130,7 +131,7 @@ export default function Home() {
             <Card className="bg-white shadow-lg hover:-translate-y-2 transition-all duration-300">
               <CardContent className="p-6">
                 <img
-                  src="https://images.unsplash.com/photo-1509440159596-0249088772ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250"
+                  src={pastriesImage}
                   alt="Pastéis de Nata - Portuguese custard tarts"
                   className="w-full h-48 object-cover rounded-lg mb-4"
                 />
