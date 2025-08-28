@@ -38,7 +38,7 @@ export default function Restaurant() {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen pt-20">
+      <div className="min-h-screen pt-32">
         <div className="max-w-7xl mx-auto px-4 py-8">
           <Skeleton className="h-12 w-96 mb-8" />
           <div className="grid md:grid-cols-2 gap-8">
@@ -56,7 +56,7 @@ export default function Restaurant() {
 
   if (error || !restaurant) {
     return (
-      <div className="min-h-screen pt-20 flex items-center justify-center">
+      <div className="min-h-screen pt-32 flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-serif font-bold text-wine mb-4">{t.restaurant.notFound}</h1>
           <p className="text-gray-600">{t.restaurant.notFoundDesc}</p>
@@ -96,7 +96,7 @@ export default function Restaurant() {
   return (
     <div className="min-h-screen">
       {/* Sub Navigation */}
-      <div className="bg-beige-light py-4 mt-20 sticky top-20 z-40">
+      <div className="bg-beige-light py-4 mt-32 sticky top-32 z-40">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-6">
             {sections.map((section) => (
