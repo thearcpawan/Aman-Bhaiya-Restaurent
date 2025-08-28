@@ -2,13 +2,13 @@ export const translations = {
   en: {
     // Navigation
     nav: {
-      title: "Casa Da Peixe & Lapicanha",
-      titleMobile: "Casa Da Peixe\n& Lapicanha"
+      title: "Original's Casa de Peixe & Lapicanha",
+      titleMobile: "Original's Casa de Peixe\n& Lapicanha"
     },
     
     // Hero Section
     hero: {
-      title: "Casa Da Peixe & Lapicanha",
+      title: "Original's Casa de Peixe & Lapicanha",
       subtitle: "Authentic Portuguese Cuisine, Two Unique Experiences",
       viewMenu: "View Menu"
     },
@@ -66,7 +66,7 @@ export const translations = {
     
     // Home Page
     home: {
-      aboutTitle: "About Casa Da Peixe & Lapicanha",
+      aboutTitle: "About Original's Casa de Peixe & Lapicanha",
       aboutSubtitle: "For over 5 years, we've been dedicated to bringing authentic Portuguese flavors to life through our two distinct culinary experiences. Each restaurant tells its own story of Portuguese heritage and passion.",
       traditionalHeritage: "Traditional Heritage",
       traditionalHeritageDesc: "Our recipes have been passed down through generations, preserving the authentic taste of Portugal's rich culinary history.",
@@ -76,7 +76,7 @@ export const translations = {
       familyExperienceDesc: "Every meal is crafted with love and served with the warmth of Portuguese hospitality, making you feel like family.",
       signatureDishes: "Signature Dishes",
       signatureDishesDesc: "Discover our most beloved creations, each telling a story of Portuguese culinary excellence",
-      whyChooseUs: "Why Choose Casa Da Peixe & Lapicanha",
+      whyChooseUs: "Why Choose Original's Casa de Peixe & Lapicanha",
       awardWinning: "Award-Winning Cuisine",
       awardWinningDesc: "Recognized by culinary experts and food critics for our authentic Portuguese dishes and exceptional service quality.",
       experience5Years: "5+ Years Experience",
@@ -205,8 +205,8 @@ export const translations = {
     // SEO Metadata
     seo: {
       homePage: {
-        title: "Casa Da Peixe & Lapicanha - Authentic Portuguese Cuisine",
-        description: "Experience authentic Portuguese cuisine at Casa Da Peixe & Lapicanha. Fresh seafood and premium grilled meats in Setúbal and Lisboa. Make reservations today."
+        title: "Original's Casa de Peixe & Lapicanha - Authentic Portuguese Cuisine",
+        description: "Experience authentic Portuguese cuisine at Original's Casa de Peixe & Lapicanha. Fresh seafood and premium grilled meats in Setúbal and Lisboa. Make reservations today."
       },
       casaDaPeixe: {
         title: "Casa Da Peixe - Fresh Portuguese Seafood | Setúbal",
@@ -257,13 +257,13 @@ export const translations = {
   pt: {
     // Navigation
     nav: {
-      title: "Casa Da Peixe & Lapicanha",
-      titleMobile: "Casa Da Peixe\n& Lapicanha"
+      title: "Original's Casa de Peixe & Lapicanha",
+      titleMobile: "Original's Casa de Peixe\n& Lapicanha"
     },
     
     // Hero Section
     hero: {
-      title: "Casa Da Peixe & Lapicanha",
+      title: "Original's Casa de Peixe & Lapicanha",
       subtitle: "Cozinha Portuguesa Autêntica, Duas Experiências Únicas",
       viewMenu: "Ver Ementa"
     },
@@ -321,7 +321,7 @@ export const translations = {
     
     // Home Page
     home: {
-      aboutTitle: "Sobre Casa Da Peixe & Lapicanha",
+      aboutTitle: "Sobre Original's Casa de Peixe & Lapicanha",
       aboutSubtitle: "Há mais de 5 anos, dedicamo-nos a dar vida aos sabores portugueses autênticos através das nossas duas experiências culinárias distintas. Cada restaurante conta a sua própria história de herança e paixão portuguesas.",
       traditionalHeritage: "Herança Tradicional",
       traditionalHeritageDesc: "As nossas receitas foram transmitidas através de gerações, preservando o sabor autêntico da rica história culinária de Portugal.",
@@ -331,7 +331,7 @@ export const translations = {
       familyExperienceDesc: "Cada refeição é preparada com amor e servida com o calor da hospitalidade portuguesa, fazendo-o sentir-se em família.",
       signatureDishes: "Pratos Especiais",
       signatureDishesDesc: "Descubra as nossas criações mais queridas, cada uma contando uma história de excelência culinária portuguesa",
-      whyChooseUs: "Porque Escolher Casa Da Peixe & Lapicanha",
+      whyChooseUs: "Porque Escolher Original's Casa de Peixe & Lapicanha",
       awardWinning: "Cozinha Premiada",
       awardWinningDesc: "Reconhecidos por especialistas culinários e críticos gastronómicos pelos nossos pratos portugueses autênticos e qualidade de serviço excecional.",
       experience5Years: "5+ Anos de Experiência",
@@ -460,8 +460,8 @@ export const translations = {
     // SEO Metadata
     seo: {
       homePage: {
-        title: "Casa Da Peixe & Lapicanha - Cozinha Portuguesa Autêntica",
-        description: "Experimente a cozinha portuguesa autêntica na Casa Da Peixe & Lapicanha. Peixe fresco e carnes grelhadas premium em Setúbal e Lisboa. Faça reservas hoje."
+        title: "Original's Casa de Peixe & Lapicanha - Cozinha Portuguesa Autêntica",
+        description: "Experimente a cozinha portuguesa autêntica na Original's Casa de Peixe & Lapicanha. Peixe fresco e carnes grelhadas premium em Setúbal e Lisboa. Faça reservas hoje."
       },
       casaDaPeixe: {
         title: "Casa Da Peixe - Peixe Português Fresco | Setúbal",
@@ -512,13 +512,13 @@ export const translations = {
   es: {
     // Navigation
     nav: {
-      title: "Casa Da Peixe & Lapicanha",
-      titleMobile: "Casa Da Peixe\n& Lapicanha"
+      title: "Original's Casa de Peixe & Lapicanha",
+      titleMobile: "Original's Casa de Peixe\n& Lapicanha"
     },
     
     // Hero Section
     hero: {
-      title: "Casa Da Peixe & Lapicanha",
+      title: "Original's Casa de Peixe & Lapicanha",
       subtitle: "Cocina Portuguesa Auténtica, Dos Experiencias Únicas",
       viewMenu: "Ver Menú"
     },
@@ -576,7 +576,7 @@ export const translations = {
     
     // Home Page
     home: {
-      aboutTitle: "Acerca de Casa Da Peixe & Lapicanha",
+      aboutTitle: "Acerca de Original's Casa de Peixe & Lapicanha",
       aboutSubtitle: "Durante más de 5 años, nos hemos dedicado a dar vida a los sabores portugueses auténticos a través de nuestras dos experiencias culinarias distintas. Cada restaurante cuenta su propia historia de herencia y pasión portuguesas.",
       traditionalHeritage: "Herencia Tradicional",
       traditionalHeritageDesc: "Nuestras recetas han sido transmitidas a través de generaciones, preservando el sabor auténtico de la rica historia culinaria de Portugal.",
@@ -586,7 +586,7 @@ export const translations = {
       familyExperienceDesc: "Cada comida se prepara con amor y se sirve con la calidez de la hospitalidad portuguesa, haciéndote sentir como en familia.",
       signatureDishes: "Platos Especiales",
       signatureDishesDesc: "Descubre nuestras creaciones más queridas, cada una contando una historia de excelencia culinaria portuguesa",
-      whyChooseUs: "Por qué Elegir Casa Da Peixe & Lapicanha",
+      whyChooseUs: "Por qué Elegir Original's Casa de Peixe & Lapicanha",
       awardWinning: "Cocina Premiada",
       awardWinningDesc: "Reconocidos por expertos culinarios y críticos gastronómicos por nuestros platos portugueses auténticos y calidad de servicio excepcional.",
       experience5Years: "5+ Años de Experiencia",
@@ -715,8 +715,8 @@ export const translations = {
     // SEO Metadata
     seo: {
       homePage: {
-        title: "Casa Da Peixe & Lapicanha - Cocina Portuguesa Auténtica",
-        description: "Experimenta la cocina portuguesa auténtica en Casa Da Peixe & Lapicanha. Mariscos frescos y carnes a la parrilla premium en Setúbal y Lisboa. Haz reservas hoy."
+        title: "Original's Casa de Peixe & Lapicanha - Cocina Portuguesa Auténtica",
+        description: "Experimenta la cocina portuguesa auténtica en Original's Casa de Peixe & Lapicanha. Mariscos frescos y carnes a la parrilla premium en Setúbal y Lisboa. Haz reservas hoy."
       },
       casaDaPeixe: {
         title: "Casa Da Peixe - Mariscos Portugueses Frescos | Setúbal",
@@ -767,13 +767,13 @@ export const translations = {
   nl: {
     // Navigation
     nav: {
-      title: "Casa Da Peixe & Lapicanha",
-      titleMobile: "Casa Da Peixe\n& Lapicanha"
+      title: "Original's Casa de Peixe & Lapicanha",
+      titleMobile: "Original's Casa de Peixe\n& Lapicanha"
     },
     
     // Hero Section
     hero: {
-      title: "Casa Da Peixe & Lapicanha",
+      title: "Original's Casa de Peixe & Lapicanha",
       subtitle: "Authentieke Portugese Keuken, Twee Unieke Ervaringen",
       viewMenu: "Bekijk Menu"
     },
@@ -831,7 +831,7 @@ export const translations = {
     
     // Home Page
     home: {
-      aboutTitle: "Over Casa Da Peixe & Lapicanha",
+      aboutTitle: "Over Original's Casa de Peixe & Lapicanha",
       aboutSubtitle: "Meer dan 5 jaar lang hebben wij ons toegewijd aan het tot leven brengen van authentieke Portugese smaken door onze twee verschillende culinaire ervaringen. Elk restaurant vertelt zijn eigen verhaal van Portugees erfgoed en passie.",
       traditionalHeritage: "Traditioneel Erfgoed",
       traditionalHeritageDesc: "Onze recepten zijn doorgegeven door generaties, waarbij de authentieke smaak van Portugal's rijke culinaire geschiedenis behouden blijft.",
@@ -841,7 +841,7 @@ export const translations = {
       familyExperienceDesc: "Elke maaltijd wordt met liefde bereid en geserveerd met de warmte van Portugese gastvrijheid, waardoor u zich thuis voelt.",
       signatureDishes: "Specialiteiten",
       signatureDishesDesc: "Ontdek onze meest geliefde creaties, elk vertelend een verhaal van Portugese culinaire excellentie",
-      whyChooseUs: "Waarom Kiezen voor Casa Da Peixe & Lapicanha",
+      whyChooseUs: "Waarom Kiezen voor Original's Casa de Peixe & Lapicanha",
       awardWinning: "Bekroonde Keuken",
       awardWinningDesc: "Erkend door culinaire experts en voedselcritici voor onze authentieke Portugese gerechten en uitzonderlijke servicekwaliteit.",
       experience5Years: "5+ Jaar Ervaring",
@@ -970,8 +970,8 @@ export const translations = {
     // SEO Metadata
     seo: {
       homePage: {
-        title: "Casa Da Peixe & Lapicanha - Authentieke Portugese Keuken",
-        description: "Ervaar authentieke Portugese keuken bij Casa Da Peixe & Lapicanha. Verse zeevruchten en premium gegrild vlees in Setúbal en Lissabon. Maak vandaag een reservering."
+        title: "Original's Casa de Peixe & Lapicanha - Authentieke Portugese Keuken",
+        description: "Ervaar authentieke Portugese keuken bij Original's Casa de Peixe & Lapicanha. Verse zeevruchten en premium gegrild vlees in Setúbal en Lissabon. Maak vandaag een reservering."
       },
       casaDaPeixe: {
         title: "Casa Da Peixe - Verse Portugese Zeevruchten | Setúbal",
