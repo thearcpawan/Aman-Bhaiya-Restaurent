@@ -258,34 +258,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Call to Action Section */}
-      <section className="py-20 bg-wine text-white">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6">
-            {t.home.readyExperience}
-          </h2>
-          <p className="text-xl mb-8 opacity-90">
-            {t.home.readyExperienceDesc}
-          </p>
-          
-          <div className="flex flex-col md:flex-row gap-6 justify-center">
-            <Button
-              onClick={() => handleRestaurantChoice('casa-da-peixe')}
-              className="bg-white text-wine hover:bg-beige-light px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300"
-              data-testid="cta-casa-da-peixe"
-            >
-              {t.home.experienceCasaDaPeixe}
-            </Button>
-            <Button
-              onClick={() => handleRestaurantChoice('lapicanha')}
-              className="bg-beige text-wine hover:bg-beige-light px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300"
-              data-testid="cta-lapicanha"
-            >
-              {t.home.discoverLapicanha}
-            </Button>
-          </div>
-        </div>
-      </section>
 
       {/* Footer */}
       <footer className="bg-charcoal text-white py-12">
