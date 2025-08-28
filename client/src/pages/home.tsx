@@ -23,7 +23,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen pt-24 sm:pt-28">
       <HeroSection 
         onRestaurantChoice={handleRestaurantChoice}
         onMenuAccess={handleMenuAccess}
