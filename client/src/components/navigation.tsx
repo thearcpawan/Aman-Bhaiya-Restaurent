@@ -59,15 +59,6 @@ export default function Navigation() {
             <div className="flex items-center space-x-1 ml-4 border-l border-gray-300 pl-4">
               <Globe className="h-4 w-4 text-gray-600" />
               <Button
-                variant={language === 'en' ? 'default' : 'ghost'}
-                size="sm"
-                onClick={() => setLanguage('en')}
-                className="px-2 py-1 text-sm"
-                data-testid="button-lang-en"
-              >
-                EN
-              </Button>
-              <Button
                 variant={language === 'pt' ? 'default' : 'ghost'}
                 size="sm"
                 onClick={() => setLanguage('pt')}
@@ -75,6 +66,33 @@ export default function Navigation() {
                 data-testid="button-lang-pt"
               >
                 PT
+              </Button>
+              <Button
+                variant={language === 'es' ? 'default' : 'ghost'}
+                size="sm"
+                onClick={() => setLanguage('es')}
+                className="px-2 py-1 text-sm"
+                data-testid="button-lang-es"
+              >
+                ES
+              </Button>
+              <Button
+                variant={language === 'nl' ? 'default' : 'ghost'}
+                size="sm"
+                onClick={() => setLanguage('nl')}
+                className="px-2 py-1 text-sm"
+                data-testid="button-lang-nl"
+              >
+                NL
+              </Button>
+              <Button
+                variant={language === 'en' ? 'default' : 'ghost'}
+                size="sm"
+                onClick={() => setLanguage('en')}
+                className="px-2 py-1 text-sm"
+                data-testid="button-lang-en"
+              >
+                EN
               </Button>
             </div>
           </div>
@@ -84,22 +102,40 @@ export default function Navigation() {
             {/* Mobile Language Switcher */}
             <div className="flex items-center space-x-1">
               <Button
-                variant={language === 'en' ? 'default' : 'ghost'}
-                size="sm"
-                onClick={() => setLanguage('en')}
-                className="px-2 py-1 text-xs"
-                data-testid="button-mobile-lang-en"
-              >
-                EN
-              </Button>
-              <Button
                 variant={language === 'pt' ? 'default' : 'ghost'}
                 size="sm"
                 onClick={() => setLanguage('pt')}
-                className="px-2 py-1 text-xs"
+                className="px-1 py-1 text-xs"
                 data-testid="button-mobile-lang-pt"
               >
                 PT
+              </Button>
+              <Button
+                variant={language === 'es' ? 'default' : 'ghost'}
+                size="sm"
+                onClick={() => setLanguage('es')}
+                className="px-1 py-1 text-xs"
+                data-testid="button-mobile-lang-es"
+              >
+                ES
+              </Button>
+              <Button
+                variant={language === 'nl' ? 'default' : 'ghost'}
+                size="sm"
+                onClick={() => setLanguage('nl')}
+                className="px-1 py-1 text-xs"
+                data-testid="button-mobile-lang-nl"
+              >
+                NL
+              </Button>
+              <Button
+                variant={language === 'en' ? 'default' : 'ghost'}
+                size="sm"
+                onClick={() => setLanguage('en')}
+                className="px-1 py-1 text-xs"
+                data-testid="button-mobile-lang-en"
+              >
+                EN
               </Button>
             </div>
             
