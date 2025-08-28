@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, Clock, MessageCircle, Instagram } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, MessageCircle, Instagram, Facebook } from "lucide-react";
 import GoogleMaps from "@/components/google-maps";
 import { useLanguage } from "@/contexts/LanguageContext";
 import type { Restaurant } from "@shared/schema";
@@ -82,6 +82,26 @@ export default function ContactSection({ restaurant }: ContactSectionProps) {
                     data-testid="link-instagram"
                   >
                     {restaurant.slug === "casa-da-peixe" ? "@casadepeixe3" : "@lapicanha_setubal"}
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-4">
+                <div className="bg-wine text-white p-3 rounded-lg flex-shrink-0">
+                  <Facebook className="h-6 w-6" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-lg mb-2">{t.contact.facebook}</h3>
+                  <a 
+                    href={restaurant.slug === "casa-da-peixe" 
+                      ? "#" 
+                      : "https://www.facebook.com/LaFamigliaSetubal"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-600 hover:text-wine transition-colors"
+                    data-testid="link-facebook"
+                  >
+                    {restaurant.slug === "casa-da-peixe" ? "Casa Da Peixe" : "La Famiglia Setúbal"}
                   </a>
                 </div>
               </div>

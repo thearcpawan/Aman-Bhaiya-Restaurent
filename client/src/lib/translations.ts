@@ -121,7 +121,8 @@ export const translations = {
       address: "Address",
       phone: "Phone",
       whatsapp: "WhatsApp",
-      instagram: "Instagram"
+      instagram: "Instagram",
+      facebook: "Facebook"
     },
 
     // Gallery Section
@@ -375,7 +376,8 @@ export const translations = {
       address: "Morada",
       phone: "Telefone",
       whatsapp: "WhatsApp",
-      instagram: "Instagram"
+      instagram: "Instagram",
+      facebook: "Facebook"
     },
 
     // Gallery Section
