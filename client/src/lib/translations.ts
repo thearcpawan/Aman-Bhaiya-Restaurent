@@ -67,7 +67,7 @@ export const translations = {
     // Home Page
     home: {
       aboutTitle: "About Casa Da Peixe & Lapicanha",
-      aboutSubtitle: "For over two decades, we've been dedicated to bringing authentic Portuguese flavors to life through our two distinct culinary experiences. Each restaurant tells its own story of Portuguese heritage and passion.",
+      aboutSubtitle: "For over 5 years, we've been dedicated to bringing authentic Portuguese flavors to life through our two distinct culinary experiences. Each restaurant tells its own story of Portuguese heritage and passion.",
       traditionalHeritage: "Traditional Heritage",
       traditionalHeritageDesc: "Our recipes have been passed down through generations, preserving the authentic taste of Portugal's rich culinary history.",
       freshIngredients: "Fresh Ingredients",
@@ -321,7 +321,7 @@ export const translations = {
     // Home Page
     home: {
       aboutTitle: "Sobre Casa Da Peixe & Lapicanha",
-      aboutSubtitle: "Há mais de duas décadas, dedicamo-nos a dar vida aos sabores portugueses autênticos através das nossas duas experiências culinárias distintas. Cada restaurante conta a sua própria história de herança e paixão portuguesas.",
+      aboutSubtitle: "Há mais de 5 anos, dedicamo-nos a dar vida aos sabores portugueses autênticos através das nossas duas experiências culinárias distintas. Cada restaurante conta a sua própria história de herança e paixão portuguesas.",
       traditionalHeritage: "Herança Tradicional",
       traditionalHeritageDesc: "As nossas receitas foram transmitidas através de gerações, preservando o sabor autêntico da rica história culinária de Portugal.",
       freshIngredients: "Ingredientes Frescos",
