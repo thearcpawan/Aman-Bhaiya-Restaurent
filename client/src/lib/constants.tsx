@@ -1,5 +1,5 @@
 import lapicanhaHeroImage from '@/assets/lapicanha-hero.png';
-import casaDaPeixeCover from '@/assets/casa-da-peixe-cover.jpg';
+import casaDaPeixeCover from '@assets/20250827_2018_Inviting Restaurant Exterior_remix_01k3pbwkpxf6g8g7k6mpb8fy6n_1756379791373.png';
 
 export const RESTAURANTS = {
   "casa-da-peixe": {
