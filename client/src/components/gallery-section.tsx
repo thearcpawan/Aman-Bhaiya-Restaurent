@@ -1,11 +1,6 @@
-import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
-import { Trash2 } from "lucide-react";
+import { useQuery } from "@tanstack/react-query";
 import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
-import PhotoUpload from "@/components/photo-upload";
-import { useToast } from "@/hooks/use-toast";
-import { apiRequest } from "@/lib/queryClient";
 import { useLanguage } from "@/contexts/LanguageContext";
 import type { Restaurant, GalleryPhoto } from "@shared/schema";
 
@@ -77,41 +72,11 @@ const defaultImages = {
 };
 
 export default function GallerySection({ restaurant }: GallerySectionProps) {
-  const { toast } = useToast();
-  const queryClient = useQueryClient();
   const { t } = useLanguage();
 
   const { data: photos, isLoading } = useQuery<GalleryPhoto[]>({
     queryKey: ["/api/restaurants", restaurant.id, "gallery"],
   });
-
-  const deleteMutation = useMutation({
-    mutationFn: async (photoId: string) => {
-      return apiRequest("DELETE", `/api/gallery/${photoId}`);
-    },
-    onSuccess: () => {
-      toast({
-        title: t.toast.success.photoDeleted,
-        description: t.toast.success.photoDeletedDesc,
-      });
-      queryClient.invalidateQueries({
-        queryKey: ["/api/restaurants", restaurant.id, "gallery"],
-      });
-    },
-    onError: () => {
-      toast({
-        title: t.toast.error.deleteFailed,
-        description: t.toast.error.deleteFailedDesc,
-        variant: "destructive",
-      });
-    },
-  });
-
-  const handleDeletePhoto = (photoId: string) => {
-    if (window.confirm(t.forms.confirmations.deletePhoto)) {
-      deleteMutation.mutate(photoId);
-    }
-  };
 
   if (isLoading) {
     return (
@@ -139,42 +104,19 @@ export default function GallerySection({ restaurant }: GallerySectionProps) {
         <h2 className="font-serif text-4xl font-bold text-center text-wine mb-12">
           {restaurant.slug === "casa-da-peixe" ? t.gallery.galleryTitle : t.gallery.ourSpaceTitle}
         </h2>
-        
-        <div className="mb-8 text-center">
-          <PhotoUpload
-            type="gallery"
-            restaurantId={restaurant.id}
-            data-testid="gallery-photo-upload"
-          />
-        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {displayImages.map((imageUrl, index) => {
             const photo = photos?.find(p => p.imageUrl === imageUrl);
-            const isUploaded = !!photo;
             
             return (
-              <Card key={isUploaded ? photo.id : `default-${index}`} className="bg-white overflow-hidden shadow-lg group">
+              <Card key={photo?.id || `default-${index}`} className="bg-white overflow-hidden shadow-lg group">
                 <div className="relative">
                   <img
                     src={imageUrl}
                     alt={photo?.title || `Gallery image ${index + 1}`}
                     className="w-full h-64 object-cover transition-transform group-hover:scale-105"
                   />
-                  {isUploaded && (
-                    <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                      <Button
-                        size="sm"
-                        variant="destructive"
-                        onClick={() => handleDeletePhoto(photo.id)}
-                        disabled={deleteMutation.isPending}
-                        className="p-2"
-                        data-testid={`button-delete-photo-${photo.id}`}
-                      >
-                        <Trash2 className="h-4 w-4" />
-                      </Button>
-                    </div>
-                  )}
                   {photo?.title && (
                     <div className="absolute bottom-0 left-0 right-0 bg-black/70 text-white p-3">
                       <h4 className="font-medium">{photo.title}</h4>
