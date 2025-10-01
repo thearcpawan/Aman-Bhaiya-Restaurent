@@ -1,7 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { Card, CardContent } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
-import PhotoUpload from "@/components/photo-upload";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { MENU_CATEGORIES } from "@/lib/constants";
 import type { Restaurant, MenuItem } from "@shared/schema";
@@ -94,13 +93,6 @@ export default function MenuSection({ restaurant }: MenuSectionProps) {
                       <p className="text-gray-500 italic">{t.menu.noItems}</p>
                     )}
                   </div>
-                  
-                  <PhotoUpload
-                    type="menu"
-                    categoryId={category.id}
-                    restaurantId={restaurant.id}
-                    data-testid={`photo-upload-${category.id}`}
-                  />
                 </CardContent>
               </Card>
             );
