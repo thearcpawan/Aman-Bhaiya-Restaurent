@@ -1,5 +1,6 @@
 import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "../server/routes";
+import { seedDatabase } from "../server/seed";
 
 const app = express();
 app.use(express.json());
@@ -33,6 +34,7 @@ app.use((req: Request, res: Response, next: NextFunction) => {
   next();
 });
 
+seedDatabase().catch(console.error);
 registerRoutes(app);
 
 app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {
