@@ -1,7 +1,5 @@
-import { type Restaurant, type MenuItem, type Reservation, type GalleryPhoto, type InsertRestaurant, type InsertMenuItem, type InsertReservation, type InsertGalleryPhoto, restaurants, menuItems, reservations, galleryPhotos } from "@shared/schema";
+import { type Restaurant, type MenuItem, type Reservation, type GalleryPhoto, type InsertRestaurant, type InsertMenuItem, type InsertReservation, type InsertGalleryPhoto } from "@shared/schema";
 import { randomUUID } from "crypto";
-import { db } from "./db";
-import { eq, and } from "drizzle-orm";
 
 export interface IStorage {
   // Restaurants
@@ -507,105 +505,5 @@ export class MemStorage implements IStorage {
   }
 }
 
-export class DatabaseStorage implements IStorage {
-  // Restaurants
-  async getRestaurants(): Promise<Restaurant[]> {
-    return await db.select().from(restaurants);
-  }
 
-  async getRestaurant(id: string): Promise<Restaurant | undefined> {
-    const [restaurant] = await db.select().from(restaurants).where(eq(restaurants.id, id));
-    return restaurant || undefined;
-  }
-
-  async getRestaurantBySlug(slug: string): Promise<Restaurant | undefined> {
-    const [restaurant] = await db.select().from(restaurants).where(eq(restaurants.slug, slug));
-    return restaurant || undefined;
-  }
-
-  async createRestaurant(insertRestaurant: InsertRestaurant): Promise<Restaurant> {
-    const [restaurant] = await db
-      .insert(restaurants)
-      .values(insertRestaurant)
-      .returning();
-    return restaurant;
-  }
-
-  // Menu Items
-  async getMenuItems(restaurantId: string): Promise<MenuItem[]> {
-    return await db.select().from(menuItems).where(eq(menuItems.restaurantId, restaurantId));
-  }
-
-  async getMenuItemsByCategory(restaurantId: string, category: string): Promise<MenuItem[]> {
-    return await db.select().from(menuItems).where(
-      and(
-        eq(menuItems.restaurantId, restaurantId),
-        eq(menuItems.category, category)
-      )
-    );
-  }
-
-  async createMenuItem(insertMenuItem: InsertMenuItem): Promise<MenuItem> {
-    const [menuItem] = await db
-      .insert(menuItems)
-      .values(insertMenuItem)
-      .returning();
-    return menuItem;
-  }
-
-  async updateMenuItem(id: string, updates: Partial<MenuItem>): Promise<MenuItem | undefined> {
-    const [updated] = await db
-      .update(menuItems)
-      .set(updates)
-      .where(eq(menuItems.id, id))
-      .returning();
-    return updated || undefined;
-  }
-
-  async deleteMenuItem(id: string): Promise<boolean> {
-    const result = await db.delete(menuItems).where(eq(menuItems.id, id));
-    return (result.rowCount ?? 0) > 0;
-  }
-
-  // Reservations
-  async getReservations(restaurantId: string): Promise<Reservation[]> {
-    return await db.select().from(reservations).where(eq(reservations.restaurantId, restaurantId));
-  }
-
-  async createReservation(insertReservation: InsertReservation): Promise<Reservation> {
-    const [reservation] = await db
-      .insert(reservations)
-      .values(insertReservation)
-      .returning();
-    return reservation;
-  }
-
-  async updateReservationStatus(id: string, status: string): Promise<Reservation | undefined> {
-    const [updated] = await db
-      .update(reservations)
-      .set({ status })
-      .where(eq(reservations.id, id))
-      .returning();
-    return updated || undefined;
-  }
-
-  // Gallery Photos
-  async getGalleryPhotos(restaurantId: string): Promise<GalleryPhoto[]> {
-    return await db.select().from(galleryPhotos).where(eq(galleryPhotos.restaurantId, restaurantId));
-  }
-
-  async createGalleryPhoto(insertGalleryPhoto: InsertGalleryPhoto): Promise<GalleryPhoto> {
-    const [photo] = await db
-      .insert(galleryPhotos)
-      .values(insertGalleryPhoto)
-      .returning();
-    return photo;
-  }
-
-  async deleteGalleryPhoto(id: string): Promise<boolean> {
-    const result = await db.delete(galleryPhotos).where(eq(galleryPhotos.id, id));
-    return (result.rowCount ?? 0) > 0;
-  }
-}
-
-export const storage = new DatabaseStorage();
+export const storage = new MemStorage();
