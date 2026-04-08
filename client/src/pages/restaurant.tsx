@@ -11,32 +11,71 @@ import ContactSection from "@/components/contact-section";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useDocumentTitle } from "@/hooks/useDocumentTitle";
 import type { Restaurant } from "@shared/schema";
+import { casaDaPeixeMenuItems, lapicanhaMenuItems } from "@/data/menu-data";
 
 type Section = "about" | "menu" | "reservations" | "gallery" | "contact";
+
+const staticRestaurants: Record<string, Restaurant> = {
+  "lapicanha": {
+    id: "lapicanha-id",
+    name: "Lapicanha",
+    slug: "lapicanha",
+    description:
+      "Premium grilled meats and traditional Portuguese flavors in a warm, rustic atmosphere. We specialize in perfectly prepared picanha and other prime cuts, paired with authentic Portuguese sides and wines.",
+    address: "Rua José Afonso n 69\nSetúbal, Portugal",
+    phone: "+351 915 214 437",
+    email: "reservas@lapicanha.pt",
+    hours:
+      "Monday - Thursday: 6:00 PM - 11:00 PM\nFriday - Saturday: 6:00 PM - 12:00 AM\nSunday: 6:00 PM - 10:00 PM",
+    createdAt: new Date("2024-01-01"),
+  },
+  "casa-da-peixe": {
+    id: "casa-da-peixe-id",
+    name: "Original's Casa de Peixe",
+    slug: "casa-da-peixe",
+    description:
+      "Specializing in the freshest seafood and traditional Portuguese coastal cuisine. Our dishes celebrate the bounty of the sea with authentic recipes passed down through generations of fishermen and coastal cooks.",
+    address: "Largo José Afonso 64, 2900-633\nSetúbal, Portugal",
+    phone: "+351 926 091 468",
+    email: "info@casadapeixe.pt",
+    hours:
+      "Tuesday - Thursday: 12:00 PM - 10:00 PM\nFriday - Saturday: 12:00 PM - 11:00 PM\nSunday: 12:00 PM - 9:00 PM\nMonday: Closed",
+    createdAt: new Date("2024-01-01"),
+  },
+};
+
+const staticMenuItems: Record<string, any[]> = {
+  "lapicanha": lapicanhaMenuItems,
+  "casa-da-peixe": casaDaPeixeMenuItems,
+};
 
 export default function Restaurant() {
   const { slug } = useParams<{ slug: string }>();
   const [activeSection, setActiveSection] = useState<Section>("about");
   const { t } = useLanguage();
-  
-  // Set page title and meta description based on restaurant
+
   const pageType = slug === 'casa-da-peixe' ? 'casaDaPeixe' : 'lapicanha';
   useDocumentTitle(pageType, slug);
 
-  // Handle hash navigation to specific sections
   useEffect(() => {
-    const hash = window.location.hash.substring(1); // Remove the #
+    const hash = window.location.hash.substring(1);
     if (hash && ["about", "menu", "reservations", "gallery", "contact"].includes(hash)) {
       setActiveSection(hash as Section);
     }
   }, []);
 
-  const { data: restaurant, isLoading, error } = useQuery<Restaurant>({
+  // Use hardcoded data for known restaurants — no API call needed
+  const staticRestaurant = slug ? staticRestaurants[slug] : undefined;
+  const staticMenu = slug ? staticMenuItems[slug] : undefined;
+
+  const { data: fetchedRestaurant, isLoading } = useQuery<Restaurant>({
     queryKey: ["/api/restaurants", slug],
-    enabled: !!slug,
+    enabled: !!slug && !staticRestaurant,
   });
 
-  if (isLoading) {
+  const restaurant = staticRestaurant ?? fetchedRestaurant;
+
+  if (!staticRestaurant && isLoading) {
     return (
       <div className="min-h-screen pt-20">
         <div className="max-w-7xl mx-auto px-4 py-8">
@@ -54,7 +93,7 @@ export default function Restaurant() {
     );
   }
 
-  if (error || !restaurant) {
+  if (!restaurant) {
     return (
       <div className="min-h-screen pt-20 flex items-center justify-center">
         <div className="text-center">
@@ -74,28 +113,24 @@ export default function Restaurant() {
   ];
 
   const renderSection = () => {
-    // At this point, restaurant is guaranteed to exist due to early returns above
-    const restaurantData = restaurant!;
-    
     switch (activeSection) {
       case "about":
-        return <AboutSection restaurant={restaurantData} />;
+        return <AboutSection restaurant={restaurant} />;
       case "menu":
-        return <MenuSection restaurant={restaurantData} />;
+        return <MenuSection restaurant={restaurant} staticMenuItems={staticMenu} />;
       case "reservations":
-        return <ReservationsSection restaurant={restaurantData} />;
+        return <ReservationsSection restaurant={restaurant} />;
       case "gallery":
-        return <GallerySection restaurant={restaurantData} />;
+        return <GallerySection restaurant={restaurant} />;
       case "contact":
-        return <ContactSection restaurant={restaurantData} />;
+        return <ContactSection restaurant={restaurant} />;
       default:
-        return <AboutSection restaurant={restaurantData} />;
+        return <AboutSection restaurant={restaurant} />;
     }
   };
 
   return (
     <div className="min-h-screen">
-      {/* Sub Navigation */}
       <div className="bg-beige-light py-4 mt-20 sticky top-20 z-40">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-6">
@@ -118,7 +153,6 @@ export default function Restaurant() {
         </div>
       </div>
 
-      {/* Section Content */}
       <div className="pb-16">
         {renderSection()}
       </div>
