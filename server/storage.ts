@@ -1,4 +1,4 @@
-import { type Restaurant, type MenuItem, type Reservation, type GalleryPhoto, type InsertRestaurant, type InsertMenuItem, type InsertReservation, type InsertGalleryPhoto } from "@shared/schema";
+import { type Restaurant, type MenuItem, type Reservation, type GalleryPhoto, type InsertRestaurant, type InsertMenuItem, type InsertReservation, type InsertGalleryPhoto } from "../shared/schema";
 import { randomUUID } from "crypto";
 
 export interface IStorage {
