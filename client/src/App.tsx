@@ -7,6 +7,8 @@ import { LanguageProvider } from "@/contexts/LanguageContext";
 import Navigation from "@/components/navigation";
 import Home from "@/pages/home";
 import Restaurant from "@/pages/restaurant";
+import CasaDaPeixePage from "@/pages/casa-da-peixe-page";
+import LapicanhaPage from "@/pages/lapicanha-page";
 import AdminPage from "@/pages/admin";
 import NotFound from "@/pages/not-found";
 
@@ -16,6 +18,8 @@ function Router() {
       <Navigation />
       <Switch>
         <Route path="/" component={Home} />
+        <Route path="/restaurant/casa-da-peixe" component={CasaDaPeixePage} />
+        <Route path="/restaurant/lapicanha" component={LapicanhaPage} />
         <Route path="/restaurant/:slug" component={Restaurant} />
         <Route path="/admin" component={AdminPage} />
         <Route component={NotFound} />
