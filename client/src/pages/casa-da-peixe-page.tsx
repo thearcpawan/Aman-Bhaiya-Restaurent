@@ -8,6 +8,7 @@ import ContactSection from "@/components/contact-section";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useDocumentTitle } from "@/hooks/useDocumentTitle";
 import type { Restaurant } from "@shared/schema";
+import { casaDaPeixeMenuItems } from "@/data/menu-data";
 
 type Section = "about" | "menu" | "reservations" | "gallery" | "contact";
 
@@ -48,7 +49,7 @@ export default function CasaDaPeixePage() {
   const renderSection = () => {
     switch (activeSection) {
       case "about": return <AboutSection restaurant={restaurant} />;
-      case "menu": return <MenuSection restaurant={restaurant} />;
+      case "menu": return <MenuSection restaurant={restaurant} staticMenuItems={casaDaPeixeMenuItems as any} />;
       case "reservations": return <ReservationsSection restaurant={restaurant} />;
       case "gallery": return <GallerySection restaurant={restaurant} />;
       case "contact": return <ContactSection restaurant={restaurant} />;

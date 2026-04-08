@@ -11,6 +11,7 @@ import casaDaPeixeMainsImage from "@assets/a7_1756382620250.jpg";
 
 interface MenuSectionProps {
   restaurant: Restaurant;
+  staticMenuItems?: MenuItem[];
 }
 
 const categoryImages = {
@@ -24,11 +25,13 @@ const categoryImages = {
   drinks: "https://images.unsplash.com/photo-1474722883778-792e7990302f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250"
 };
 
-export default function MenuSection({ restaurant }: MenuSectionProps) {
+export default function MenuSection({ restaurant, staticMenuItems }: MenuSectionProps) {
   const { t } = useLanguage();
-  const { data: menuItems, isLoading } = useQuery<MenuItem[]>({
+  const { data: fetchedItems, isLoading } = useQuery<MenuItem[]>({
     queryKey: ["/api/restaurants", restaurant.id, "menu"],
+    enabled: !staticMenuItems,
   });
+  const menuItems = staticMenuItems ?? fetchedItems;
 
   const getItemsByCategory = (category: string) => {
     return menuItems?.filter(item => item.category === category) || [];
